@@ -41,40 +41,63 @@
 		<script src="/app/js/script.js"></script>
 	</head>
 	<body>
-		<header></header>
-		<main>
+		<a href="#main" class="visually-hidden">Skip to main content</a>
+		<header class="topnav">
+			<h2 class="visually-hidden">Header</h2>
+			<div class="wrapper topnav__wrapper">
+				<a href="/" class="topnav__homelink">
+					<img
+						src="/img/logo-mythos.svg"
+						alt="Mythos homepage"
+						class="topnav__logo"
+						width="128"
+						height="36"
+					/>
+				</a>
+				<nav>
+					<ul class="topnav__links">
+						<li class="topnav__item">
+							<a href="" class="topnav__link">Features</a>
+						</li>
+						<li class="topnav__item">
+							<a href="" class="topnav__link">Pricing</a>
+						</li>
+						<li class="topnav__item">
+							<a href="" class="topnav__link">About</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main id="main">
 			<article>
-				<section class="wrapper">
-					<h1>Find that elusive unicorn.</h1>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur
-						adipisicing elit. Saepe nostrum accusamus
-						explicabo rerum quaerat maxime sequi quisquam qui
-						eveniet, minus quam at numquam voluptas
-						consequuntur nemo expedita! Ipsum quia sapiente
-						temporibus, in aut, eos, ducimus eum numquam ad
-						repellat cumque illo porro consequatur. Rerum ex
-						aspernatur nulla, quae repellendus eligendi.
-					</p>
-				</section>
-				<section class="wrapper">
-					<h2>Angel investment matching in real time.</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur
-						adipisicing elit. Saepe nostrum accusamus
-						explicabo rerum quaerat maxime sequi quisquam qui
-						eveniet, minus quam at numquam voluptas
-						consequuntur nemo expedita! Ipsum quia sapiente
-						temporibus, in aut, eos, ducimus eum numquam ad
-						repellat cumque illo porro consequatur. Rerum ex
-						aspernatur nulla, quae repellendus eligendi.
-					</p>
-				</section>
-				<section class="wrapper">
-					<h2 class="visually-hidden">Features</h2>
-					<h3>AI Powered Matchmaking</h3>
-					<h3>Immediate Notifications</h3>
-					<h3>AI Protected Payments</h3>
+				<section class="hero">
+					<div class="wrapper hero__wrapper">
+						<img
+							src="img/unicorn.svg"
+							alt="Funny unicorn farting stars"
+							class="hero__image"
+						/>
+						<div class="hero__text">
+							<h1 class="hero__title">
+								Find that elusive unicorn.
+							</h1>
+							<p class="hero__content large">
+								Mythos will enable you to discover the
+								newest startups to invest in. Powered by
+								AI, used by millions of humans.
+							</p>
+							<a
+								href=""
+								class="hero__button button primary"
+								>Free Trial</a
+							><a
+								href=""
+								class="hero__button button secondary"
+								>Pricing</a
+							>
+						</div>
+					</div>
 				</section>
 			</article>
 		</main>

@@ -17,8 +17,18 @@ body {
 	font-family: u.$font;
 	background-color: var(--background-color);
 	color: var(--text-color);
-	display: grid;
+	// display: grid;
+	// grid-template-columns: 1fr; // add this line
+	// width: 100vw; // add this line
+	// height: 100vh; // add this line
 	justify-content: center;
+	margin-block-end: 50vh;
+}
+
+img {
+	display: block;
+	// width: 100%;
+	height: auto;
 }
 
 .visually-hidden {
@@ -28,4 +38,13 @@ body {
 	width: 1px;
 	height: 1px;
 	overflow: hidden;
+
+	&:focus {
+		left: 0;
+		width: auto;
+		background-color: #ffffff;
+		height: auto;
+		padding: 0.5rem;
+		border: 1px solid;
+	}
 }
