@@ -28,6 +28,12 @@
 		max-width: u.rem(483);
 		padding-bottom: 20px;
 
+		transition: transform 0.6s ease-in-out;
+
+		&:hover {
+			transform: rotate(-5deg); // Rotate image 10 degrees on hover
+		}
+
 		@include u.breakpoint(large) {
 			// flex: 5;
 			order: 2;
@@ -44,6 +50,15 @@
 	&__content {
 	}
 	&__button {
+		position: relative;
+		transform: scale(1);
+		transform-origin: center;
+		transform: translateZ(0);
+		transition: transform 0.45s ease;
+
+		&:hover {
+			transform: scale(1.05);
+		}
 		&:first-of-type {
 			margin-inline-end: 20px;
 		}
