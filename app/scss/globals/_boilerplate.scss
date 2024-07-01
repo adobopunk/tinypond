@@ -35,6 +35,15 @@ figure, blockquote {
 	margin: 0;
 }
 
+header ul, footer ul {
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style-type: none;
+	}
+}
+
 .visually-hidden {
 	position: absolute;
 	left: -10000px;
@@ -51,4 +60,16 @@ figure, blockquote {
 		padding: 0.5rem;
 		border: 1px solid;
 	}
+}
+
+.logo-hover {
+	transform: scale(1);
+		transition-property: transform, opacity;
+		transform-origin: center;
+		transform: translateZ(0);
+		transition-duration: 400ms;
+		&:hover {
+			opacity: 0.85;
+			transform: scale(1.05);
+		}
 }

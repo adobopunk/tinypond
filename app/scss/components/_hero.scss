@@ -50,17 +50,6 @@
 	&__content {
 	}
 	&__button {
-		position: relative;
-		transform: scale(1);
-		transform-origin: center;
-		transform: translateZ(0);
-		transition: transform 0.45s ease;
-
-		&:hover {
-			transform: scale(1.05);
-		}
-		&:first-of-type {
-			margin-inline-end: 20px;
-		}
+		
 	}
 }
