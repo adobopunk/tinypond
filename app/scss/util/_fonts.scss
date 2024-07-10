@@ -1,1 +1,14 @@
+
+@font-face {
+    font-family: 'Roc Grotesk Extrabold';
+    src:url(../../../fonts/Roc\ Grotesk\ ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'Yink';
+    src:url(../../../fonts/Yink\ Regular.ttf);
+}
+
 $font: 'Source Sans 3', sans-serif;
+$header-font: 'Roc Grotesk Extrabold', sans-serif;
+$silly-font: 'Yink'

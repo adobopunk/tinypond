@@ -2,9 +2,10 @@
 
 .wrapper {
 	margin-inline: auto;
-    width: min(100% - u.rem(40), u.rem(1200));
-	max-width: u.rem(1200);
+	width: min(100% - u.rem(40), u.rem(1300));
+	max-width: u.rem(1300);
 	padding-block: 60px;
+	padding-inline: u.rem(10);
 
 	@include u.breakpoint(large) {
 		padding-block: 80px;

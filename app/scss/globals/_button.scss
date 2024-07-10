@@ -1,6 +1,7 @@
 @use '../util/' as u;
 
 .button {
+	font-family: u.$header-font;
 	display: inline-block;
 	font-size: u.rem(18);
 	line-height: 1;
@@ -10,7 +11,7 @@
 	padding: u.rem(10) u.rem(14);
 	border-radius: u.rem(24);
 	margin-block: u.rem(20);
-	transition-property: background-color, border, color;
+	transition-property: background-color, border, color, filter;
 	transition-duration: 200ms;
 	transition-timing-function: ease-in-out;
 
@@ -28,14 +29,15 @@
 	}
 
 	&.primary {
-		background-color: var(--button-primary-bg);
-		color: var(--button-primary-text);
-		border: u.rem(2) solid var(--button-primary-bg);
+		background-color: var(--lilly-green);
+		color: var(--deep-water);
+		border: u.rem(2) solid var(--lilly-green);
 
 		&:hover {
-			background-color: var(--button-primary-bg-hover);
-			border: u.rem(2) solid var(--button-primary-bg-hover);
-			color: var(--button-secondary-text);
+			background-color: var(--lilly-green);
+			border: u.rem(2) solid var(--lilly-green);
+			color: var(--murky-clouds);
+			filter: drop-shadow(0 0 20px hsla(112, 44%, 55%, 0.452));
 		}
 
 		&.white {
@@ -43,19 +45,19 @@
 			border: u.rem(2) solid var(--button-primary-white-bg);
 
 			&:hover {
-				color: var(--button-primary-text);
+				color: var(--deep-water);
 			}
 		}
 	}
 
 	&.secondary {
-		background-color: var(--button-secondary-bg);
-		color: var(--button-secondary-text);
-		border: u.rem(2) solid var(--button-secondary-border);
+		background-color: var(--blue-fog);
+		color: var(--deep-water);
+		border: u.rem(3) solid var(--blue-fog);
 
 		&:hover {
-			background-color: var(--button-secondary-bg-hover);
-			color: var(--button-secondary-text-hover);
+			color: var(--murky-clouds);
+			filter: drop-shadow(0 0 20px hsla(0, 0%, 90%, 0.226));
 		}
 	}
 }

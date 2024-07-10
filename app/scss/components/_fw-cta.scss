@@ -1,22 +1,8 @@
 @use '../util' as u;
- 
-.fw-cta {
-	// @include u.fullwidth;
-	background: linear-gradient(
-		to right,
-		var(--gradient1) 0%,
-		var(--gradient2) 75%,
-		var(--gradient3) 150%
-	);
 
-	@include u.breakpoint(large) {
-		background: linear-gradient(
-			to right,
-			var(--gradient1) 0%,
-			var(--gradient2) 55%,
-			var(--gradient3) 110%
-		);
-	}
+.fw-cta {
+	background-color: var(--deep-water);
+
 
 	&__wrapper {
 	}
@@ -29,4 +15,19 @@
 
 	&__button {
 	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 100rem;
+	}
+}
+
+#message {
+	flex-grow: 10;
+}
+
+#email {
+	flex-grow: 2;
 }

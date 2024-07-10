@@ -1,58 +1,60 @@
 @use '../util' as u;
 
 .features {
-	// &__wrapper {
-	// 	display: flex;
-	// 	flex-wrap: wrap;
-	// 	justify-content: center;
-	// 	gap: 40px 5.5%;
-	// }
+	background-color: var(--deep-water);
 
-	// &__item {
-	// 	flex: 0 1 u.rem(346);
-	// 	text-align: center;
-
-	// 	@include u.breakpoint(large) {
-
-	// 		text-align: left;
-	// 	}
-	// }
 	&__wrapper {
+		gap: u.rem(40) u.rem(20);
+	}
+
+	&__wrapper2 {
 		display: flex;
-		gap: 40px;
 		flex-wrap: wrap;
-		justify-content: center;
+		align-items: center;
 
-		@include u.breakpoint(large) {
-			flex-wrap: nowrap;
-			gap: 5.57%;
+		@include u.breakpoint-down(small) {
+			flex-direction: column;
+			text-align: center;
 		}
 	}
 
-	&__item {
-		text-align: center;
-		@include u.breakpoint(large) {
-			flex: 1;
-			text-align: left;
+	&__label {
+		@include u.breakpoint-down(small) {
+			text-align: center;
 		}
 	}
 
-	&__icon {
-		margin-block-end: 10px;
-		width: auto;
-		height: u.rem(48);
+	&__headline {
+		font-size: 4rem;
+		font-size: clamp(5rem, 3.06rem + 4.45vw, 5rem);
+		line-height: 1;
 
-		@include u.breakpoint-down(medium) {
-			margin-inline: auto;
+		@include u.breakpoint-down(small) {
+			font-size: 2.5rem;
+			font-size: clamp(
+				2.5rem,
+				1.5601503759398496rem + 5.012531328320802vw,
+				3.75rem
+			);
+			margin-block-end: u.rem(80);
 		}
-	}
-
-	&__title {
-		margin-block-end: u.rem(10);
 	}
 
 	&__description {
-		max-width: 50ch;
-		margin-block-end: 0;
+		max-width: 40ch;
+	}
+
+	&__title {
+		margin-block-end: u.rem(5);
+	}
+
+	&__image {
+		flex: 1 1 35%;
+		margin-block-end: u.rem(40);
+		height: auto;
+	}
+
+	&__item {
+		flex: 1 1 50%;
 	}
 }

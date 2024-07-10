@@ -4,18 +4,17 @@
 	background-color: var(--header-bg);
 	color: var(--text-light);
 
+
 	&__wrapper {
-		// display: flex;
-		// flex-direction: column;
-		// align-items: center;
 
-		display: grid;
-		grid-template-columns: 1fr;
-		justify-items: center;
-		align-items: center;
 
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+		justify-content: flex-end;
+		max-height: 100vh;
 		gap: 40px;
-		padding-block: 40px 80px;
+		padding-top: u.rem(250);
 
 		@include u.breakpoint(large) {
 			padding-block: 40px, 80px;
@@ -49,7 +48,50 @@
 	}
 	&__content {
 	}
-	&__button {
-		
+	&__button-wrapper {
+		display: flex;
+		justify-content: flex-start; // Horizontally center the items
+	}
+	&__background-video {
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: -100;
+
+		// @include u.breakpoint-down(small) {
+		// 	display: none;
+		// }
+	}
+
+	&__scroll {
+		align-self: center;
+		opacity: 0;
+		animation: fadeIn 4s infinite;
+		-webkit-animation: fadeIn 4s infinite;
+		-moz-animation: fadeIn 4s infinite;
+		-o-animation: fadeIn 4s infinite;
+		animation: fadeIn 4s infinite;
+		animation-delay: 1.5s;
+
+		@include u.breakpoint-down(small) {
+			scale: 75%;
+		}
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
 	}
 }
