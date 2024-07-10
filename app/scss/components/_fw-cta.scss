@@ -17,17 +17,7 @@
 	}
 
 	&__form {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		gap: 100rem;
+
 	}
 }
 
-#message {
-	flex-grow: 10;
-}
-
-#email {
-	flex-grow: 2;
-}

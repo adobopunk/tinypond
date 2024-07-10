@@ -18,15 +18,16 @@ body {
 	background-color: var(--deep-water);
 	color: var(--murky-clouds);
 	justify-content: center;
-
 }
 
 ::-webkit-scrollbar {
 	width: 0;
 	height: 0;
-  }
+}
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	font-family: u.$header-font;
 }
 
@@ -36,11 +37,13 @@ img {
 	height: auto;
 }
 
-figure, blockquote {
+figure,
+blockquote {
 	margin: 0;
 }
 
-header ul, footer ul {
+header ul,
+footer ul {
 	margin: 0;
 	padding: 0;
 
@@ -69,12 +72,12 @@ header ul, footer ul {
 
 .logo-hover {
 	transform: scale(1);
-		transition-property: transform, opacity;
-		transform-origin: center;
-		transform: translateZ(0);
-		transition-duration: 400ms;
-		&:hover {
-			opacity: 0.85;
-			transform: scale(1.05);
-		}
+	transition-property: transform, opacity;
+	transform-origin: center;
+	transform: translateZ(0);
+	transition-duration: 400ms;
+	&:hover {
+		opacity: 0.85;
+		transform: scale(1.05);
+	}
 }

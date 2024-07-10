@@ -49,9 +49,23 @@
 	}
 
 	&__image {
-		flex: 1 1 35%;
+		flex: 1 1 45%;
 		margin-block-end: u.rem(40);
 		height: auto;
+		transform: scale(1);
+		transition-property: transform, opacity;
+		transform-origin: center;
+		transform: translateZ(0);
+		transition-duration: 400ms;
+		&:hover {
+			opacity: 0.95;
+			transform: scale(1.05);
+		}
+	}
+
+	&__headline {
+		text-align: center;
+		margin-block-end: u.rem(100);
 	}
 
 	&__item {

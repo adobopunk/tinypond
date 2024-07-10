@@ -6,8 +6,6 @@
 
 
 	&__wrapper {
-
-
 		display: flex;
 		flex-direction: column;
 		align-items: left;
@@ -44,10 +42,7 @@
 			// flex: 6;
 		}
 	}
-	&__title {
-	}
-	&__content {
-	}
+
 	&__button-wrapper {
 		display: flex;
 		justify-content: flex-start; // Horizontally center the items
@@ -62,10 +57,6 @@
 		top: 0;
 		bottom: 0;
 		z-index: -100;
-
-		// @include u.breakpoint-down(small) {
-		// 	display: none;
-		// }
 	}
 
 	&__scroll {
