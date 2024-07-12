@@ -3,7 +3,7 @@
 .button {
 	font-family: u.$header-font;
 	display: inline-block;
-	font-size: u.rem(18);
+	font-size: u.rem(24);
 	line-height: 1;
 	font-weight: 700;
 	letter-spacing: 0.05em;
@@ -20,6 +20,12 @@
 	transform-origin: center;
 	transform: translateZ(0);
 	transition: transform 0.45s ease;
+	@include u.breakpoint-down(medium) {
+		font-size: u.rem(20);
+	}
+	@include u.breakpoint-down(small) {
+		font-size: u.rem(16);
+	}
 
 	&:hover {
 		transform: scale(1.05);

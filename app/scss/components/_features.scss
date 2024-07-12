@@ -2,6 +2,7 @@
 
 .features {
 	background-color: var(--deep-water);
+	margin-block-start: -1px;
 
 	&__wrapper {
 		gap: u.rem(40) u.rem(20);

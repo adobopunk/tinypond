@@ -4,13 +4,12 @@
 	background-color: var(--header-bg);
 	color: var(--text-light);
 
-
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: left;
-		justify-content: flex-end;
-		max-height: 100vh;
+		justify-content: space-between;
+		height: 100vh;
 		gap: 40px;
 		padding-top: u.rem(250);
 
