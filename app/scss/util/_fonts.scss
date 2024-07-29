@@ -1,14 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 
 @font-face {
-    font-family: 'Roc Grotesk Extrabold';
-    src:url(../../../fonts/Roc\ Grotesk\ ExtraBold.ttf);
+	font-family: 'Roc Grotesk Extrabold';
+	src: url(../../../fonts/Roc\ Grotesk\ ExtraBold.ttf);
 }
 
 @font-face {
-    font-family: 'Yink';
-    src:url(../../../fonts/Yink\ Regular.ttf);
+	font-family: 'Yink';
+	src: url(../../../fonts/Yink\ Regular.ttf);
 }
 
-$font: 'Source Sans 3', sans-serif;
+$font: 'Roboto Serif', 'Source Sans 3', sans-serif;
 $header-font: 'Roc Grotesk Extrabold', sans-serif;
-$silly-font: 'Yink'
+$silly-font: 'Yink';
