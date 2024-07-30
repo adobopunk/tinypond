@@ -20,6 +20,10 @@ body {
 	color: var(--murky-clouds);
 	justify-content: center;
 	overflow-x: hidden;
+	overscroll-behavior-y: none;
+	-webkit-overflow-scrolling: touch;
+
+	
 }
 
 ::-webkit-scrollbar {

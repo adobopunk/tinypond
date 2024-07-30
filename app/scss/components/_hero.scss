@@ -3,14 +3,14 @@
 .hero {
 	background-color: var(--header-bg);
 	color: var(--text-light);
-	// animation: fadein 2s;
+	// animation: fadeOnLoad 2s;
 
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-around;
-		height: 100vh;
+		height: 90vh;
 		gap: 40px;
 		padding-top: u.rem(200);
 	}
@@ -32,7 +32,7 @@
 		}
 	}
 	&__text {
-		animation: fadein 2s;
+		animation: fadeOnLoad 2s;
 		@include u.breakpoint(large) {
 			// flex: 6;
 		}
@@ -57,12 +57,12 @@
 	&__scroll {
 		align-self: center;
 		opacity: 0;
-		animation: fadeIn 4s infinite;
-		-webkit-animation: fadeIn 4s infinite;
-		-moz-animation: fadeIn 4s infinite;
-		-o-animation: fadeIn 4s infinite;
-		animation: fadeIn 4s infinite;
-		animation-delay: 0.5s;
+		animation: fadeInOut 4s infinite;
+		-webkit-animation: fadeInOut 4s infinite;
+		-moz-animation: fadeInOut 4s infinite;
+		-o-animation: fadeInOut 4s infinite;
+		animation: fadeInOut 4s infinite;
+		animation-delay: 1.5s;
 
 		@include u.breakpoint-down(small) {
 			scale: 75%;
@@ -70,13 +70,13 @@
 	}
 }
 
-.marquee {
+.bg-text-hero {
 	animation: fadein 4s;
 	z-index: -1;
 	font-family: u.$silly-font;
-	font-size: clamp(15rem, 16.194vw + 10.425rem, 25rem);
+	font-size: u.rem(460);
 	white-space: nowrap;
-	-webkit-text-stroke: 2px hsla(112, 44%, 55%, 0.22);
+	-webkit-text-stroke: 2px hsla(112, 44%, 55%, 0.262);
 	color: hsla(112, 44%, 55%, 0);
 	overflow: hidden;
 	top: 15%;
@@ -84,9 +84,25 @@
 	position: absolute;
 	overflow-x: hidden;
 	box-sizing: border-box;
+
+	@include u.breakpoint-down(small) {
+		font-size: u.rem(320);
+	}
 }
 
-@keyframes fadein {
+@keyframes fadeInOut {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fadeOnLoad {
 	0% {
 		opacity: 0;
 	}

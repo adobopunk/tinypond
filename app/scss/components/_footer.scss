@@ -1,7 +1,7 @@
 @use '../util' as u;
 
 .footer {
-	background-color: var(--deep-water);
+	background-color: var(--background-color);
 	$b: &;
 	background-image: url(/img/accents/Texture\ Mushroom\ Green.svg);
 	background-size: 75vw;

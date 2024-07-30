@@ -4,20 +4,20 @@
     position: relative;
     overflow: hidden; // Ensure the gradient overlay doesn't overflow
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 50%; // Position the gradient 50% down the element
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-            to top,
-            var(--deep-water),
-            rgba(0, 0, 0, 0)
-        );
-        z-index: 1;
-        transform: translateY(-50%); // Center the gradient vertically
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     top: 50%; // Position the gradient 50% down the element
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: linear-gradient(
+    //         to top,
+    //         var(--deep-water),
+    //         rgba(0, 0, 0, 0)
+    //     );
+    //     z-index: 1;
+    //     transform: translateY(-50%); // Center the gradient vertically
+    // }
     
 }

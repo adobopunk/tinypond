@@ -35,8 +35,7 @@
 	}
 	&__logo {
 		width: u.rem(180);
-		padding-right: 10px;
-
+		padding: 20px 10px 0 0;
 		@include u.breakpoint-down(medium) {
 			width: u.rem(126);
 		}
@@ -44,6 +43,7 @@
 	&__links {
 		font-family: u.$header-font;
 		display: flex;
+		justify-content: right;
 		gap: 30px;
 
 		@include u.breakpoint-down(small) {
