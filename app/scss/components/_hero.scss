@@ -3,15 +3,16 @@
 .hero {
 	background-color: var(--header-bg);
 	color: var(--text-light);
+	// animation: fadein 2s;
 
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
-		align-items: left;
+		align-items: center;
 		justify-content: space-around;
 		height: 100vh;
 		gap: 40px;
-		padding-top: u.rem(250);
+		padding-top: u.rem(200);
 	}
 	&__image {
 		width: 62%;
@@ -31,6 +32,7 @@
 		}
 	}
 	&__text {
+		animation: fadein 2s;
 		@include u.breakpoint(large) {
 			// flex: 6;
 		}
@@ -60,22 +62,36 @@
 		-moz-animation: fadeIn 4s infinite;
 		-o-animation: fadeIn 4s infinite;
 		animation: fadeIn 4s infinite;
-		animation-delay: 1.5s;
+		animation-delay: 0.5s;
 
 		@include u.breakpoint-down(small) {
 			scale: 75%;
 		}
 	}
+}
 
-	@keyframes fadeIn {
-		0% {
-			opacity: 0;
-		}
-		50% {
-			opacity: 1;
-		}
-		100% {
-			opacity: 0;
-		}
+.marquee {
+	animation: fadein 4s;
+	z-index: -1;
+	font-family: u.$silly-font;
+	font-size: clamp(15rem, 16.194vw + 10.425rem, 25rem);
+	white-space: nowrap;
+	-webkit-text-stroke: 2px hsla(112, 44%, 55%, 0.22);
+	color: hsla(112, 44%, 55%, 0);
+	overflow: hidden;
+	top: 15%;
+	right: 0;
+	position: absolute;
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }
