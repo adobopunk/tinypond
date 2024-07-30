@@ -1,9 +1,8 @@
 @use '../util' as u;
 
 .hero {
-	background-color: var(--header-bg);
+	// background-color: var(--header-bg);
 	color: var(--text-light);
-	// animation: fadeOnLoad 2s;
 
 	&__wrapper {
 		display: flex;
