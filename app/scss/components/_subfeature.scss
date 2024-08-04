@@ -3,11 +3,14 @@
 
 .subfeature {
     height: 100vh;
-
+    position: relative;
     &__content {
+        height: 100vh;
+        z-index: 10;
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         gap: 5vw;
 
         @include u.breakpoint-down(small) {
@@ -17,6 +20,9 @@
 
     & .reverse {
         flex-direction: row-reverse;
+        @include u.breakpoint-down(small) {
+            flex-direction: column;
+        }
     }
 
     &__content-text {
@@ -27,12 +33,34 @@
         }
     }
 
+    &__content-headline {
+		font-size: 4rem;
+		font-size: clamp(5rem, 3.06rem + 4.45vw, 5rem);
+		line-height: 1;
+
+		@include u.breakpoint-down(small) {
+			font-size: 2.5rem;
+			font-size: clamp(
+				2.5rem,
+				1.5601503759398496rem + 5.012531328320802vw,
+				3.75rem
+			);
+			margin-block-end: u.rem(80);
+		}
+	}
+
     &__feature-img {
         width: 50vw;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include u.breakpoint-down(small) {
             width: 90vw;
         }
+    }
+
+    &__feature-img img {
+        width: 35vw;
     }
 }
 
