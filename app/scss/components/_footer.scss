@@ -5,6 +5,7 @@
 	$b: &;
 	background-image: url(/img/accents/Texture\ Mushroom\ Green.svg);
 	background-size: 75vw;
+	background-attachment: fixed;
 	z-index: 50;
 
 	&__wrapper {
@@ -14,7 +15,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: u.rem(40) u.rem(20);
-		min-height:100vh;
+		min-height: 100vh;
 	}
 
 	&__logo {

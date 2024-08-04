@@ -2,7 +2,7 @@
 
 .features {
 	min-height: 300vh;
-	padding-bottom: 10vh;
+	padding-bottom: 20vh;
 	position: relative;
 	background-color: var(--feature-1);
 	margin-block-start: -1px;
@@ -22,6 +22,14 @@
 	transition: background-color 2s;
 	z-index: -1;
 	overflow: hidden;
+
+	@include u.breakpoint-down(medium) {
+		background-size: 20vw 20vw;
+	}
+
+	@include u.breakpoint-down(small) {
+		background-size: 10vw 10vw;
+	}
 
 	&__wrapper {
 		gap: u.rem(40) u.rem(20);

@@ -11,10 +11,11 @@ window.onload = function () {
 	// Footer code
 	const footerTag = document.querySelector('h2.footer__title');
 	const footerOptions = [
-		"Your Journey Awaits.<br>Let's get started!",
-		'I saw a frog today oh boy.',
-		'Put us to work!',
-		'Want a free consult?',
+		"Your Journey Awaits.<br>Let's Get Started!",
+		"Level Up Your Brand<br>Today.",
+		"Tiny Pond, Big Results.<br>Let's Dive In.",
+		"Free Consult?<br>We Got You.",
+		"You Have Ideas. We Have Ideas.<br>Let's Chat."
 	];
 
 	const randomFooter = function () {
