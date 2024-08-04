@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1214.07 2807.83"><defs><style>.cls-1{letter-spacing:-.02em;}.cls-2{letter-spacing:0em;}.cls-3{fill:rgba(11,24,30,0.39);font-family:Yink, Yink;font-size:1103.71px;}</style></defs><text class="cls-3" transform="translate(275.93 0) rotate(90)"><tspan x="0" y="0">T</tspan><tspan class="cls-1" x="743.9" y="0">I</tspan><tspan class="cls-2" x="1154.49" y="0">NY</tspan></text></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1214.07 2807.83">
+  <defs>
+    <style>
+      font-face {
+        font-family: 'Yink';
+        src: url('/fonts/Yink Regular.ttf'); /* replace with your font file URL */
+      }
+     .cls-1 {
+        letter-spacing: -.02em;
+      }
+     .cls-2 {
+        letter-spacing: 0em;
+      }
+     .cls-3 {
+        fill: rgba(11, 24, 30, 0.39);
+        font-family: Yink, Yink;
+        font-size: 1103.71px;
+      }
+    </style>
+  </defs>
+  <text class="cls-3" transform="translate(275.93 0) rotate(90)">
+    <tspan x="0" y="0">T</tspan>
+    <tspan class="cls-1" x="743.9" y="0">I</tspan>
+    <tspan class="cls-2" x="1154.49" y="0">NY</tspan>
+  </text>
+</svg>
