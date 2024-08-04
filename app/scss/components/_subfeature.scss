@@ -1,0 +1,38 @@
+@use '../util' as u;
+
+
+.subfeature {
+    height: 100vh;
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5vw;
+
+        @include u.breakpoint-down(small) {
+            flex-direction: column;
+        }
+    }
+
+    & .reverse {
+        flex-direction: row-reverse;
+    }
+
+    &__content-text {
+        width: 50vw;
+        @include u.breakpoint-down(small) {
+            width: 90vw;
+            text-align: center;
+        }
+    }
+
+    &__feature-img {
+        width: 50vw;
+
+        @include u.breakpoint-down(small) {
+            width: 90vw;
+        }
+    }
+}
+

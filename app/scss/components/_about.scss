@@ -1,0 +1,107 @@
+@use '../util' as u;
+
+.about {
+  width: 100vw;
+  background-color: var(--background-color);
+  transition: background-color 2s;
+  background-image: url(/img/accents/Texture\ Mushroom\ Green.svg);
+  // background-color: hsla(0, 94%, 48%, 0.2);
+  background-attachment: fixed;
+
+  @include u.breakpoint-down(small) {
+    background-size: 30px 30px;
+  }
+
+
+  &__subsection {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__images {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5vw;
+
+    @include u.breakpoint-down(small) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.about h2 {
+  text-align: center;
+  margin: 20vh 0 5vh 0;
+}
+
+.about p {
+  text-align: center;
+}
+
+.about img {
+  height: 20vw; /* set a fixed height for all images */
+  object-fit: contain;
+  margin: 10px;
+  @include u.breakpoint-down(small) {
+    height: 80vw;
+  }
+}
+
+.about__subsection.section1 {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.about__subsection.section2 {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+// #design-1, #design-5 {
+//   flex: 0.5 1 0; /* smallest images */
+//   flex-basis: 15%; /* initial width */
+// }
+// #design-2, #design-4 {
+//   flex: 1 1 0; /* smaller images */
+//   flex-basis: 25%; /* initial width */
+// }
+// #design-3 {
+//   flex: 2 1 0; /* largest image */
+//   flex-basis: 40%; /* initial width */
+// }
+
+#design-1 {
+  position: absolute;
+  top: -20vh;
+  left: -25vw;
+}
+#design-2 {
+  position: absolute;
+  top: 0vh;
+  left: -30vw;
+}
+#design-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  size: 100%;
+}
+// #design-4 {
+//   position: absolute;
+//   top: -20vh;
+//   left: -25vw;
+// }
+// #design-5 {
+//   position: absolute;
+//   top: -20vh;
+//   left: -25vw;
+// }
