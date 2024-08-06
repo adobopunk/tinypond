@@ -12,16 +12,16 @@ window.onload = function () {
 	const footerTag = document.querySelector('h2.footer__title');
 	const footerOptions = [
 		"Your Journey Awaits.<br>Let's Get Started!",
-		"Level Up Your Brand<br>Today.",
+		'Level Up Your Brand<br>Today.',
 		"Tiny Pond, Big Results.<br>Let's Dive In.",
-		"Free Consult?<br>We Got You.",
-		"You Have Ideas. We Have Ideas.<br>Let's Chat."
+		'Free Consult?<br>We Got You.',
+		"You Have Ideas. We Have Ideas.<br>Let's Chat.",
 	];
 
 	const randomFooter = function () {
 		// Choose a random index from the array
-        const randomItem = Math.floor(Math.random() * footerOptions.length);
-        console.log(randomItem);
+		const randomItem = Math.floor(Math.random() * footerOptions.length);
+		console.log(randomItem);
 		// Grab the selected index
 		const selectedFooter = footerOptions[randomItem];
 		// Apply inner HTML
@@ -29,4 +29,28 @@ window.onload = function () {
 	};
 
 	randomFooter();
+
+	const copyLink = document.getElementById('copy-link');
+	console.log(copyLink);
+
+	copyLink.addEventListener('click', (e) => {
+		e.preventDefault(); // prevent default link behavior
+
+		const textToCopy = 'hi@tinypond.studio'; // the text you want to copy
+		navigator.clipboard
+			.writeText(textToCopy)
+			.then(() => {
+				console.log('Text copied to clipboard!');
+				// Change the inner HTML to "Email copied to clipboard!"
+				copyLink.innerHTML = 'Email copied to clipboard!';
+
+				// Delay for 2 seconds before changing it back
+				setTimeout(() => {
+					copyLink.innerHTML = 'hi@tinypond.studio';
+				}, 2000);
+			})
+			.catch((error) => {
+				console.error('Error copying text:', error);
+			});
+	});
 };

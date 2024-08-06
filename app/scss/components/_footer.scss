@@ -3,10 +3,11 @@
 .footer {
 	background-color: var(--background-color);
 	$b: &;
-	background-image: url(/img/accents/Texture\ Mushroom\ Green.svg);
-	background-size: 75vw;
+	background-image: url(/img/accents/Texture\ Mushroom\ Green\ -\ Compressed.svg);
+	background-size: 140vh;
 	background-attachment: fixed;
 	z-index: 50;
+	background-repeat: repeat-x;
 
 	&__wrapper {
 		text-align: center;
@@ -88,6 +89,34 @@
 	&__email {
 		color: var(--lilly-green);
 
+		transform: scale(1);
+		transition-property: text-shadow, transform;
+		transform-origin: center;
+		transform: translateZ(0);
+		transition-duration: 100ms;
+
+		&:hover {
+			text-decoration-thickness: 1px;
+			transform: scale(1.05);
+			color: var(--lilly-green);
+			text-shadow: 0 0 20px hsla(195, 77%, 50%, 0.476);
+		}
+	}
+
+	&__homelink {
+		transform: scale(1);
+		transition-property: transform, opacity;
+		transform-origin: center;
+		transform: translateZ(0);
+		transition-duration: 400ms;
+		&:hover {
+			opacity: 0.95;
+			transform: scale(1.05);
+		}
+	}
+
+	&__about-link {
+		color: var(--murky-clouds);
 		transform: scale(1);
 		transition-property: text-shadow, transform;
 		transform-origin: center;

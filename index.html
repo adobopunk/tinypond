@@ -60,7 +60,11 @@
 							>
 						</li>
 						<li class="topnav__item">
-							<a href="" class="topnav__link">Connect</a>
+							<a
+								href="#contact"
+								class="topnav__link js-scroll scroll-to"
+								>Connect</a
+							>
 						</li>
 					</ul>
 				</nav>
@@ -68,7 +72,7 @@
 		</header>
 		<main id="main">
 			<article>
-				<section class="hero">
+				<section class="hero" id="home">
 					<div class="wrapper hero__wrapper">
 						<video
 							class="hero__background-video"
@@ -84,12 +88,12 @@
 							/>
 						</video>
 						<div class="hero__text">
-							<h1 class="hero__title" data-parallax="0.2">
+							<h1 class="hero__title" data-parallax="0.4">
 								We make elite visuals.
 							</h1>
 							<p
 								class="hero__content large"
-								data-parallax="0.2"
+								data-parallax="0.4"
 							>
 								A modern digital co-op, owned and
 								operated by passionate and experienced
@@ -99,7 +103,7 @@
 							<div
 								class="bg-text-hero"
 								aria-hidden="true"
-								data-parallax="0.4"
+								data-parallax="0.6"
 							>
 								TINY POND
 							</div>
@@ -108,11 +112,8 @@
 				</section>
 				<section class="reel">
 					<div
-						style="
-							padding: 56.25% 0 0 0;
-							position: relative;
-							z-index: 100;
-						"
+						class="reel__video"
+						style="padding: 56.25% 0 0 0; position: relative"
 					>
 						<iframe
 							src="https://player.vimeo.com/video/325355987?autoplay=0&loop=1&muted=1&controls=1"
@@ -324,64 +325,11 @@
 					</section>
 				</div>
 				<section class="gallery">
-					<div class="gallery__wrapper wrapper">
-						<!-- <h1 class="gallery__headline">Selected Projects</h1> -->
-						<div class="gallery__image-gallery">
-							<div class="gallery__row" id="row1">
-								<img
-									src="/img/landing/square_mtndew.jpg"
-									alt=""
-									class="gallery__bubble"
-								/>
-								<img
-									src="/img/landing/square_mtndew.jpg"
-									alt=""
-									class="gallery__bubble"
-								/>
-								<img
-									src="/img/accents/Star Burst.svg"
-									alt=""
-									class="gallery__accent rotate"
-								/>
-							</div>
-							<div class="gallery__row" id="row2">
-								<img
-									src="/img/accents/Star Burst.svg"
-									alt=""
-									class="gallery__accent rotate"
-								/>
-								<img
-									src="/img/landing/square_mtndew.jpg"
-									alt=""
-									class="gallery__bubble"
-								/>
-								<img
-									src="/img/landing/square_mtndew.jpg"
-									alt=""
-									class="gallery__bubble"
-								/>
-							</div>
-							<div class="gallery__row" id="row3">
-								<img
-									src="/img/landing/square_mtndew.jpg"
-									alt=""
-									class="gallery__bubble"
-								/>
-								<img
-									src="/img/landing/square_mtndew.jpg"
-									alt=""
-									class="gallery__bubble"
-								/>
-							</div>
-						</div>
-					</div>
-					<div class="gallery__marquee">
-						<span>TINY POND</span>
-					</div>
+					<div class="gallery__wrapper wrapper"></div>
 				</section>
 			</article>
 		</main>
-		<footer class="footer">
+		<footer class="footer" id="contact">
 			<h2 class="visually-hidden">Footer</h2>
 			<div class="footer__wrapper wrapper">
 				<h2 class="footer__title">
@@ -390,6 +338,7 @@
 				<h3 class="footer__email">
 					<a
 						class="footer__email"
+						id="copy-link"
 						href="mailto:hi@tinypond.studio"
 						>hi@tinypond.studio</a
 					>
@@ -397,13 +346,23 @@
 
 				<ul class="footer__links">
 					<li class="footer__item">
-						<h3>About Us</h3>
+						<a href="/about.html#about">
+							<h3 class="footer__about-link">About Us</h3>
+						</a>
 					</li>
 					<li class="footer__item">
-						<h3>Our Values</h3>
+						<a href="/about.html#values"
+							><h3 class="footer__about-link">
+								Our Values
+							</h3></a
+						>
 					</li>
 					<li class="footer__item">
-						<h3>The Team</h3>
+						<a href="/about.html#team"
+							><h3 class="footer__about-link">
+								The Team
+							</h3></a
+						>
 					</li>
 				</ul>
 				<section class="footer__column follow">
@@ -462,7 +421,10 @@
 						</li>
 					</ul>
 					<section class="footer__logo">
-						<a href="/" class="footer__homelink logo-hover">
+						<a
+							href="#home"
+							class="footer__homelink logo-hover js-scroll scroll-to"
+						>
 							<img
 								src="/img/Logos/Full White TP.svg"
 								alt="Tiny Pond homepage"
@@ -479,8 +441,7 @@
 			</div>
 		</footer>
 		<script src="/app/js/homepage.js" defer></script>
-		<!-- <script src="/app/js/animation.js" defer></script> -->
-		<!-- <script src="/app/js/parallax-features.js" defer></script> -->
 		<script src="/app/js/footer.js" defer></script>
+		<script src="/app/js/scrolling.js"></script>
 	</body>
 </html>
