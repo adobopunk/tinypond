@@ -23,7 +23,14 @@
 		display: block;
 		position: relative;
 		z-index: 1;
-		box-shadow: 0 0px 100px rgba(0, 0, 0, 1);
+		box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
 		overflow: visible;
+		transition: box-shadow 0.5s ease-in-out 0s;
 	}
+
+	&__video.loaded {
+
+		box-shadow: 0 0px 100px rgba(0, 0, 0, 1);
+	  
+	  }
 }

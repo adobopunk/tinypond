@@ -7,6 +7,26 @@ function debug(message) {
 	// console.log(`[Debug] ${message}`);
 }
 
+//fade-in video
+function setupReelVideoFadeIn() {
+	const reelVideos = selectAll('.reel__video');
+  
+	debug(`Found ${reelVideos.length} reel videos`);
+  
+	reelVideos.forEach((video) => (video.style.opacity = 0));
+  
+	function fadeInReelVideos() {
+	  reelVideos.forEach((video) => {
+		video.style.animation = 'fadein 1.0s both';
+	  });
+	}
+  
+	return fadeInReelVideos;
+  }
+  
+  const fadeInReelVideos = setupReelVideoFadeIn();
+  fadeInReelVideos();
+
 // Fade-in animations
 function setupFadeInAnimations() {
 	const animatedTags = selectAll(
@@ -34,6 +54,20 @@ function setupFadeInAnimations() {
 
 	return fadeIn;
 }
+
+//add delay on video drop shadow
+
+document.addEventListener('DOMContentLoaded', function() {
+
+	const video = document.querySelector('.reel__video');
+  
+	setTimeout(() => {
+  
+	  video.classList.add('loaded');
+  
+	}, 250);
+  
+  });
 
 // Accent animations
 function setupAccentAnimations() {
@@ -225,3 +259,5 @@ if (!document.querySelector('style#fade-in-animation')) {
 	document.head.appendChild(style);
 	debug('Added fade-in animation CSS');
 }
+
+
