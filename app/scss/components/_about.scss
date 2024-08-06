@@ -2,6 +2,70 @@
 
 .about {
 	width: 100vw;
-	height: 100vh;
-	background-color: var(--background-color);
+	height: 200vh;
+	background-color: var(--feature-1);
+	padding-top: 10vh;
+	background-image: linear-gradient(
+			to bottom right,
+			transparent,
+			transparent
+		),
+		url(/img/backgrounds/Tiny\ Pond\ horizontal\ background\ text.svg);
+
+	background-position: center; 
+	background-size: 500vh; 
+	@include u.breakpoint-down(large) {
+		background-size: 600vh;
+	}
+
+	background-repeat: no-repeat;
+
+	color: var(--murky-water);
+
+	&__background-grid {
+		position: absolute; /* Add this to position the grid overlay */
+		background-attachment: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 200%;
+		background-image: linear-gradient(
+				to right,
+				rgba(129, 129, 129, 0.05) 1px,
+				transparent 1px
+			),
+			linear-gradient(
+				to bottom,
+				rgba(129, 129, 129, 0.05) 1px,
+				transparent 1px
+			);
+
+		background-size: 3vw 3vw; /* Adjust grid size as needed */
+		background-position: 0 0; /* Remove the -50% offset */
+		z-index: 1; /* Add this to ensure the grid is on top of the background image */
+
+		@include u.breakpoint-down(large) {
+			background-size: 15vw 15vw;
+		}
+	
+		@include u.breakpoint-down(small) {
+			background-size: 10vw 10vw;
+		}
+	}
+
+	&__layout1 {
+		display: flex;
+		flex-direction: row;
+		gap: 60px;
+	}
+
+	&__left {
+		flex: 0 0 60vw;
+	}
+
+	&__right {
+		flex: 0 0 40vw;
+	}
+
+	
 }
