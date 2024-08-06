@@ -1,4 +1,7 @@
+@use '../util' as u;
+
 .gallery {
+	position: relative;
 	min-height: 100vh;
 	background-color: var(--background-color);
 	text-align: left;
@@ -9,30 +12,72 @@
 
 	&__wrapper {
 		padding-block: 12vh;
+
+		@include u.breakpoint(small) {
+			max-width: 90vw;
+		}
 	}
 
 	&__image-gallery {
+		z-index: 10;
 		display: flex;
 		flex-direction: column;
-		gap: 5vh;
+		gap: 12vh;
 	}
 
 	&__row {
+		z-index: 10;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		gap: 5%;
+		gap: 6%;
 	}
 
 	&__bubble {
-		width: 16vw;
+		width: 22vw;
 		border-radius: 50%;
 		border: 5px solid var(--lilly-green);
+
+		@include u.breakpoint-down(medium) {
+			width: 20vw;
+		}
+
+		@include u.breakpoint-down(small) {
+			width: 25vw;
+		}
 	}
 
 	&__accent {
 		width: 20vw;
 	}
+
+	&__marquee {
+		position: absolute;
+		top: 0;
+		font-family: u.$silly-font;
+		color: var(--feature-1);
+		font-size: 36vw;
+		text-wrap: nowrap;
+		z-index: 0;
+		line-height: 1;
+		overflow: hidden;
+		width: 100%;
+	}
+
+	&__marquee span {
+		animation: moveLeft 50s infinite;
+		white-space: nowrap;
+		display: block;
+		position: relative;
+	}
 }
 
+// @keyframes moveLeft {
+// 	0% {
+// 		transform: translateX(0);
+// 	}
+// 	100% {
+// 		transform: translateX(-3000vw);
+// 	}
+// }

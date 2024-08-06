@@ -38,7 +38,6 @@ window.addEventListener('resize', function () {
 	fadeIn();
 });
 
-
 //accent animations
 
 const breathers = document.querySelectorAll('.breathe');
@@ -77,3 +76,16 @@ spinners.forEach(function (spinner, index) {
 		}
 	);
 });
+
+// function tinyMarquee() {
+// 	const marqueeText = 'TINY POND';
+
+// 	const marqueeFill = new Array(50).fill(marqueeText).join('');
+
+// 	const marquee = document.querySelector('.gallery__marquee span');
+// 	console.log(marquee);
+
+// 	marquee.innerHTML = marqueeFill;
+// }
+
+// tinyMarquee();
