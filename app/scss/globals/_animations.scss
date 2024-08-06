@@ -4,9 +4,32 @@
 		transform: translateY(20px);
 	}
 	50% {
-		transform: translate(0);
+		
 	}
 	100% {
 		opacity: 1;
+		transform: translate(0);
 	}
 }
+
+// @media (min-width: 640px) {
+// 	.subfeature__img, .subfeature__accent
+// 	{
+// 		opacity: 0;
+// 		transition: opacity 0.8s ease;
+// 	}
+
+// 	.in-viewport .subfeature__img,
+// 	.in-viewport .accent {
+// 		opacity: 1;
+// 	}
+// }
+
+.animation-wrapper {
+	position: relative;
+  }
+  
+  .animation-wrapper[data-parallax] {
+	transform: translate(0, 0);
+	transition: transform 0.5s ease;
+  }

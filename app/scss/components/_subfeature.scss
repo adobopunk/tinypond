@@ -5,7 +5,7 @@
 	position: relative;
 	&__content {
 		height: 100vh;
-		z-index: 10;
+		z-index: 100;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -26,6 +26,7 @@
 
 	&__content-text {
 		width: 50vw;
+		z-index: 200;
 		@include u.breakpoint-down(small) {
 			width: 90vw;
 			text-align: center;
@@ -64,6 +65,7 @@
 		left: 0;
 		width: 20vw;
 		z-index: -1;
+		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 	}
 
 	&__accent {
@@ -79,7 +81,11 @@
 	}
 
 	&__animation-feature {
-		width: 50vw;
+		width: 45vw;
+		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+	}
+
+	&__broadcast-feature {
 		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
 	}
 }
@@ -142,8 +148,28 @@
 #porscheClip {
 	border-radius: 20px;
 	top: 75vh;
-	left: 28vw;
+	left: 24vw;
 	width: 23vw;
+}
+
+#valPoster {
+	top: 8vh;
+	width: 22vw;
+	left: 1vw;
+	border-radius: 5px;
+}
+
+#calderaPoster {
+	top: 76vh;
+	width: 22vw;
+	left: 22vw;
+	border-radius: 5px;
+}
+
+#accent-lillypad {
+	top: -6vh;
+	left: 70vw;
+	width: 12vw;
 }
 
 

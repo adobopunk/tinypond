@@ -1,0 +1,38 @@
+.gallery {
+	min-height: 100vh;
+	background-color: var(--background-color);
+	text-align: left;
+
+	&__headline {
+		font-size: 5em;
+	}
+
+	&__wrapper {
+		padding-block: 12vh;
+	}
+
+	&__image-gallery {
+		display: flex;
+		flex-direction: column;
+		gap: 5vh;
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 5%;
+	}
+
+	&__bubble {
+		width: 16vw;
+		border-radius: 50%;
+		border: 5px solid var(--lilly-green);
+	}
+
+	&__accent {
+		width: 20vw;
+	}
+}
+
