@@ -4,33 +4,33 @@ const selectAll = (selector) => document.querySelectorAll(selector);
 
 // Debugging function
 function debug(message) {
-    // console.log(`[Debug] ${message}`);
+	// console.log(`[Debug] ${message}`);
 }
 
 // Mobile device check
 function isMobileDevice() {
-    return window.innerWidth <= 768; // You can adjust this threshold as needed
+	return window.innerWidth <= 768; // You can adjust this threshold as needed
 }
 
 //fade-in video
 function setupReelVideoFadeIn() {
 	const reelVideos = selectAll('.reel__video');
-  
+
 	debug(`Found ${reelVideos.length} reel videos`);
-  
+
 	reelVideos.forEach((video) => (video.style.opacity = 0));
-  
+
 	function fadeInReelVideos() {
-	  reelVideos.forEach((video) => {
-		video.style.animation = 'fadein 1.0s both';
-	  });
+		reelVideos.forEach((video) => {
+			video.style.animation = 'fadein 1.0s both';
+		});
 	}
-  
+
 	return fadeInReelVideos;
-  }
-  
-  const fadeInReelVideos = setupReelVideoFadeIn();
-  fadeInReelVideos();
+}
+
+const fadeInReelVideos = setupReelVideoFadeIn();
+fadeInReelVideos();
 
 // Fade-in animations
 function setupFadeInAnimations() {
@@ -62,17 +62,13 @@ function setupFadeInAnimations() {
 
 //add delay on video drop shadow
 
-document.addEventListener('DOMContentLoaded', function() {
-
+document.addEventListener('DOMContentLoaded', function () {
 	const video = document.querySelector('.reel__video');
-  
+
 	setTimeout(() => {
-  
-	  video.classList.add('loaded');
-  
+		video.classList.add('loaded');
 	}, 250);
-  
-  });
+});
 
 // Accent animations
 function setupAccentAnimations() {
@@ -112,144 +108,146 @@ function setupAccentAnimations() {
 
 // Parallax effects
 function setupParallaxEffects() {
-    const heroSection = select('.hero');
-    const featuresContainer = select('.features');
-    const sections = selectAll('.features .subfeature');
+	const heroSection = select('.hero');
+	const featuresContainer = select('.features');
+	const sections = selectAll('.features .subfeature');
 
-    debug(
-        `Hero section found: ${!!heroSection}, Features container found: ${!!featuresContainer}, Number of sections: ${
-            sections.length
-        }`
-    );
+	debug(
+		`Hero section found: ${!!heroSection}, Features container found: ${!!featuresContainer}, Number of sections: ${
+			sections.length
+		}`
+	);
 
-    function applyHeroParallax() {
-        if (!heroSection) {
-            debug('Hero section not found, skipping hero parallax');
-            return;
-        }
+	function applyHeroParallax() {
+		if (!heroSection) {
+			debug('Hero section not found, skipping hero parallax');
+			return;
+		}
 
-        if (isMobileDevice()) {
-            debug('Mobile device detected, skipping hero parallax');
-            return;
-        }
+		if (isMobileDevice()) {
+			debug('Mobile device detected, skipping hero parallax');
+			return;
+		}
 
-        const scrollY =
-            window.pageYOffset || document.documentElement.scrollTop;
-        const parallaxTags = heroSection.querySelectorAll('[data-parallax]');
+		const scrollY =
+			window.pageYOffset || document.documentElement.scrollTop;
+		const parallaxTags = heroSection.querySelectorAll('[data-parallax]');
 
-        debug(`Applying hero parallax to ${parallaxTags.length} elements`);
+		debug(`Applying hero parallax to ${parallaxTags.length} elements`);
 
-        parallaxTags.forEach((tag) => {
-            const speed = parseFloat(tag.getAttribute('data-parallax'));
-            const yPos = scrollY * speed;
-            tag.style.transform = `translate3d(0, ${yPos}px, 0)`;
-        });
-    }
+		parallaxTags.forEach((tag) => {
+			const speed = parseFloat(tag.getAttribute('data-parallax'));
+			const yPos = scrollY * speed;
+			tag.style.transform = `translate3d(0, ${yPos}px, 0)`;
+		});
+	}
 
-    function applyFeaturesParallax() {
-        if (!featuresContainer) {
-            debug('Features container not found, skipping features parallax');
-            return;
-        }
+	function applyFeaturesParallax() {
+		if (!featuresContainer) {
+			debug(
+				'Features container not found, skipping features parallax'
+			);
+			return;
+		}
 
-        if (isMobileDevice()) {
-            debug('Mobile device detected, skipping features parallax');
-            return;
-        }
+		if (isMobileDevice()) {
+			debug('Mobile device detected, skipping features parallax');
+			return;
+		}
 
-        const scrollY =
-            window.pageYOffset || document.documentElement.scrollTop;
-        const viewportHeight = window.innerHeight;
-        const featuresTop = featuresContainer.offsetTop;
+		const scrollY =
+			window.pageYOffset || document.documentElement.scrollTop;
+		const viewportHeight = window.innerHeight;
+		const featuresTop = featuresContainer.offsetTop;
 
-        sections.forEach((section, index) => {
-            const topSection = section.offsetTop + featuresTop;
-            const midSection = topSection + section.offsetHeight / 2;
-            const distanceToSection =
-                scrollY + viewportHeight / 2 - midSection;
-            const parallaxTags = section.querySelectorAll('[data-parallax]');
+		sections.forEach((section, index) => {
+			const topSection = section.offsetTop + featuresTop;
+			const midSection = topSection + section.offsetHeight / 2;
+			const distanceToSection =
+				scrollY + viewportHeight / 2 - midSection;
+			const parallaxTags = section.querySelectorAll('[data-parallax]');
 
-            debug(
-                `Applying parallax to section ${index + 1}, ${
-                    parallaxTags.length
-                } parallax elements`
-            );
+			debug(
+				`Applying parallax to section ${index + 1}, ${
+					parallaxTags.length
+				} parallax elements`
+			);
 
-            parallaxTags.forEach((tag) => {
-                const speed = parseFloat(tag.getAttribute('data-parallax'));
-                tag.style.transform = `translate3d(0, ${
-                    distanceToSection * speed
-                }px, 0)`;
-            });
+			parallaxTags.forEach((tag) => {
+				const speed = parseFloat(tag.getAttribute('data-parallax'));
+				tag.style.transform = `translate3d(0, ${
+					distanceToSection * speed
+				}px, 0)`;
+			});
 
-            // Background color change logic
-            const dataBackground = section.getAttribute('data-background');
-            if (dataBackground) {
-                const sectionVisibility =
-                    (scrollY + viewportHeight / 2 - topSection) /
-                    section.offsetHeight;
-                if (sectionVisibility > 0 && sectionVisibility < 1) {
-                    let backgroundColor = dataBackground;
-                    if (backgroundColor.startsWith('var(')) {
-                        backgroundColor = getComputedStyle(
-                            document.documentElement
-                        ).getPropertyValue(
-                            backgroundColor.slice(4, -1).trim()
-                        );
-                    }
-                    featuresContainer.style.backgroundColor =
-                        backgroundColor;
-                    debug(
-                        `Changed background color to ${backgroundColor} for section ${
-                            index + 1
-                        }`
-                    );
-                }
-            }
-        });
-    }
+			// Background color change logic
+			const dataBackground = section.getAttribute('data-background');
+			if (dataBackground) {
+				const sectionVisibility =
+					(scrollY + viewportHeight / 2 - topSection) /
+					section.offsetHeight;
+				if (sectionVisibility > 0 && sectionVisibility < 1) {
+					let backgroundColor = dataBackground;
+					if (backgroundColor.startsWith('var(')) {
+						backgroundColor = getComputedStyle(
+							document.documentElement
+						).getPropertyValue(
+							backgroundColor.slice(4, -1).trim()
+						);
+					}
+					featuresContainer.style.backgroundColor =
+						backgroundColor;
+					debug(
+						`Changed background color to ${backgroundColor} for section ${
+							index + 1
+						}`
+					);
+				}
+			}
+		});
+	}
 
-    return { applyHeroParallax, applyFeaturesParallax };
+	return { applyHeroParallax, applyFeaturesParallax };
 }
 
 // Main initialization
 function initializeAnimationsAndParallax() {
-    debug('Initializing animations and parallax effects');
+	debug('Initializing animations and parallax effects');
 
-    const fadeIn = setupFadeInAnimations();
-    setupAccentAnimations();
-    const { applyHeroParallax, applyFeaturesParallax } =
-        setupParallaxEffects();
+	const fadeIn = setupFadeInAnimations();
+	setupAccentAnimations();
+	const { applyHeroParallax, applyFeaturesParallax } =
+		setupParallaxEffects();
 
-    // Combine all effects into a single scroll handler
-    function handleScroll() {
-        fadeIn();
-        applyHeroParallax();
-        applyFeaturesParallax();
-    }
+	// Combine all effects into a single scroll handler
+	function handleScroll() {
+		fadeIn();
+		applyHeroParallax();
+		applyFeaturesParallax();
+	}
 
-    // Initial application
-    handleScroll();
+	// Initial application
+	handleScroll();
 
-    // Throttle scroll events for better performance
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                handleScroll();
-                ticking = false;
-            });
-            ticking = true;
-        }
-    });
+	// Throttle scroll events for better performance
+	let ticking = false;
+	window.addEventListener('scroll', () => {
+		if (!ticking) {
+			window.requestAnimationFrame(() => {
+				handleScroll();
+				ticking = false;
+			});
+			ticking = true;
+		}
+	});
 
-    // Handle resize events
-    window.addEventListener('resize', () => {
-        handleScroll();
-        debug(`Window resized. Is mobile device: ${isMobileDevice()}`);
-    });
+	// Handle resize events
+	window.addEventListener('resize', () => {
+		handleScroll();
+		debug(`Window resized. Is mobile device: ${isMobileDevice()}`);
+	});
 
-    debug('Initialization complete, event listeners attached');
+	debug('Initialization complete, event listeners attached');
 }
 
 // Run initialization when the DOM is fully loaded
@@ -275,5 +273,3 @@ if (!document.querySelector('style#fade-in-animation')) {
 	document.head.appendChild(style);
 	debug('Added fade-in animation CSS');
 }
-
-

@@ -58,20 +58,7 @@
 		z-index: -100;
 	}
 
-	&__scroll {
-		align-self: center;
-		opacity: 0;
-		animation: fadeInOut 4s infinite;
-		-webkit-animation: fadeInOut 4s infinite;
-		-moz-animation: fadeInOut 4s infinite;
-		-o-animation: fadeInOut 4s infinite;
-		animation: fadeInOut 4s infinite;
-		animation-delay: 1.5s;
-
-		@include u.breakpoint-down(small) {
-			scale: 75%;
-		}
-	}
+	
 }
 
 .bg-text-hero {
