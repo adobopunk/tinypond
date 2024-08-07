@@ -12,6 +12,11 @@
 		height: 90vh;
 		gap: 40px;
 		padding-top: u.rem(200);
+
+		@include u.breakpoint-down(medium) {
+			text-align: center;
+		}
+		
 	}
 	&__image {
 		width: 62%;

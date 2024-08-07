@@ -12,14 +12,15 @@
 		justify-content: center;
 		gap: 5vw;
 
-		@include u.breakpoint-down(small) {
+		@include u.breakpoint-down(medium) {
 			flex-direction: column;
+			height: 80vh;
 		}
 	}
 
 	& .reverse {
 		flex-direction: row-reverse;
-		@include u.breakpoint-down(small) {
+		@include u.breakpoint-down(medium) {
 			flex-direction: column;
 		}
 	}
@@ -27,7 +28,7 @@
 	&__content-text {
 		width: 50vw;
 		z-index: 200;
-		@include u.breakpoint-down(small) {
+		@include u.breakpoint-down(medium) {
 			width: 90vw;
 			text-align: center;
 		}
@@ -66,6 +67,10 @@
 		width: 20vw;
 		z-index: -1;
 		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+
+		@include u.breakpoint-down(small) {
+			display: none;
+		}
 	}
 
 	&__accent {
@@ -83,6 +88,10 @@
 	&__animation-feature {
 		width: 45vw;
 		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+
+		@include u.breakpoint-down(small) {
+			width: 100vw;
+		}
 	}
 
 	&__broadcast-feature {
