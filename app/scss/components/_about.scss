@@ -42,7 +42,7 @@
 
 		background-size: 3vw 3vw; /* Adjust grid size as needed */
 		background-position: 0 0; /* Remove the -50% offset */
-		z-index: 1; /* Add this to ensure the grid is on top of the background image */
+		z-index: 0; /* Add this to ensure the grid is on top of the background image */
 
 		@include u.breakpoint-down(large) {
 			background-size: 15vw 15vw;
