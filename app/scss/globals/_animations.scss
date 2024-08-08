@@ -11,20 +11,29 @@
 		transform: translate(0);
 	}
 }
+//Transition blinking
+@keyframes fadeInOut {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 
-// @media (min-width: 640px) {
-// 	.subfeature__img, .subfeature__accent
-// 	{
-// 		opacity: 0;
-// 		transition: opacity 0.8s ease;
-// 	}
+@keyframes fadeOnLoad {
+	0% {
+		opacity: 0;
+	}
 
-// 	.in-viewport .subfeature__img,
-// 	.in-viewport .accent {
-// 		opacity: 1;
-// 	}
-// }
-
+	100% {
+		opacity: 1;
+	}
+}
+//Parallax
 .animation-wrapper {
 	position: relative;
   }
