@@ -1,17 +1,17 @@
 @use '../util' as u;
 
 .subfeature {
+	z-index: 1;
 	height: 100vh;
 	position: relative;
+
 	&__content {
-		height: 100vh;
-		z-index: 100;
+		min-height: 100vh;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
 		gap: 5vw;
-
 		@include u.breakpoint-down(medium) {
 			flex-direction: column;
 			height: 80vh;
@@ -27,7 +27,6 @@
 
 	&__content-text {
 		width: 50vw;
-		z-index: 200;
 		@include u.breakpoint-down(medium) {
 			width: 90vw;
 			text-align: center;
@@ -64,9 +63,12 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 20vw;
+		width: 400px;
 		z-index: -1;
 		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+
+		@include u.breakpoint-down(large) {
+		}
 
 		@include u.breakpoint-down(small) {
 			display: none;
@@ -111,8 +113,7 @@
 
 #mtndew {
 	top: 4vh;
-	left: 72vw;
-	width: 18vw;
+	left: 68vw;
 }
 
 #warzone {
@@ -124,7 +125,6 @@
 	left: 25vw;
 	top: 80vh;
 	width: 25vw;
-
 }
 
 #accent-starburst {

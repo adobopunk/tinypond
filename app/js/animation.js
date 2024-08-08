@@ -1,5 +1,5 @@
 const animatedTags = document.querySelectorAll(
-	' h1, h2, h3, p, .about__img, a.button, .footer__img, .topnav__homelink, .bg-text-hero, .topnav__item, .footer__logo, .footer__links, .subfeature__img, .subfeature__accent,  .subfeature__feature-img'
+	' h1, h2, h3, p, .about__img, a.button, .footer__img, .topnav__homelink, .bg-text-hero, .topnav__item, .footer__logo, .footer__links, .subfeature__img, .subfeature__accent,  .subfeature__feature-img, .next-arrow, .subfeature__content, .subfeature__content-text'
 );
 
 //fade out on load

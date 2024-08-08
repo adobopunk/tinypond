@@ -66,6 +66,8 @@
 		// margin-block-end: u.rem(10);
 		color: var(--murky-clouds);
 
+		
+
 		&:hover {
 			color: var(--lilly-green);
 
@@ -95,6 +97,10 @@
 		transform: translateZ(0);
 		transition-duration: 100ms;
 
+		@include u.breakpoint-down(small) {
+			font-size: u.rem(28);
+		}
+
 		&:hover {
 			text-decoration-thickness: 1px;
 			transform: scale(1.05);
@@ -122,6 +128,11 @@
 		transform-origin: center;
 		transform: translateZ(0);
 		transition-duration: 100ms;
+
+		@include u.breakpoint-down(small) {
+			font-size: u.rem(16);
+			text-wrap: nowrap;
+		}
 
 		&:hover {
 			text-decoration-thickness: 1px;
@@ -171,3 +182,5 @@ textarea {
 	flex-basis: 500;
 	flex-grow: 5;
 }
+
+article {}
