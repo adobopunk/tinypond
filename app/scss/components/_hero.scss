@@ -7,16 +7,15 @@
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: space-around;
-		height: 90vh;
+		align-items: left;
+		justify-content: center;
+		height: 100vh;
 		gap: 40px;
-		padding-top: u.rem(200);
+		padding-top: u.rem(20);
 
 		@include u.breakpoint-down(medium) {
 			text-align: center;
 		}
-		
 	}
 	&__image {
 		width: 62%;
@@ -36,10 +35,14 @@
 		}
 	}
 	&__text {
-		animation: fadeOnLoad 2s;
+		float: left;
 		@include u.breakpoint(large) {
 			// flex: 6;
 		}
+	}
+
+	&__title {
+		transition: opacity 0.5s; /* fade out and in */
 	}
 
 	&__button-wrapper {
@@ -58,7 +61,19 @@
 		z-index: -100;
 	}
 
-	
+	&__gradient-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: -50; /* place it just above the background video */
+		background: linear-gradient(
+			to right,
+			rgba(10, 107, 112, 0.439) 10%,
+			rgba(255, 255, 255, 0) 60%
+		);
+	}
 }
 
 .bg-text-hero {
@@ -80,4 +95,3 @@
 		font-size: u.rem(320);
 	}
 }
-

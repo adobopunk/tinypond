@@ -4,6 +4,7 @@
 	z-index: 1;
 	height: 100vh;
 	position: relative;
+	margin-block: 10vh;
 
 	&__content {
 		min-height: 100vh;
@@ -26,6 +27,8 @@
 	}
 
 	&__content-text {
+		text-align: center;
+		text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 		width: 50vw;
 		@include u.breakpoint-down(medium) {
 			width: 90vw;
@@ -46,6 +49,41 @@
 				3.75rem
 			);
 			margin-block-end: u.rem(80);
+		}
+	}
+
+	&__content-offerings {
+		margin-block: 20px;
+		display: flex;
+		flex-direction: row;
+		display: inline-block; /* add this */
+		line-height: 2;
+		text-align: center;
+	}
+	&__content-offering {
+		flex: 0 0 auto;
+		min-width: 0;
+		font-family: u.$header-font;
+		text-transform: uppercase;
+		font-size: u.rem(24);
+		border: 2px solid var(--lilly-green);
+		padding: 0px 20px;
+		border-radius: 20px;
+		white-space: nowrap;
+		margin-inline: u.rem(5);
+		display: inline-block;
+		box-sizing: border-box; /* Add this */
+		margin-bottom: u.rem(10); /* Add this */
+
+		transform: scale(1);
+		transform-origin: center;
+		transition: transform 0.45s ease, background-color 0.5s,
+			drop-shadow 1s;
+
+		&:hover {
+			background-color: var(--lilly-green);
+			transform: scale(1.05);
+			filter: drop-shadow(0 0 20px hsla(0, 0%, 90%, 0.226));
 		}
 	}
 
@@ -112,8 +150,8 @@
 }
 
 #mtndew {
-	top: 4vh;
-	left: 68vw;
+	top: 0vh;
+	left: 32vw;
 }
 
 #warzone {
@@ -121,10 +159,9 @@
 	left: 3vw;
 }
 
-#pglock {
+#cracked {
 	left: 25vw;
 	top: 80vh;
-	width: 25vw;
 }
 
 #accent-starburst {

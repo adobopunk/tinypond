@@ -2,7 +2,7 @@
 
 .about {
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	background-color: var(--feature-1);
 	padding-top: 10vh;
 	background-image: linear-gradient(
@@ -22,34 +22,11 @@
 
 	color: var(--murky-water);
 
-	&__background-grid {
-		position: absolute; /* Add this to position the grid overlay */
-		background-attachment: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: linear-gradient(
-				to right,
-				rgba(129, 129, 129, 0.05) 1px,
-				transparent 1px
-			),
-			linear-gradient(
-				to bottom,
-				rgba(129, 129, 129, 0.05) 1px,
-				transparent 1px
-			);
-
-		background-size: 3vw 3vw; /* Adjust grid size as needed */
-		background-position: 0 0; /* Remove the -50% offset */
-		z-index: 0; /* Add this to ensure the grid is on top of the background image */
+	&__wrapper {
+		width: min(100% - u.rem(40), 60%);
 
 		@include u.breakpoint-down(large) {
-			background-size: 15vw 15vw;
-		}
-
-		@include u.breakpoint-down(small) {
-			background-size: 10vw 10vw;
+			width: min(100% - u.rem(0), 80%);
 		}
 	}
 
@@ -89,29 +66,30 @@
 	}
 
 	&__layout-values {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(3, 1fr);
-		grid-gap: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 25px;
 
 		@include u.breakpoint-down(medium) {
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: repeat();
+			flex-direction: column;
 		}
 	}
 
 	&__values-grid-item {
-		padding: 20px;
-		border: 1px dashed var(--lilly-green);
-		line-height: 2;
-		border-radius: 5%;
+		
 
-		transform: translateZ(0), box-shadow, border;
-		transition: all 400ms 100ms ease-in-out;
+		transform: box-shadow, border, translateY(0);
+		transition: all 200ms ease-in-out;
 		&:hover {
+			transform: scale(1.05) translateY(-10px);
 			box-shadow: 10px 10px 10px #0a03035d;
-			transform: scale(1.1);
-			border: 1px solid var(--lilly-green);
+		}
+
+		&.span2 {
+			flex-basis: calc(
+				50% - 25px
+			); /* adjust the width calculation as needed */
 		}
 	}
 
@@ -121,21 +99,34 @@
 		margin-bottom: u.rem(10);
 	}
 
-	&__values-grid-item.div {
+	& h1 {
+		font-size: 4rem;
+		line-height: 1.2;
 	}
-}
 
-.span2 {
-	grid-column: 1/3;
-}
+	& p {
+		font-family: u.$font;
+		font-weight: 400;
+		line-height: 1.75;
+		font-style: normal;
+		margin-block: u.rem(20);
+	}
 
-.grid-intro {
-	box-shadow: 0 0 0 #0a030300;
-		transform: scale(1);
-		border: none;
-	&:hover {
+	& img {
+		border-radius: 10px;
+		box-shadow: 0 10px 10px hsla(210, 100%, 5%, 0.503);
+		margin-block: u.rem(50);
+		max-width: 1200px;
+	}
+
+	.grid-intro {
 		box-shadow: 0 0 0 #0a030300;
 		transform: scale(1);
 		border: none;
+		&:hover {
+			box-shadow: 0 0 0 #0a030300;
+			transform: scale(1);
+			border: none;
+		}
 	}
 }

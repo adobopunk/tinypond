@@ -26,7 +26,6 @@
 		transform: scale(1);
 		transition-property: transform, opacity;
 		transform-origin: center;
-		transform: translateZ(0);
 		transition-duration: 400ms;
 		&:hover {
 			opacity: 0.95;

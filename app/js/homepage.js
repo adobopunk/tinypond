@@ -35,7 +35,7 @@ fadeInReelVideos();
 // Fade-in animations
 function setupFadeInAnimations() {
 	const animatedTags = selectAll(
-		'h1, h2, h3, p, .about__img, a.button, .footer__img, .topnav__homelink, .bg-text-hero, .topnav__item, .footer__logo, .footer__links, .subfeature__img, .subfeature__accent, .subfeature__feature-img, .subfeature__content-text, .bg-text-hero'
+		'h1, h2, h3, p, .about__img, a.button, .footer__img, .topnav__homelink, .bg-text-hero, .topnav__item, .footer__logo, .footer__links, .subfeature__img, .subfeature__accent, .subfeature__feature-img, .subfeature__content-text, .bg-text-hero, about img'
 	);
 
 	debug(`Found ${animatedTags.length} animated tags`);
@@ -156,7 +156,7 @@ function setupParallaxEffects() {
 		}
 
 		const scrollY =
-			window.pageYOffset || document.documentElement.scrollTop;
+			window.scrollY || document.documentElement.scrollTop;
 		const viewportHeight = window.innerHeight;
 		const featuresTop = featuresContainer.offsetTop;
 
