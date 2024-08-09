@@ -1,9 +1,11 @@
 @use '../util' as u;
 
 .gallery {
+	background-image: url(/img/accents/Texture\ Mushroom\ Green\ -\ Compressed.svg);
+	background-attachment: fixed;
 	position: relative;
 	min-height: 100vh;
-	background-color: var(--background-color);
+	background-color: hsl(180, 69%, 6%);
 	text-align: left;
 
 	&__headline {
@@ -12,39 +14,13 @@
 
 	&__wrapper {
 		padding-block: 12vh;
-
-		@include u.breakpoint(small) {
-			max-width: 90vw;
-		}
-	}
-
-	&__image-gallery {
-		z-index: 10;
 		display: flex;
 		flex-direction: column;
-		gap: 12vh;
-	}
-
-	&__row {
-		z-index: 10;
-		display: flex;
-		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		gap: 6%;
-	}
-
-	&__bubble {
-		width: 22vw;
-		border-radius: 50%;
-		border: 5px solid var(--lilly-green);
-
-		@include u.breakpoint-down(medium) {
-			width: 20vw;
-		}
-
-		@include u.breakpoint-down(small) {
-			width: 25vw;
+		gap: u.rem(20);
+		@include u.breakpoint(small) {
+			max-width: 90vw;
 		}
 	}
 
@@ -52,24 +28,36 @@
 		width: 20vw;
 	}
 
-	&__marquee {
-		position: absolute;
-		top: 0;
-		font-family: u.$silly-font;
-		color: var(--feature-1);
-		font-size: 36vw;
-		text-wrap: nowrap;
-		z-index: 0;
-		line-height: 1;
-		overflow: hidden;
-		width: 100%;
+	&__image-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		gap: 20px;
+		align-items: center;
 	}
 
-	&__marquee span {
-		animation: moveLeft 50s infinite;
-		white-space: nowrap;
-		display: block;
-		position: relative;
+	&__image {
+		width: 20vw;
+		margin: 10px;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border: u.rem(2) solid var(--lilly-green);
+			border-radius: 20px;
+			box-shadow: 0 2px 10px hsla(0, 0%, 0%, 0.287);
+
+			transform: scale(1);
+			transform-origin: center;
+			transform: translateZ(0);
+			transition: transform 0.2s ease;
+
+			&:hover {
+				transform: scale(1.02);
+
+				color: var(--murky-clouds);
+			}
+		}
 	}
 }
 

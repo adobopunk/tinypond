@@ -10,12 +10,12 @@
 	transition: background-color 2s;
 	background-image: linear-gradient(
 			to right,
-			rgba(129, 129, 129, 0.1) 1px,
+			rgba(57, 57, 57, 0.357) 1px,
 			transparent 1px
 		),
 		linear-gradient(
 			to bottom,
-			rgba(129, 129, 129, 0.1) 1px,
+			rgba(57, 57, 57, 0.357) 1px,
 			transparent 1px
 		);
 	background-size: 3vw 3vw; /* Adjust grid size as needed */
@@ -30,7 +30,6 @@
 	@include u.breakpoint-down(small) {
 		background-size: 10vw 10vw;
 	}
-
 
 	&__wrapper {
 		gap: u.rem(40) u.rem(20);
@@ -106,10 +105,10 @@
 .svg-bg__2 {
 	z-index: 0;
 	position: absolute;
-	width: 100vw;
+	min-width: 100vw;
+	width: 50vw;
 	padding: 10em;
 	overflow: hidden;
-
 	@include u.breakpoint-down(large) {
 	}
 }
@@ -119,7 +118,8 @@
 	left: -30vw;
 
 	@include u.breakpoint-down(large) {
-		width: 160vw;
+		height: 400vh;
+		width: auto;
 		left: -50vw;
 	}
 
@@ -130,7 +130,7 @@
 }
 
 .svg-bg__2 {
-	top: -8%;
+	top: 5%;
 	left: 30vw;
 	fill: #ffffff;
 
