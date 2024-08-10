@@ -1,7 +1,7 @@
 @use '../util' as u;
 
 .features {
-	box-shadow: 0 -100px 200px black;
+	box-shadow: 0 -100px 200px var(--feature-1);
 	min-height: 300vh;
 	background-color: var(--feature-1);
 	// pointer-events: none;
