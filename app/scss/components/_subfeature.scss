@@ -2,9 +2,8 @@
 
 .subfeature {
 	z-index: 1;
-	height: 100vh;
+	min-height: 100vh;
 	position: relative;
-	margin-block: 10vh;
 
 	&__content {
 		min-height: 100vh;
@@ -15,7 +14,6 @@
 		gap: 5vw;
 		@include u.breakpoint-down(medium) {
 			flex-direction: column;
-			height: 80vh;
 		}
 	}
 
@@ -108,7 +106,7 @@
 		@include u.breakpoint-down(large) {
 		}
 
-		@include u.breakpoint-down(small) {
+		@include u.breakpoint-down(medium) {
 			display: none;
 		}
 	}
@@ -122,20 +120,51 @@
 	}
 
 	&__design-feature {
-		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.9));
+		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 	}
 
 	&__animation-feature {
-		width: 45vw;
-		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+		// position: relative;
+		// background-color: green;
+		// background-image: url(/img/backgrounds/BG_splt.mp4);
+		// width: 100vw;
+		// height: 60vh;
+		// border-radius: 40px;
 
 		@include u.breakpoint-down(small) {
 			width: 100vw;
+			margin: 0;
 		}
+		
+	}
+
+	&__animation-feature .video-background video {
+		border-radius: 40px;
+		border: 8px solid var(--lilly-green);
+		min-height: 60vh;
+		object-fit: cover;
+		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3))
+			drop-shadow(0 0 5px rgba(114, 249, 51, 0.9));
+
+		@include u.breakpoint(large) {
+			transform: translateX(-10%);
+		}
+
+
+
+		@include u.breakpoint(large){
+			width: 70vw;
+		}
+
+		
 	}
 
 	&__broadcast-feature {
 		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
+		border: 8px solid var(--lilly-green);
+		border-radius: 40px;
+		width: 55vw;
+		transform: translateX(8%);
 	}
 }
 

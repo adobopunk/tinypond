@@ -3,20 +3,15 @@
 .about {
 	width: 100vw;
 	min-height: 100vh;
-	background-color: var(--feature-1);
 	padding-top: 10vh;
-	background-image: linear-gradient(
-			to bottom right,
-			transparent,
-			transparent
-		),
-		url(/img/backgrounds/Tiny\ Pond\ horizontal\ background\ text.svg);
 
+	background-color: var(--background-color);
+	background-image: url(/img/backgrounds/tinyPondText.png);
 	background-position: center;
-	background-size: 500vh;
-	@include u.breakpoint-down(large) {
-		background-size: 600vh;
-	}
+	background-size: 300vh;
+	background-attachment: fixed;
+
+
 
 	background-repeat: no-repeat;
 
@@ -33,37 +28,38 @@
 	&__services {
 		width: 100vw;
 		height: 100vh;
-		background-color: var(--feature-1);
+		background-color: var(--background-color);
 		padding-top: 10vh;
 	}
 
 	&__team {
 		width: 100vw;
-		height: 100vh;
-		background-color: var(--feature-1);
+		min-height: 100vh;
 		padding-top: 10vh;
+
+		background-color: var(--background-color);
+		background-image: url(/img/backgrounds/tinyPondText.png);
+		background-position: center;
+		background-size: 300vh;
+		background-attachment: fixed;
+
+
 	}
 
 	&__values {
 		width: 100vw;
 		min-height: 100vh;
-		background-color: var(--feature-1);
 		padding-top: 10vh;
+
+		background-color: var(--feature-1);
+		background-image: url(/img/backgrounds/tinyPondText.png);
+		background-position: center;
+		background-size: 300vh;
+		background-attachment: fixed;
+
+
 	}
 
-	&__layout1 {
-		display: flex;
-		flex-direction: row;
-		gap: 60px;
-	}
-
-	&__left {
-		flex: 0 0 60vw;
-	}
-
-	&__right {
-		flex: 0 0 40vw;
-	}
 
 	&__layout-values {
 		display: flex;
@@ -77,8 +73,6 @@
 	}
 
 	&__values-grid-item {
-		
-
 		transform: box-shadow, border, translateY(0);
 		transition: all 200ms ease-in-out;
 		&:hover {
@@ -113,10 +107,77 @@
 	}
 
 	& img {
+		display: inline-block;
 		border-radius: 10px;
 		box-shadow: 0 10px 10px hsla(210, 100%, 5%, 0.503);
-		margin-block: u.rem(50);
-		max-width: 1200px;
+		margin-block: u.rem(100);
+		max-width: 900px;
+		align-self: center;
+		text-align: center;
+	}
+
+	&__person {
+		margin-block: 20vh;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: flex-start;
+
+		@include u.breakpoint-down(small) {
+			flex-direction: column;
+		}
+	}
+
+	&__headshot {
+		position: absolute;
+		top: -10%;
+		width: 440px;
+		height: 440px;
+		background-image: url(/img/accents/Lilly\ Pad-teal.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		box-shadow: 0 20 30px hsla(0, 0%, 0%, 0.268);
+		overflow: visible;
+	}
+
+	&__bio {
+		margin-left: 120px;
+		display: block;
+		min-height: 500px;
+		width: 100%;
+		background-color: var(--lilly-green);
+		border-radius: 20px;
+		padding-block-end: 50px;
+		border: 8px solid #016859;
+
+		background-size: 75%;
+	}
+
+	&__bio-name,
+	&__bio-text {
+		color: var(--deep-water);
+	}
+
+	&__bio-name {
+		font-size: u.rem(48);
+	}
+
+	&__bio-name span {
+		display: block;
+		font-size: u.rem(24);
+		font-family: u.$font;
+		font-weight: 800;
+		font-style: italic;
+	}
+
+	&__bio-text {
+		padding-inline: 100px;
+	}
+
+	&__bio-name {
+		padding-left: 340px;
+		margin-block: 40px;
 	}
 
 	.grid-intro {
@@ -129,4 +190,12 @@
 			border: none;
 		}
 	}
+}
+
+.about__bio .about__bio-text:first-of-type {
+	padding-left: 340px;
+}
+
+.pfp {
+	border-radius: 50%;
 }

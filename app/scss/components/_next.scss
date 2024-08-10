@@ -25,14 +25,15 @@
 }
 
 #arrow2 {
+	z-index: 1;
 	top: 90%;
 	animation: fadeInOut 4s infinite;
 	-webkit-animation: fadeInOut 3s infinite;
 	-moz-animation: fadeInOut 3s infinite;
 	-o-animation: fadeInOut 3s infinite;
 	animation: fadeInOut 3s infinite;
-	animation-delay: 6s;
-
+	animation-delay: 3s;
+	pointer-events: auto;
 	@include u.breakpoint-down(large) {
 		top: 110%;
 	}
