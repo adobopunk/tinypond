@@ -1,0 +1,69 @@
+@use '../util' as u;
+
+.features {
+	position: relative;
+	// background-color: var(--background-color);
+	margin-block-start: -1px;
+	background-image: url(/img/accents/Texture\ Mushroom\ Green.svg);
+	background-position: -50%;
+	background-attachment: fixed;
+	transition: background-color 1s;
+
+	&__wrapper {
+		gap: u.rem(40) u.rem(20);
+	}
+
+	&__label {
+		@include u.breakpoint-down(small) {
+			text-align: center;
+		}
+	}
+
+	&__headline {
+		font-size: 4rem;
+		font-size: clamp(5rem, 3.06rem + 4.45vw, 5rem);
+		line-height: 1;
+
+		@include u.breakpoint-down(small) {
+			font-size: 2.5rem;
+			font-size: clamp(
+				2.5rem,
+				1.5601503759398496rem + 5.012531328320802vw,
+				3.75rem
+			);
+			margin-block-end: u.rem(80);
+		}
+	}
+
+	&__description {
+		max-width: 40ch;
+	}
+
+	&__title {
+		margin-block-end: u.rem(5);
+	}
+
+	&__image {
+		flex: 1 1 45%;
+		margin-block-end: u.rem(40);
+		height: auto;
+		transform: scale(1);
+		transition-property: transform, opacity;
+		transform-origin: center;
+		transform: translateZ(0);
+		transition-duration: 400ms;
+		&:hover {
+			opacity: 0.95;
+			transform: scale(1.05);
+		}
+	}
+
+	&__headline {
+		text-align: center;
+		margin-block-end: u.rem(100);
+	}
+
+	&__item {
+		flex: 1 1 50%;
+	}
+}

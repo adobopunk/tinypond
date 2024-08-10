@@ -4,9 +4,10 @@
 	z-index: 1;
 	min-height: 100vh;
 	position: relative;
+	margin-block: 20vh;
 
 	&__content {
-		min-height: 100vh;
+		// min-height: 100vh;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -35,7 +36,7 @@
 	}
 
 	&__content-headline {
-		font-size: 4rem;
+		font-size: 3rem;
 
 		line-height: 1;
 
@@ -63,7 +64,7 @@
 		min-width: 0;
 		font-family: u.$header-font;
 		text-transform: uppercase;
-		font-size: u.rem(24);
+		font-size: u.rem(18);
 		border: 2px solid var(--lilly-green);
 		padding: 0px 20px;
 		border-radius: 20px;
@@ -99,7 +100,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 400px;
+		width: min(300px, 30vw);
 		z-index: -1;
 		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 
@@ -172,25 +173,26 @@
 	line-height: 2;
 }
 
-#reunion {
-	top: 12vh;
-	left: 30vw;
-	width: 15vw;
+
+#accent-lillypad {
+	top: -30vh;
+	left: 70vw;
+	width: 12vw;
 }
 
 #mtndew {
-	top: 0vh;
+	top: -35vh;
 	left: 32vw;
 }
 
 #warzone {
-	top: 5vh;
+	top: -25vh;
 	left: 3vw;
 }
 
 #cracked {
 	left: 25vw;
-	top: 80vh;
+	top: 85vh;
 }
 
 #accent-starburst {
@@ -199,11 +201,6 @@
 	width: 10vw;
 }
 
-#accent-lilly1 {
-	top: 100vh;
-	left: 70vw;
-	width: 11vw;
-}
 
 #viewport {
 	top: 15vh;
@@ -242,11 +239,7 @@
 	border-radius: 5px;
 }
 
-#accent-lillypad {
-	top: -6vh;
-	left: 70vw;
-	width: 12vw;
-}
+
 
 #fnreunion {
 	top: 94vh;
