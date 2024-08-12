@@ -12,6 +12,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+		margin-block: 10vh;
 		gap: 5vw;
 		@include u.breakpoint-down(medium) {
 			flex-direction: column;
@@ -95,6 +96,16 @@
 		@include u.breakpoint-down(small) {
 			width: 90vw;
 		}
+
+		& video-wrapper {
+			position: relative;
+			width: 300px;
+			height: 300px;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	&__img {
@@ -127,33 +138,21 @@
 	}
 
 	&__animation-feature {
-		// position: relative;
-		// background-color: green;
-		// background-image: url(/img/backgrounds/BG_splt.mp4);
-		// width: 100vw;
-		// height: 60vh;
-		// border-radius: 40px;
+		// position: absolute;
+		width: 45vw;
+		height: 100%;
+		object-fit: cover;
+		transform: translateZ(0);
+		-webkit-mask-image: url('/img/accents/Lilly\ Pad-teal.svg');
+		-webkit-mask-size: 100% 100%;
+		-webkit-mask-position: center;
+		mask-image: url('/img/accents/Lilly\ Pad-teal.svg');
+		mask-size: 100% 100%;
+		mask-position: center;
 
 		@include u.breakpoint-down(small) {
 			width: 100vw;
 			margin: 0;
-		}
-	}
-
-	&__animation-feature .video-background video {
-		border-radius: 40px;
-		border: 8px solid var(--lilly-green);
-		min-height: 60vh;
-		object-fit: cover;
-		filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3))
-			drop-shadow(0 0 5px rgba(114, 249, 51, 0.9));
-
-		@include u.breakpoint(large) {
-			transform: translateX(-10%);
-		}
-
-		@include u.breakpoint(large) {
-			width: 70vw;
 		}
 	}
 
@@ -163,6 +162,16 @@
 		border-radius: 40px;
 		width: 55vw;
 		transform: translateX(8%);
+	}
+}
+
+@keyframes rotate-mask {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
 	}
 }
 

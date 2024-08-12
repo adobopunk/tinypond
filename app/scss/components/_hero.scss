@@ -77,6 +77,10 @@
 			rgba(255, 255, 255, 0) 60%
 		);
 	}
+
+	p {
+		line-height: 2;
+	}
 }
 
 .bg-text-hero {
@@ -85,7 +89,7 @@
 	font-family: u.$silly-font;
 	font-size: u.rem(460);
 	white-space: nowrap;
-	-webkit-text-stroke: 2px hsla(112, 44%, 55%, 0.262);
+	-webkit-text-stroke: 2px hsla(112, 44%, 55%, 0.149);
 	color: hsla(112, 44%, 55%, 0);
 	overflow: hidden;
 	top: 15%;
