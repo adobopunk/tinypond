@@ -50,15 +50,18 @@
 		justify-content: flex-start; // Horizontally center the items
 	}
 	&__background-video {
-		width: 100vw;
+		width: auto;
 		height: 100vh;
 		object-fit: cover;
 		position: fixed;
-		left: 0;
 		right: 0;
 		top: 0;
 		bottom: 0;
 		z-index: -100;
+
+		@include u.breakpoint-down(small) {
+			right: -15vh;
+		}
 	}
 
 	&__gradient-overlay {
