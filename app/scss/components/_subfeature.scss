@@ -4,10 +4,11 @@
 	z-index: 1;
 	min-height: 100vh;
 	position: relative;
-	margin-block: 20vh;
+	// padding-block: 200px;
+
 
 	&__content {
-		// min-height: 100vh;
+		min-height: 100vh;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -175,24 +176,28 @@
 
 
 #accent-lillypad {
-	top: -30vh;
+	top: 0vh;
 	left: 70vw;
 	width: 12vw;
 }
 
 #mtndew {
-	top: -35vh;
-	left: 32vw;
+	top: 10vh;
+	left: 38vw;
 }
 
 #warzone {
-	top: -25vh;
+	top: 15vh;
 	left: 3vw;
 }
 
 #cracked {
 	left: 25vw;
 	top: 85vh;
+}
+
+#accent-lilly1 {
+	width: 10vw;
 }
 
 #accent-starburst {
