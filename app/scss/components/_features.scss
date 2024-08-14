@@ -1,11 +1,11 @@
 @use '../util' as u;
 
 .features {
-	box-shadow: 0 -100px 200px var(--feature-1);
+	// box-shadow: 0 -150px 200px var(--feature-1);
 	min-height: 300vh;
 	background-color: var(--feature-1);
 	// pointer-events: none;
-	padding-block: 20vh;
+	padding-bottom: 20vh;
 	position: relative;
 	margin-block-start: -1px;
 	transition: background-color 1.5s;
@@ -35,8 +35,6 @@
 	&__wrapper {
 		gap: u.rem(40) u.rem(20);
 	}
-
-
 
 	&__label {
 		@include u.breakpoint-down(small) {
@@ -106,7 +104,7 @@
 }
 
 .svg-bg {
-	top: -10%;
+	top: 0%;
 	left: -30vw;
 
 	@include u.breakpoint-down(large) {

@@ -35,7 +35,7 @@ fadeInReelVideos();
 // Fade-in animations
 function setupFadeInAnimations() {
 	const animatedTags = selectAll(
-		'h1, h2, h3, p, .about__img, a.button, .footer__img, .topnav__homelink, .bg-text-hero, .topnav__item, .footer__logo, .footer__links, .subfeature__img, .subfeature__accent, .subfeature__feature-img, .subfeature__content-text, .bg-text-hero, about img'
+		'h1, h2, h3, p, .about__img, a.button, .footer__img, .topnav__homelink, .topnav__item, .footer__logo, .footer__links, .subfeature__img, .subfeature__accent, .subfeature__feature-img, .subfeature__content-text, .about img, .about__headshot, div.divider'
 	);
 
 	debug(`Found ${animatedTags.length} animated tags`);
