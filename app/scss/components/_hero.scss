@@ -88,11 +88,10 @@
 
 		@include u.breakpoint-down(medium) {
 			background: linear-gradient(
-					to bottom,
-					rgba(255, 255, 255, 0) 80%,
-					var(--feature-1) 95%
-				),
-				;
+				to bottom,
+				rgba(255, 255, 255, 0) 80%,
+				var(--feature-1) 95%
+			);
 		}
 	}
 
@@ -100,18 +99,28 @@
 		// animation: fadein 4s;
 		z-index: -1;
 		font-family: u.$silly-font;
-		font-size: u.rem(460);
+		font-size: 20vw;
 		white-space: nowrap;
 		-webkit-text-stroke: 2px hsla(112, 44%, 55%, 0.149);
 		color: hsla(112, 44%, 55%, 0);
 		overflow: hidden;
 		top: 15%;
-		right: 0;
+		left: -5%;
 		position: absolute;
 		overflow-x: hidden;
 		box-sizing: border-box;
 		animation: neon-flicker 12s alternate infinite;
 		opacity: 50%;
+
+		@include u.breakpoint-down(large) {
+			font-size: 40vw;
+		}
+
+		@include u.breakpoint-down(medium) {
+			font-size: 60vw;
+			left: '';
+			right: 0;
+		}
 
 		@include u.breakpoint-down(small) {
 			opacity: 0;
