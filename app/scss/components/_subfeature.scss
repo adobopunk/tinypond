@@ -12,7 +12,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		margin-block-start: 10vh;
+		margin-block-end: 10vh;
 		gap: 25vw;
 		@include u.breakpoint-down(medium) {
 			flex-direction: column;
