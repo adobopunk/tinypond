@@ -78,9 +78,7 @@
 		}
 	}
 
-	&__value {
-	}
-
+	
 	& h1 {
 		font-size: 4rem;
 		line-height: 1.2;
@@ -102,8 +100,8 @@
 		border: 4px solid var(--lilly-green);
 		border-radius: 10px;
 		box-shadow: 0 10px 10px hsla(210, 100%, 5%, 0.503);
-		max-width: 900px;
-		margin: 0 auto;
+		max-width: 600px;
+		margin: 10px auto;
 	}
 
 	&__person {
@@ -197,4 +195,11 @@
 #our-team,
 #values-headline {
 	text-align: center;
+}
+
+figcaption {
+	font-style: italic;
+	text-align: center;
+    font-family: u.$font;
+    color: var(--lilly-green);
 }
