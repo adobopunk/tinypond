@@ -13,10 +13,6 @@
 		grid-template-rows: repeat(3, 1fr);
 		align-items: center;
 		justify-items: center;
-
-		@include u.breakpoint-down(medium) {
-			grid-template-columns: repeat(1, 1fr);
-		}
 	}
 
 	&__preview {
@@ -45,48 +41,62 @@
 		border: 6px solid var(--lilly-green);
 		margin-block-end: 30px;
 
-		transition: transform 0.3s linear, box-shadow 0.3s linear;
+		transition: transform 0.15s linear, box-shadow 0.15s linear;
 		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.185);
 
 		&:hover {
 			box-shadow: 0 10px 10px rgba(0, 0, 0, 0.185),
-				0 10px 40px rgba(2, 125, 20, 0.361);
-
-			transform: scale(1.05);
+				0 10px 40px rgba(2, 125, 20, 0.691);
 		}
 	}
 }
 
 #preview-fortnite-reunion {
-    background-image: url(/img/projects/Fortnite\ Reunion\ Cake.png);
+	background-image: url(/img/projects/Fortnite\ Reunion\ Cake.png);
 }
 
 #preview-valorant-select {
-    background-image: url(/img/projects/val-select-screen.png);
+	background-image: url(/img/projects/val-select-screen.png);
 }
 
-#preview-fortnite-reunion, #preview-valorant-select {
-    position: relative;
-    background-size: cover; /* Adjust as needed */
-    background-position: center; /* Adjust as needed */
-    background-attachment: fixed;
+#preview-fortnite-reunion,
+#preview-valorant-select {
+	position: relative;
+	background-size: cover; /* Adjust as needed */
+	background-attachment: fixed;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.75); /* Dark semi-transparent color */
-        backdrop-filter: blur(5px); 
-        z-index: 1; /* Ensure it sits on top of the background image */
-        pointer-events: none; /* Allow interaction with underlying content */
-    }
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(
+			0,
+			0,
+			0,
+			0.75
+		); /* Initial dark semi-transparent color */
+		backdrop-filter: blur(5px); /* Initial blur effect */
+		z-index: 1; /* Ensure it sits on top of the background image */
+		pointer-events: none; /* Allow interaction with underlying content */
 
-    & > * {
-        position: relative;
-        z-index: 2;
-    }
+		transition: backdrop-filter 1s, background 1s; /* Smooth transition for both properties */
+	}
+
+	&:hover::before {
+		backdrop-filter: blur(0px); /* Remove blur on hover */
+		background: rgba(
+			0,
+			0,
+			0,
+			0.55
+		); /* Lighten the semi-transparent color */
+	}
+
+	& > * {
+		position: relative;
+		z-index: 2;
+	}
 }
-
