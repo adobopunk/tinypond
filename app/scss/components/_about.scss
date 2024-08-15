@@ -33,7 +33,6 @@
 	&__team {
 		width: 100vw;
 		min-height: 100vh;
-		padding-top: 10vh;
 
 		background-color: var(--background-color);
 		background-image: url(/img/backgrounds/tinyPondText.png);
@@ -42,46 +41,44 @@
 		background-attachment: fixed;
 	}
 
-	&__values {
-		width: 100vw;
-		min-height: 100vh;
-		padding-top: 10vh;
-
-		background-color: var(--background-color);
-		background-image: url(/img/backgrounds/tinyPondText.png);
-		background-position: center;
-		background-size: 300vh;
-		background-attachment: fixed;
-	}
-
-	&__layout-values {
+	&__values-layout {
 		display: flex;
+		flex-direction: row;
+		gap: 5vw;
+		align-items: flex-start;
+		justify-content: center;
 		flex-wrap: wrap;
-		justify-content: space-between;
-		gap: 25px;
 
-		@include u.breakpoint-down(medium) {
-			flex-direction: column;
-		}
-	}
-
-	&__values-grid-item {
-		transform: box-shadow, border, translateY(0);
-		transition: all 200ms ease-in-out;
-		&:hover {
-			transform: scale(1.05) translateY(-10px);
-			box-shadow: 10px 10px 10px #0a03035d;
+		& span {
+			font-size: u.rem(32);
+			line-height: 1.2;
+			font-weight: 700;
+			display: block;
+			text-align: center;
+			font-style: italic;
+			margin-block-end: u.rem(10);
 		}
 
-		&.span2 {
-			flex-basis: calc(50% - 25px);
+		& p {
+			width: 25vw;
+			min-width: 400px;
+			border: 2px solid var(--lilly-green);
+			border-radius: 15px;
+			padding: 25px 35px;
+			background-color: var(--about-background);
+			backdrop-filter: blur(10px);
+			transition: transform 0.3s ease, box-shadow 0.3s linear;
+			box-shadow: 0 10px 10px rgba(0, 0, 0, 0.185);
+
+			&:hover {
+				box-shadow: 0 10px 10px rgba(0, 0, 0, 0.185), 0 10px 40px rgba(2, 125, 20, 0.361);
+
+				transform: translateY(-10px);
+			}
 		}
 	}
 
 	&__value {
-		font-weight: bold;
-		font-size: u.rem(24);
-		margin-bottom: u.rem(10);
 	}
 
 	& h1 {
@@ -135,6 +132,7 @@
 		background-size: contain;
 		box-shadow: 0 20 30px hsla(0, 0%, 0%, 0.268);
 		overflow: visible;
+		z-index: 100;
 	}
 
 	&__bio {
@@ -142,11 +140,12 @@
 		min-height: 500px;
 		width: 100%;
 		max-width: 1000px;
-		background-color: #004d33;
+		background-color: var(--about-background);
 		border-radius: 20px;
 		padding-block-end: 50px;
 		border: 8px solid var(--lilly-green);
 		background-size: 75%;
+		backdrop-filter: blur(10px);
 	}
 
 	&__bio-name,
@@ -179,21 +178,10 @@
 		padding-top: 100px;
 		margin-block: 40px;
 	}
-
-	.grid-intro {
-		box-shadow: 0 0 0 #0a030300;
-		transform: scale(1);
-		border: none;
-		&:hover {
-			box-shadow: 0 0 0 #0a030300;
-			transform: scale(1);
-			border: none;
-		}
-	}
 }
 
-
 .pfp {
+	position: absolute;
 	border-radius: 50%;
 	scale: 95%;
 }
@@ -206,7 +194,7 @@
 	margin: 0 auto;
 }
 
-#our-team, #values-headline {
+#our-team,
+#values-headline {
 	text-align: center;
 }
-

@@ -8,8 +8,8 @@ h3 {
 }
 
 h1 {
-	font-size: 4rem;
-	font-size: clamp(5rem, 3.06rem + 4.45vw, 5rem);
+	font-size: 3.5rem;
+	// font-size: clamp(5rem, 3.06rem + 4.45vw, 5rem);
 	line-height: 1;
 	margin-block-end: u.rem(20);
 
@@ -42,10 +42,10 @@ h3 {
 
 p {
 	margin-top: 0;
-	font-size: u.rem(24);
+	font-size: u.rem(22);
 	font-style: italic;
 	// font-size: u.rem(18);
-	line-height: 1.3;
+	line-height: 1.5;
 	@include u.breakpoint-down(medium) {
 		font-size: u.rem(24);
 	}
