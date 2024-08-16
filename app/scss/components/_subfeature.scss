@@ -99,6 +99,7 @@
 		margin-block: 5vh;
 		@include u.breakpoint-down(small) {
 			width: 90vw;
+			min-width: 0px;
 		}
 
 		& video-wrapper {
@@ -155,7 +156,7 @@
 
 		@include u.breakpoint-down(small) {
 			width: 100vw;
-			margin: 0;
+			margin: 0 auto;
 		}
 	}
 

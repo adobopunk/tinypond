@@ -98,7 +98,6 @@
 	}
 
 	& h1 {
-		font-size: 4rem;
 		line-height: 1.2;
 		text-align: center;
 		margin-block: u.rem(40);
@@ -124,8 +123,6 @@
 		@include u.breakpoint-down(medium) {
 			width: 80vw;
 		}
-
-
 	}
 
 	&__person {
@@ -155,6 +152,11 @@
 		box-shadow: 0 20 30px hsla(0, 0%, 0%, 0.268);
 		overflow: visible;
 		z-index: 100;
+
+		@include u.breakpoint-down(small) {
+			width: 300px;
+			top: 200px;
+		}
 	}
 
 	&__bio {
