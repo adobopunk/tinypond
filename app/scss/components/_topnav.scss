@@ -27,6 +27,7 @@
 		transition-property: transform, opacity;
 		transform-origin: center;
 		transition-duration: 400ms;
+		align-items: flex-start;
 		&:hover {
 			opacity: 0.95;
 			transform: scale(1.05);
@@ -38,6 +39,10 @@
 		@include u.breakpoint-down(medium) {
 			width: u.rem(126);
 		}
+
+		@include u.breakpoint-down(small) {
+			width: 30vw;
+		}
 	}
 	&__links {
 		font-family: u.$header-font;
@@ -47,6 +52,10 @@
 
 		@include u.breakpoint-down(small) {
 			gap: 16px;
+		}
+
+		@include u.breakpoint-down(xsmall) {
+			gap: 12px;
 		}
 	}
 	// &__item {
@@ -68,6 +77,10 @@
 
 		@include u.breakpoint-down(small) {
 			font-size: u.rem(14);
+		}
+
+		@include u.breakpoint-down(xsmall) {
+			font-size: u.rem(12);
 		}
 		&:hover {
 			text-decoration-thickness: 1px;
