@@ -67,6 +67,7 @@
 	position: relative;
 	background-size: cover; /* Adjust as needed */
 	background-attachment: fixed;
+	background-position: center;
 
 	&::before {
 		content: '';
@@ -81,11 +82,18 @@
 			0,
 			0.75
 		); /* Initial dark semi-transparent color */
-		backdrop-filter: blur(5px); /* Initial blur effect */
+		/* Initial blur effect */
 		z-index: 1; /* Ensure it sits on top of the background image */
 		pointer-events: none; /* Allow interaction with underlying content */
 
 		transition: backdrop-filter 1s, background 1s; /* Smooth transition for both properties */
+
+		@include u.breakpoint(medium) {
+			backdrop-filter: blur(5px); 
+		}
+		@include u.breakpoint-down(small) {
+			backdrop-filter: blur(2px); 
+		}
 	}
 
 	&:hover::before {
@@ -94,7 +102,7 @@
 			0,
 			0,
 			0,
-			0.55
+			0.65
 		); /* Lighten the semi-transparent color */
 	}
 

@@ -57,7 +57,9 @@
 		bottom: 0;
 		z-index: -100;
 		right: 0;
-		@include u.breakpoint-down(small) {
+		@include u.breakpoint-down(medium) {
+			right: -40vw;
+			width: auto;
 		}
 
 		p {

@@ -88,17 +88,20 @@
 	}
 
 	&__feature-img {
-		width: 50vw;
-		min-width: 500px;
-		max-width: 1000px;
-		margin: auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding-inline: 50px;
 		margin-block: 5vh;
+
+		@include u.breakpoint(medium) {
+			width: 50vw;
+			min-width: 500px;
+			max-width: 1000px;
+			margin: auto;
+			padding-inline: 50px;
+		}
+		
 		@include u.breakpoint-down(small) {
-			width: 90vw;
 			min-width: 0px;
 		}
 
@@ -134,6 +137,10 @@
 		left: 0;
 		width: 20vw;
 		z-index: -10;
+
+		@include u.breakpoint-down(small) {
+			display: none;
+		}
 	}
 
 	&__design-feature {
