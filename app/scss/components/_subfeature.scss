@@ -118,8 +118,8 @@
 	}
 
 	&__img {
-		display: none;
-		// position: relative;
+		// display: none;
+		position: absolute;
 		top: 0;
 		left: 0;
 		width: 10vw;
@@ -133,6 +133,7 @@
 	}
 
 	&__accent {
+		display: none;
 		position: absolute;
 		top: 0;
 		left: 0;
