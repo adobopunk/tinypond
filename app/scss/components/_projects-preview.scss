@@ -62,8 +62,23 @@
 	background-image: url(/img/projects/val-select-screen.png);
 }
 
+#preview-mtn-dew {
+	background-image: url(/img/backgrounds/mtn-dew-bg.png);
+}
+
+#preview-tfue {
+	background-image: url(/img/backgrounds/tfue-bg.jpg);
+}
+
+#preview-porsche {
+	background-image: url(/img/backgrounds/porsche-bg.png);
+}
+
+#preview-boom {
+	background-image: url(/img/backgrounds/boom\ bg.png);
+}
 #preview-fortnite-reunion,
-#preview-valorant-select {
+#preview-valorant-select, #preview-mtn-dew, #preview-tfue, #preview-porsche, #preview-boom {
 	position: relative;
 	background-size: cover; /* Adjust as needed */
 	background-attachment: fixed;

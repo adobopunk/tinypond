@@ -18,10 +18,10 @@ h1 {
 		;
 	}
 
-	@include u.breakpoint(xlarge) {
-		font-size: 5rem;
-		font-size: clamp(5rem, -1rem + 6.666666666666667vw, 8rem);
-	}
+	// @include u.breakpoint(xlarge) {
+	// 	font-size: 5rem;
+	// 	font-size: clamp(5rem, -1rem + 6.666666666666667vw, 8rem);
+	// }
 }
 
 h2 {
