@@ -17,7 +17,7 @@
 	color: var(--murky-water);
 
 	&__wrapper {
-		width: min(100% - u.rem(40), 60%);
+		width: min(100% - u.rem(40), 50%);
 
 		@include u.breakpoint-down(large) {
 			width: min(100% - u.rem(0), 80%);
@@ -113,15 +113,17 @@
 	}
 
 	& img {
+		width: 50vw;
+		max-width: 1200px;
 		display: block;
 		text-align: center;
 		border: 4px solid var(--lilly-green);
 		border-radius: 10px;
 		box-shadow: 0 10px 10px hsla(210, 100%, 5%, 0.503);
-		width: 60vw;
+
 		margin: 10px auto;
 
-		@include u.breakpoint-down(medium) {
+		@include u.breakpoint-down(large) {
 			width: 80vw;
 		}
 	}
