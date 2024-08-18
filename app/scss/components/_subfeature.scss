@@ -93,13 +93,13 @@
 		align-items: center;
 		margin-block: 5vh;
 
-		@include u.breakpoint(medium) {
-			width: 50vw;
-			min-width: 500px;
-			max-width: 1000px;
-			margin: auto;
-			padding-inline: 50px;
-		}
+		// @include u.breakpoint(medium) {
+		// 	width: 50vw;
+		// 	min-width: 500px;
+		// 	max-width: 1000px;
+		// 	margin: auto;
+		// 	padding-inline: 50px;
+		// }
 
 		@include u.breakpoint-down(small) {
 			min-width: 0px;
