@@ -3,6 +3,7 @@
 .projects-directory {
 	height: auto;
 	width: 100vw;
+	position: relative;
 	&__wrapper {
 		background-color: var(--background-color);
 		position: relative;
@@ -83,6 +84,7 @@
 	background-size: cover; /* Adjust as needed */
 	background-attachment: fixed;
 	background-position: center;
+	background-repeat: no-repeat;
 
 	&::before {
 		content: '';

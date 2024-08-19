@@ -15,7 +15,6 @@ h1 {
 
 	@include u.breakpoint-down(medium) {
 		font-size: 3rem;
-		;
 	}
 
 	// @include u.breakpoint(xlarge) {
@@ -72,4 +71,20 @@ a,
 a:visited,
 a:active {
 	text-decoration: none;
+}
+
+b {
+	animation: glow 2s infinite;
+}
+
+@keyframes glow {
+	0% {
+		text-shadow: 0 0 10px var(--lilly-green);
+	}
+	50% {
+		text-shadow: 0 0 40px var(--lilly-green);
+	}
+	100% {
+		text-shadow: 0 0 10px var(--lilly-green);
+	}
 }
