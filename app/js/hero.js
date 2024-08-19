@@ -1,5 +1,5 @@
 const textObject = document.getElementById('hero__title');
-const words = ['Visuals.', 'Branding.', 'Animation.', 'Events.', 'Broadcasts.']; // array of words
+const words = ['Visuals.', 'Branding.', 'Animation.', 'Events.', 'Broadcasts.', 'Marketing.', 'Entertainment.']; // array of words
 let currentWordIndex = 1;
 let opacity = 1;
 
