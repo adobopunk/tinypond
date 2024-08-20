@@ -13,7 +13,7 @@
 
 	@include u.breakpoint-down(medium) {
 		// width: min(100% - u.rem(40), 100%);
-		max-width: 100%;
+		max-width: 95%;
 		padding-inline: u.rem(0);
 	}
 }

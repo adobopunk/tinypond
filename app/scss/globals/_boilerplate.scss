@@ -80,7 +80,7 @@ footer ul {
 	transform: scale(1);
 	transition-property: transform, opacity;
 	transform-origin: center;
-	transform: translateZ(0);
+	// transform: translateZ(0);
 	transition-duration: 400ms;
 	&:hover {
 		opacity: 0.85;
@@ -94,15 +94,15 @@ a {
 	font-weight: 600;
 
 	transform: scale(1);
-		transition-property: text-shadow, transform;
-		transform-origin: center;
-		transform: translateZ(0);
-		transition-duration: 100ms;
-		
-		&:hover {
-			text-decoration-thickness: 1px;
-			transform: scale(1.05);
-			color: var(--lilly-green);
-			text-shadow: 0 0 20px hsla(195, 77%, 50%, 0.476);
-		}
+	transition-property: text-shadow, transform;
+	transform-origin: center;
+	transform: translateZ(0);
+	transition-duration: 100ms;
+
+	&:hover {
+		text-decoration-thickness: 1px;
+		transform: scale(1.05);
+		color: var(--lilly-green);
+		text-shadow: 0 0 20px hsla(195, 77%, 50%, 0.476);
+	}
 }

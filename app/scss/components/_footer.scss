@@ -108,18 +108,19 @@
 	}
 
 	&__homelink {
+		display: inline-block;
 		transform: scale(1);
 		transition-property: transform, opacity;
 		transform-origin: center;
-		transform: translateZ(0);
 		transition-duration: 400ms;
 		&:hover {
-			opacity: 0.95;
+			opacity: 0.75;
 			transform: scale(1.05);
 		}
 	}
 
 	&__about-link {
+		font-size: u.rem(24);
 		color: var(--murky-clouds);
 		transform: scale(1);
 		transition-property: text-shadow, transform;
@@ -128,7 +129,7 @@
 		transition-duration: 100ms;
 
 		@include u.breakpoint-down(small) {
-			font-size: u.rem(16);
+			font-size: u.rem(20);
 			text-wrap: nowrap;
 		}
 
