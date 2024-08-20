@@ -1,6 +1,7 @@
 @use '../util/' as u;
 root {
 	--silly-font: #{u.$silly-font};
+	color-scheme: dark;
 }
 html {
 	box-sizing: border-box;

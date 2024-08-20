@@ -17,7 +17,7 @@
 	color: var(--murky-water);
 
 	&__wrapper {
-		width: min(100% - u.rem(40), 75%);
+		width: min(100% - u.rem(40), 60%);
 
 		@include u.breakpoint-down(large) {
 			width: min(100% - u.rem(0), 80%);
@@ -32,10 +32,16 @@
 		}
 	}
 
+	&__wrapper > p {
+		@include u.breakpoint(xlarge) {
+			// padding-inline: u.rem(100);
+		}
+	}
+
 	&__banner {
 		position: relative;
 		margin-top: -12vh;
-		height: 75vh; /* Adjust the height to your liking */
+		height: 45vh; /* Adjust the height to your liking */
 		width: auto;
 		// overflow: hidden;
 		background-image: url(/img/projects/Fortnite\ Reunion\ Cake.png);
@@ -54,7 +60,7 @@
 			bottom: 0;
 			left: 0;
 			width: 100%;
-			height: 75vh;
+			height: 45vh;
 
 			@include u.breakpoint-down(medium) {
 				height: 50vh;
@@ -62,7 +68,7 @@
 
 			background-image: linear-gradient(
 				to bottom,
-				rgba(0, 0, 0, 0) 50%,
+				rgba(0, 0, 0, 0) 80%,
 				var(--background-color) 100%
 			);
 
@@ -75,6 +81,7 @@
 		width: 100vw;
 		background-color: var(--murky-water);
 		margin-inline: auto;
+		padding-inline: 0;
 		// width: min(100% - u.rem(40), 75%);
 		max-width: 100%;
 		padding-inline: u.rem(100);
@@ -83,7 +90,6 @@
 		}
 
 		@include u.breakpoint-down(medium) {
-			// width: min(100% - u.rem(40), 100%);
 			max-width: 95%;
 			padding-inline: u.rem(0);
 		}
@@ -92,9 +98,9 @@
 			margin-block: 0;
 			text-indent: -70px; /* indent the first line by -50px */
 			font-size: u.rem(18);
-			margin-left: 70px;
+			// margin-left: 70px;
 
-			@include u.breakpoint-down(small) {
+			@include u.breakpoint-down(xsmall) {
 				font-size: u.rem(14);
 				margin-left: 0;
 				flex: 1;
@@ -224,4 +230,23 @@ figcaption {
 
 #values {
 	padding-bottom: 25vh;
+}
+
+.side-by-side {
+	display: flex;
+	flex-direction: row;
+
+	justify-content: space-between;
+	gap: u.rem(20);
+
+	@include u.breakpoint-down(small) {
+		flex-direction: column;
+	}
+}
+
+.side-by-side img,
+.siide-by-side figure {
+	max-width: 100%;
+	height: auto;
+	flex: 1;
 }
