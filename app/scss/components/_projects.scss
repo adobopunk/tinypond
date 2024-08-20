@@ -3,14 +3,16 @@
 .project {
 	// overflow-x: hidden;
 	width: 100vw;
-	// min-height: 100vh;
+	min-height: 100vh;
 	padding-top: 10vh;
-
 	background-color: var(--background-color);
 	background-image: url(/img/backgrounds/tinyPondText.png);
 	background-position: center;
 	background-size: 300vh;
 	background-attachment: fixed;
+	@include u.breakpoint-down(small) {
+		padding-block-end: 10vh;
+	}
 
 	background-repeat: no-repeat;
 
@@ -18,6 +20,7 @@
 
 	&__wrapper {
 		width: min(100% - u.rem(40), 60%);
+		min-height: 100vh;
 
 		@include u.breakpoint-down(large) {
 			width: min(100% - u.rem(0), 80%);
@@ -85,6 +88,7 @@
 		// width: min(100% - u.rem(40), 75%);
 		max-width: 100%;
 		padding-inline: u.rem(100);
+		margin-block-end: 60px;
 
 		@include u.breakpoint(large) {
 		}
@@ -123,8 +127,7 @@
 
 	&__layout1 {
 		gap: 2%;
-		height: 100vh; /* Add this to ensure the layout takes full viewport height */
-		// overflow: hidden;
+		padding-block-end: 20vh;
 	}
 
 	&__details {
@@ -157,6 +160,10 @@
 		@include u.breakpoint-down(large) {
 			width: 80vw;
 		}
+	}
+
+	&__wrapper figure {
+		margin-block: 20px;
 	}
 
 	&__featured-image {
@@ -200,14 +207,41 @@
 	&__banner-details p {
 		margin-block: 0;
 	}
+
+	&__step {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 40px;
+
+		@include u.breakpoint-down(small) {
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		&__number {
+			font-family: u.$silly-font;
+			font-size: u.rem(200);
+			-webkit-text-stroke: 2px var(--lilly-green);
+			color: hsla(112, 44%, 55%, 0);
+			animation: neon-flicker 12s alternate infinite;
+		}
+	}
 }
 
 .divider {
+	display: block;
 	background-image: url(/img/accents/Leafs\ Long\ -\ Green.svg);
 	background-repeat: no-repeat;
-	height: 100px;
+	background-position: center;
+	height: 50px;
 	width: 75%;
-	margin: 0 auto;
+	margin: 20px auto;
+	text-align: center;
+
+	@include u.breakpoint-down(small) {
+		height: 20px;
+	}
 }
 
 #our-team,

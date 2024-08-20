@@ -17,6 +17,7 @@
 		justify-content: center;
 		gap: u.rem(40) u.rem(20);
 		min-height: 100vh;
+		padding-inline: 40px;
 	}
 
 	&__logo {
@@ -54,6 +55,10 @@
 		gap: u.rem(40);
 		justify-content: center;
 		align-items: center;
+
+		@include u.breakpoint-down(small) {
+			gap: u.rem(20);
+		}
 	}
 
 	&__link {

@@ -16,6 +16,9 @@ h1 {
 	@include u.breakpoint-down(medium) {
 		font-size: 3rem;
 	}
+	@include u.breakpoint-down(small) {
+		font-size: 2rem;
+	}
 
 	// @include u.breakpoint(xlarge) {
 	// 	font-size: 5rem;
@@ -45,7 +48,7 @@ p {
 		font-size: u.rem(24);
 	}
 	@include u.breakpoint-down(small) {
-		font-size: u.rem(22);
+		font-size: u.rem(18);
 	}
 
 	&.small {
