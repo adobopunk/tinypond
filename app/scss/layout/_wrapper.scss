@@ -4,12 +4,12 @@
 	margin-inline: auto;
 	// width: min(100% - u.rem(40), 75%);
 	max-width: 90%;
-	padding-block: 60px;
+	// padding-block: 60px;
 	padding-inline: u.rem(10);
 
-	@include u.breakpoint(large) {
-		padding-block: 80px;
-	}
+	// @include u.breakpoint(large) {
+	// 	padding-block: 80px;
+	// }
 
 	@include u.breakpoint-down(medium) {
 		// width: min(100% - u.rem(40), 100%);
