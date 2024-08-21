@@ -126,7 +126,7 @@ table {
 img,
 iframe {
 	vertical-align: bottom;
-	max-width: 100%;
+	/* max-width: 100%; */
 }
 
 input,

@@ -108,15 +108,16 @@
 	left: -30vw;
 
 	@include u.breakpoint-down(large) {
-		height: 400vh;
+		height: 350vh;
 		width: auto;
-		left: -50vw;
+		// max-width: 200vw;
+		left: -40vw;
 	}
-
-	@include u.breakpoint-down(small) {
-		width: 300vw;
-		left: -100vw;
-	}
+	// @include u.breakpoint-down(medium) {
+	// 	height: 20vh;
+	// 	width: auto;
+	// 	left: -100vw;
+	// }
 }
 
 .svg-bg__2 {
