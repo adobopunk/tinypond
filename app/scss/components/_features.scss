@@ -95,11 +95,11 @@
 .svg-bg__2 {
 	z-index: 0;
 	position: absolute;
-	min-width: 100vw;
+	min-width: 120vw;
 	// width: 50vw;
 	padding: 10em;
 	overflow: hidden;
-	@include u.breakpoint-down(large) {
+	@include u.breakpoint-down(medium) {
 	}
 }
 
@@ -107,7 +107,7 @@
 	top: 0%;
 	left: -30vw;
 
-	@include u.breakpoint-down(large) {
+	@include u.breakpoint-down(medium) {
 		height: 350vh;
 		width: auto;
 		// max-width: 200vw;
@@ -125,7 +125,7 @@
 	left: 30vw;
 	fill: #ffffff;
 
-	@include u.breakpoint-down(large) {
+	@include u.breakpoint-down(medium) {
 		display: none;
 	}
 }
