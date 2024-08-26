@@ -1,6 +1,7 @@
 @use '../util' as u;
 
 .features {
+	overflow: hidden;
 	// box-shadow: 0 -150px 200px var(--feature-1);
 	min-height: 300vh;
 	background-color: var(--feature-1);
@@ -22,7 +23,6 @@
 	background-size: 3vw 3vw; /* Adjust grid size as needed */
 	background-position: -50%;
 	background-attachment: fixed;
-	overflow: hidden;
 
 	@include u.breakpoint-down(medium) {
 		background-size: 20vw 20vw;
@@ -128,4 +128,8 @@
 	@include u.breakpoint-down(medium) {
 		display: none;
 	}
+}
+
+.cta {
+	text-align: center;
 }

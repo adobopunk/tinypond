@@ -64,10 +64,14 @@
 	&__values-layout {
 		display: flex;
 		flex-direction: row;
-		gap: 5vw;
+		column-gap: 40px;
 		align-items: flex-start;
 		justify-content: center;
 		flex-wrap: wrap;
+
+		@include u.breakpoint-down(medium) {
+			gap: 10px;
+		}
 
 		& span {
 			font-size: u.rem(32);
@@ -102,7 +106,7 @@
 	& h1 {
 		line-height: 1.2;
 		text-align: center;
-		margin-block: u.rem(40);
+		margin-bottom: u.rem(40);
 	}
 
 	& p {
@@ -117,7 +121,7 @@
 	}
 
 	& img {
-		width: 50vw;
+		// width: 50vw;
 		max-width: 1200px;
 		display: block;
 		text-align: center;
@@ -128,7 +132,7 @@
 		margin: 10px auto;
 
 		@include u.breakpoint-down(large) {
-			width: 80vw;
+			// width: 80vw;
 		}
 	}
 

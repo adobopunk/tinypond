@@ -2,19 +2,11 @@
 
 .wrapper {
 	margin-inline: auto;
-	// width: min(100% - u.rem(40), 75%);
 	max-width: 90%;
-	// padding-block: 60px;
 	padding-inline: u.rem(10);
-	overflow-x: hidden;
-
-	// @include u.breakpoint(large) {
-	// 	padding-block: 80px;
-	// }
 
 	@include u.breakpoint-down(medium) {
-		// width: min(100% - u.rem(40), 100%);
 		max-width: 95%;
-		padding-inline: u.rem(0);
+		padding-inline: u.rem(20);
 	}
 }

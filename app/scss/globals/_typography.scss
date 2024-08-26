@@ -41,7 +41,7 @@ h3 {
 p {
 	margin-top: 0;
 	font-size: u.rem(22);
-	font-style: italic;
+	// font-style: italic;
 	// font-size: u.rem(18);
 	line-height: 1.5;
 	@include u.breakpoint-down(medium) {

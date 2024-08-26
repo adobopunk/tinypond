@@ -15,7 +15,7 @@ window.onload = function () {
 		'Level Up Your Brand<br>Today.',
 		"Tiny Pond, Big Results.<br>Let's Dive In.",
 		'Free Consult?<br>We Got You.',
-		"You Have Ideas. We Have Ideas.<br>Let's Chat.",
+		"You Have Ideas. We Have Ideas.<br>Let's Make Magic Happen.",
 	];
 
 	const randomFooter = function () {
