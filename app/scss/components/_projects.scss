@@ -1,12 +1,10 @@
 @use '../util' as u;
 
 .project {
-
-	
 	// overflow-x: hidden;
 	width: 100vw;
 	min-height: 100vh;
-	padding-top: 10vh;
+	// padding-top: 10vh;
 	background-color: var(--background-color);
 	background-image: url(/img/backgrounds/tinyPondText.png);
 	background-position: center;

@@ -14,7 +14,7 @@
 	background-size: 300vh;
 	background-attachment: fixed;
 
-	padding-top: 10vh;
+	padding-block: 10vh;
 	height: auto;
 	width: 100vw;
 	position: relative;
@@ -25,7 +25,6 @@
 	}
 
 	&__frame {
-		margin-block: 10vh;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		row-gap: 40px;
@@ -44,35 +43,26 @@
 		background-size: cover;
 		display: flex;
 		flex-direction: column;
-		// align-items: center;
 		text-align: left;
-
-		@include u.breakpoint-down(medium) {
-			width: 90%;
-		}
 	}
 
 	&__preview img {
-		border-radius: 10px;
-		border: 4px solid var(--lilly-green);
+		aspect-ratio: 16 / 9;
+		border-radius: 4px;
+		width: 100%;
 		margin-bottom: 12px;
+		object-fit: cover;
+
+		transition: transform 0.15s linear, box-shadow 0.15s linear;
+		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.185);
+
+		&:hover {
+			transform: scale(1.02);
+		}
 	}
 
-	// &__preview-link {
-	// 	width: 20vw;
-	// 	min-width: 300px;
-	// 	height: auto;
-	// 	object-fit: cover;
-	// 	border-radius: 4px;
-	// 	border: 2px solid var(--lilly-green);
-	// 	margin-block-end: 30px;
-
-	// 	transition: transform 0.15s linear, box-shadow 0.15s linear;
-	// 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.185);
-
-	// 	&:hover {
-	// 		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.185),
-	// 			0 10px 40px rgba(2, 125, 20, 0.691);
-	// 	}
-	// }
+	.parallax-image {
+		width: 100%;
+		border-radius: 20px; /* Adjust border-radius as needed */
+	}
 }

@@ -1,12 +1,20 @@
 const textObject = document.getElementById('hero__title');
-const words = ['Visuals.', 'Branding.', 'Animation.', 'Events.', 'Broadcasts.', 'Marketing.', 'Entertainment.']; // array of words
+const words = [
+	'Visuals.',
+	'Branding.',
+	'Animation.',
+	'Live Events.',
+	'Broadcasts.',
+	'Marketing.',
+	'Experiences.',
+]; // array of words
 let currentWordIndex = 1;
 let opacity = 1;
 
 let animationDirection = -1; // -1 for fade out, 1 for fade in
 
 function animate() {
-    opacity += animationDirection * 0.01;
+	opacity += animationDirection * 0.01;
 
 	textObject.style.opacity = opacity;
 

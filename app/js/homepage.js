@@ -35,7 +35,7 @@ fadeInReelVideos();
 // Fade-in animations
 function setupFadeInAnimations() {
 	const animatedTags = selectAll(
-		'h1, h2, h3, p, .about__img, a.button, .footer__img, .topnav__homelink, .topnav__item, .footer__logo, .footer__links, .subfeature__img, .subfeature__feature-img, .subfeature__content-text, .about img, .about__headshot, div.divider, .about__bio, .projects-directory img, .gallery img'
+		'.hero h1, .about h1, .hero h2, .hero h3, p, .about__img, a.button, .footer__img, .topnav__homelink, .topnav__item, .footer__logo, .footer__links, .subfeature__img, .subfeature__feature-img, .subfeature__content-text, .about img, .about__headshot, div.divider, .about__bio, .projects-directory img, figure'
 	);
 
 	debug(`Found ${animatedTags.length} animated tags`);
@@ -48,7 +48,7 @@ function setupFadeInAnimations() {
 			const tagTop = tag.getBoundingClientRect().top;
 			const tagBottom = tag.getBoundingClientRect().bottom;
 			if (tagTop < window.innerHeight - 25 && tagBottom > 0) {
-				tag.style.animation = `fadein 1.0s ${delay}s both`;
+				tag.style.animation = `fadein 0.75s ease-out ${delay}s both`;
 				delay += 0.05;
 			} else {
 				tag.style.opacity = 0;
@@ -265,8 +265,14 @@ if (!document.querySelector('style#fade-in-animation')) {
 	style.id = 'fade-in-animation';
 	style.textContent = `
         @keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
+            0% {
+                opacity: 0;
+
+            }
+            100% {
+                opacity: 1;
+
+            }
         }
     `;
 	document.head.appendChild(style);

@@ -4,7 +4,6 @@
 		transform: translateY(20px);
 	}
 	50% {
-		
 	}
 	100% {
 		opacity: 1;
@@ -36,9 +35,9 @@
 //Parallax
 .animation-wrapper {
 	position: relative;
-  }
-  
-  .animation-wrapper[data-parallax] {
+}
+
+.animation-wrapper[data-parallax] {
 	transform: translate(0, 0);
 	transition: transform 0.5s ease;
-  }
+}

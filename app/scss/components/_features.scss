@@ -1,135 +1,156 @@
 @use '../util' as u;
 
+.features h2 {
+	// z-index: 10;
+	text-align: center;
+}
+
 .features {
-	overflow: hidden;
-	// box-shadow: 0 -150px 200px var(--feature-1);
-	min-height: 300vh;
-	background-color: var(--feature-1);
-	// pointer-events: none;
-	padding-bottom: 20vh;
-	position: relative;
-	margin-block-start: -1px;
-	transition: background-color 1.5s;
-	background-image: linear-gradient(
-			to right,
-			rgba(33, 33, 33, 0.357) 1px,
-			transparent 1px
-		),
-		linear-gradient(
-			to bottom,
-			rgba(33, 33, 33, 0.357) 1px,
-			transparent 1px
-		);
-	background-size: 3vw 3vw; /* Adjust grid size as needed */
-	background-position: -50%;
+	background-color: var(--background-color);
+	background-image: url(/img/backgrounds/tinyPondText.png);
+	background-size: 300vh;
 	background-attachment: fixed;
 
-	@include u.breakpoint-down(medium) {
-		background-size: 20vw 20vw;
+	min-height: 100vh;
+	width: 100vw;
+	position: relative;
+
+	&__2x {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+		overflow: hidden;
+
+		@include u.breakpoint-down(medium) {
+			flex-direction: column;
+		}
 	}
 
-	@include u.breakpoint-down(small) {
-		background-size: 10vw 10vw;
+	&__text {
+		z-index: 0;
+		height: 100vh;
+		flex: 1;
+		max-width: 50vw;
+
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		align-items: flex-start;
+		justify-content: center;
+		padding-inline: 4vw;
+
+		@include u.breakpoint-down(medium) {
+			max-width: 80vw;
+			text-align: center;
+			min-height: 100vh;
+			padding-block: 10vh;
+		}
+
+		@include u.breakpoint(medium) {
+			flex: 1;
+		}
 	}
 
-	&__wrapper {
-		gap: u.rem(40) u.rem(20);
+	&__text h2 {
+		font-size: 6.25rem;
+		font-size: clamp(6.25rem, 5.25rem + 5vw, 11.25rem);
 	}
 
-	&__label {
-		@include u.breakpoint-down(small) {
+	&__text-fullwidth h2 {
+		font-size: 5rem;
+		font-size: clamp(5rem, 4.125rem + 4.375vw, 9.375rem);
+		padding-inline: 40px;
+	}
+
+	&__text h2,
+	&__text p {
+		text-align: left;
+
+		@include u.breakpoint-down(medium) {
 			text-align: center;
 		}
 	}
 
-	&__headline {
-		font-size: 4rem;
-		font-size: clamp(5rem, 3.06rem + 4.45vw, 5rem);
-		line-height: 1;
+	&__fullwidth {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		min-height: 100vh;
+		background-attachment: fixed;
+		// overflow: hidden;
 
-		@include u.breakpoint-down(small) {
-			font-size: 2.5rem;
-			font-size: clamp(
-				2.5rem,
-				1.5601503759398496rem + 5.012531328320802vw,
-				3.75rem
-			);
-			margin-block-end: u.rem(80);
+		@include u.breakpoint-down(medium) {
+			justify-content: center;
 		}
 	}
 
-	&__description {
-		max-width: 40ch;
+	&__fullwidth h2 {
+		text-align: center;
 	}
-
-	&__title {
-		margin-block-end: u.rem(5);
+	&__fullwidth p {
+		text-align: center;
 	}
 
 	&__image {
-		flex: 1 1 45%;
-		margin-block-end: u.rem(40);
-		height: auto;
-		transform: scale(1);
-		transition-property: transform, opacity;
-		transform-origin: center;
-		transform: translateZ(0);
-		transition-duration: 400ms;
-		&:hover {
-			opacity: 0.95;
-			transform: scale(1.05);
+		// flex: 1;
+		height: 100vh;
+		width: max-content;
+		width: 100%;
+		object-fit: cover;
+
+		background-image: url(/img/landing/pexels-saunak-shah-1169776-2819290.webp);
+
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+
+		@include u.breakpoint-down(medium) {
+			height: 100vh;
+			// background-size: contain;
+		}
+
+		@include u.breakpoint(medium) {
+			flex: 1;
 		}
 	}
 
-	&__headline {
-		text-align: center;
-		margin-block-end: u.rem(100);
-	}
-
-	&__item {
-		flex: 1 1 50%;
+	&__accent-container {
+		position: relative;
+		overflow: hidden;
 	}
 }
 
-.svg-bg,
-.svg-bg__2 {
-	z-index: 0;
+.accent {
+	position: relative;
+	width: 200px;
+	// z-index: -1;
+}
+
+.reverse {
+	flex-direction: row-reverse;
+
+	@include u.breakpoint-down(medium) {
+		flex-direction: column;
+	}
+}
+
+#design-image {
+	background-image: url(/img/landing/pexels-saunak-shah-1169776-2819290.webp);
+}
+
+#accent-design1 {
 	position: absolute;
-	min-width: 120vw;
-	// width: 50vw;
-	padding: 10em;
-	overflow: hidden;
-	@include u.breakpoint-down(medium) {
-	}
+	bottom: 10%;
+	right: 10%;
 }
-
-.svg-bg {
-	top: 0%;
-	left: -30vw;
-
-	@include u.breakpoint-down(medium) {
-		height: 350vh;
-		width: auto;
-		// max-width: 200vw;
-		left: -40vw;
-	}
-	// @include u.breakpoint-down(medium) {
-	// 	height: 20vh;
-	// 	width: auto;
-	// 	left: -100vw;
-	// }
+#broadcast {
+	background-image: url(/img/landing/pexels-saunak-shah-1169776-2819290.webp);
 }
-
-.svg-bg__2 {
-	top: 5%;
-	left: 30vw;
-	fill: #ffffff;
-
-	@include u.breakpoint-down(medium) {
-		display: none;
-	}
-}
-
-.cta {
-	text-align: center;
+#influencers {
+	background-image: url(/img/landing/pexels-saunak-shah-1169776-2819290.webp);
 }

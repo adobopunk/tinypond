@@ -1,7 +1,6 @@
 @use '../util' as u;
 
 .hero {
-	// background-color: var(--header-bg);
 	color: var(--text-light);
 
 	&__wrapper {
@@ -40,8 +39,16 @@
 		}
 	}
 
+	&__content {
+		max-width: 50ch; /* max 50 characters per line */
+
+		overflow-wrap: break-word;
+	}
+
 	&__title {
 		transition: opacity 0.5s; /* fade out and in */
+		font-size: 6.25rem;
+		font-size: clamp(6.25rem, 5.25rem + 5vw, 11.25rem);
 	}
 
 	&__button-wrapper {
@@ -77,28 +84,17 @@
 
 		@include u.breakpoint(large) {
 			background: linear-gradient(
-					to bottom,
-					rgba(255, 255, 255, 0) 80%,
-					var(--feature-1) 95%
-				),
-				linear-gradient(
-					to right,
-					rgba(0, 50, 72, 0.998) 5%,
-					rgba(255, 255, 255, 0) 50%
-				);
+				to right,
+				rgba(0, 50, 72, 0.998) 5%,
+				rgba(255, 255, 255, 0) 50%
+			);
 		}
 
 		@include u.breakpoint-down(medium) {
-			background: linear-gradient(
-				to bottom,
-				rgba(255, 255, 255, 0) 80%,
-				var(--feature-1) 95%
-			);
 		}
 	}
 
 	.bg-text-hero {
-		// animation: fadein 4s;
 		z-index: -1;
 		font-family: u.$silly-font;
 		font-size: 20vw;
@@ -112,7 +108,7 @@
 		overflow-x: hidden;
 		box-sizing: border-box;
 		animation: neon-flicker 12s alternate infinite;
-		opacity: 50%;
+		opacity: 15%;
 
 		@include u.breakpoint-down(large) {
 			font-size: 40vw;

@@ -1,6 +1,7 @@
 @use '../util' as u;
 
 .next-arrow {
+	z-index: 100;
 	width: 35px;
 	display: block;
 	position: absolute;
