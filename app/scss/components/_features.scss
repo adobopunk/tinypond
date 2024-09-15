@@ -26,6 +26,7 @@
 
 		@include u.breakpoint-down(medium) {
 			flex-direction: column;
+			min-height: 200vh;
 		}
 	}
 
@@ -96,27 +97,14 @@
 	}
 
 	&__image {
-		// flex: 1;
+		flex: 1;
 		height: 100vh;
-		width: max-content;
-		width: 100%;
 		object-fit: cover;
 
-		background-image: url(/img/landing/pexels-saunak-shah-1169776-2819290.webp);
-
+		background-image: url(/img/landing/Logo\ Comp\ Render.jpg);
 		background-attachment: fixed;
 		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
-
-		@include u.breakpoint-down(medium) {
-			height: 100vh;
-			// background-size: contain;
-		}
-
-		@include u.breakpoint(medium) {
-			flex: 1;
-		}
+		background-size: auto auto;
 	}
 
 	&__accent-container {
@@ -140,7 +128,7 @@
 }
 
 #design-image {
-	background-image: url(/img/landing/pexels-saunak-shah-1169776-2819290.webp);
+	background-image: url(/img/landing/Logo\ Comp\ Render.jpg);
 }
 
 #accent-design1 {
