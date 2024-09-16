@@ -4,7 +4,7 @@
 	// overflow-x: hidden;
 	width: 100vw;
 	min-height: 100vh;
-	// padding-top: 10vh;
+	padding-top: 10vh;
 	background-color: var(--background-color);
 	background-image: url(/img/backgrounds/tinyPondText.png);
 	background-position: center;
@@ -19,7 +19,7 @@
 	color: var(--murky-water);
 
 	&__wrapper {
-		width: min(100% - u.rem(40), 60%);
+		width: min(100% - u.rem(40), 75%);
 		min-height: 100vh;
 
 		@include u.breakpoint-down(large) {
@@ -41,51 +41,12 @@
 		}
 	}
 
-	&__banner {
-		position: relative;
-		margin-top: -12vh;
-		height: 45vh; /* Adjust the height to your liking */
-		width: auto;
-		// overflow: hidden;
-		background-image: url(/img/projects/Fortnite\ Reunion\ Cake.png);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-		background-position: center;
-
-		@include u.breakpoint-down(medium) {
-			height: 50vh;
-		}
-
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 45vh;
-
-			@include u.breakpoint-down(medium) {
-				height: 50vh;
-			}
-
-			background-image: linear-gradient(
-				to bottom,
-				rgba(0, 0, 0, 0) 80%,
-				var(--background-color) 100%
-			);
-
-			z-index: 1; /* Make sure it's on top of the image */
-		}
-	}
-
 	&__info {
 		height: auto;
 		width: 100vw;
 		background-color: var(--murky-water);
 		margin-inline: auto;
 		padding-inline: 0;
-		// width: min(100% - u.rem(40), 75%);
 		max-width: 100%;
 		padding-inline: u.rem(100);
 		margin-block-end: 60px;
@@ -147,8 +108,8 @@
 	}
 
 	&__wrapper img {
-		width: 50vw;
-		max-width: 1200px;
+		width: 75vw;
+		max-width: 1600px;
 		display: block;
 		text-align: center;
 		// border: 4px solid var(--lilly-green);
@@ -199,7 +160,7 @@
 
 	& h1 {
 		line-height: 1.2;
-		// text-align: center;
+		text-align: center;
 		margin-block: u.rem(40);
 		// font-size: u.rem(20);
 	}

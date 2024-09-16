@@ -1,68 +1,63 @@
 @use '../util' as u;
 
-.projects-directory wrapper {
+.preview {
+	height: 100vh;
+	padding-block: 10vh;
+	background-position: center center;
 	background-repeat: no-repeat;
-	@include u.breakpoint-down(medium) {
-		margin-inline: 100px;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 100;
+	position: relative;
+
+	&__text {
+		z-index: 200;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 80vh;
+	}
+
+	&__subheader {
+		z-index: 200;
+	}
+
+	&__header {
+		z-index: 200;
+
+		font-size: 4rem;
+		font-size: clamp(4rem, 3.6rem + 2vw, 6rem);
+	}
+
+	&__description {
+		z-index: 200;
+		max-width: 50ch;
+		word-wrap: break-word;
+		white-space: normal;
+		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft drop shadow */
 	}
 }
 
-.projects-directory {
-	background-color: var(--background-color);
-	background-image: url(/img/backgrounds/tinyPondText.png);
-	background-position: center;
-	background-size: 300vh;
-	background-attachment: fixed;
+.preview::before {
+	content: '';
+	position: absolute; /* Positions the overlay relative to the div */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(
+		4,
+		41,
+		42,
+		0.371
+	); /* Dark overlay with 50% opacity */
+	z-index: 0; /* Put the overlay behind the text */
+}
 
-	padding-block: 10vh;
-	height: auto;
-	width: 100vw;
-	position: relative;
+#reunion {
+	background-image: url(/img/backgrounds/reunion-bg.png);
+}
 
-	&__headline {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	&__frame {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		row-gap: 40px;
-		column-gap: 20px;
-		max-width: 100vw;
-		align-items: center;
-		justify-content: center;
-
-		@include u.breakpoint-down(medium) {
-			grid-template-columns: repeat(1, 1fr);
-		}
-	}
-
-	&__preview {
-		grid-column: span 1;
-		background-size: cover;
-		display: flex;
-		flex-direction: column;
-		text-align: left;
-	}
-
-	&__preview img {
-		aspect-ratio: 16 / 9;
-		border-radius: 4px;
-		width: 100%;
-		margin-bottom: 12px;
-		object-fit: cover;
-
-		transition: transform 0.15s linear, box-shadow 0.15s linear;
-		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.185);
-
-		&:hover {
-			transform: scale(1.02);
-		}
-	}
-
-	.parallax-image {
-		width: 100%;
-		border-radius: 20px; /* Adjust border-radius as needed */
-	}
+#porsche {
+	background-image: url(/img/backgrounds/porsche-bg.png);
 }
