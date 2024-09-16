@@ -2,7 +2,7 @@
 
 .preview {
 	height: 100vh;
-	padding-block: 10vh;
+	padding-block: 15vh;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -34,13 +34,13 @@
 		max-width: 50ch;
 		word-wrap: break-word;
 		white-space: normal;
-		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft drop shadow */
+		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
 	}
 }
 
 .preview::before {
 	content: '';
-	position: absolute; /* Positions the overlay relative to the div */
+	position: absolute; 
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -50,8 +50,8 @@
 		41,
 		42,
 		0.371
-	); /* Dark overlay with 50% opacity */
-	z-index: 0; /* Put the overlay behind the text */
+	); 
+	z-index: 0; 
 }
 
 #reunion {

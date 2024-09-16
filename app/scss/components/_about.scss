@@ -17,11 +17,7 @@
 
 	&__wrapper {
 		padding-top: 10vh;
-		width: min(100% - u.rem(40), 50%);
-
-		@include u.breakpoint-down(large) {
-			width: min(100% - u.rem(0), 80%);
-		}
+		width: min(100% - u.rem(0), 80%);
 	}
 
 	&__team-container {

@@ -46,8 +46,8 @@
 
 	&__title {
 		transition: opacity 0.5s; /* fade out and in */
-		font-size: 6.25rem;
-		font-size: clamp(6.25rem, 5.25rem + 5vw, 11.25rem);
+		font-size: 6rem;
+		font-size: clamp(6rem, 5.2rem + 4vw, 10rem);
 		white-space: nowrap;
 	}
 
@@ -108,7 +108,7 @@
 		overflow-x: hidden;
 		box-sizing: border-box;
 		animation: neon-flicker 12s alternate infinite;
-		opacity: 15%;
+		opacity: 25%;
 
 		@include u.breakpoint-down(large) {
 			font-size: 40vw;
