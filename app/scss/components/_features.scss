@@ -15,6 +15,8 @@
 	width: 100vw;
 	position: relative;
 
+	transition: background-color 2s ease-out;
+
 	&__2x {
 		display: flex;
 		flex-direction: row;
@@ -26,7 +28,7 @@
 
 		@include u.breakpoint-down(medium) {
 			flex-direction: column;
-			min-height: 200vh;
+			// min-height: 200vh;
 		}
 	}
 
@@ -46,7 +48,7 @@
 		@include u.breakpoint-down(medium) {
 			max-width: 80vw;
 			text-align: center;
-			min-height: 100vh;
+			min-height: 50vh;
 			padding-block: 10vh;
 		}
 
@@ -56,14 +58,15 @@
 	}
 
 	&__text h2 {
-		font-size: 6.25rem;
-		font-size: clamp(6.25rem, 5.25rem + 5vw, 11.25rem);
+		font-size: 4rem;
+		font-size: clamp(4rem, 2.8rem + 6vw, 10rem);
 	}
 
-	&__text-fullwidth h2 {
-		font-size: 5rem;
-		font-size: clamp(5rem, 4.125rem + 4.375vw, 9.375rem);
-		padding-inline: 40px;
+	&__text-fullwidth h3 {
+		// font-size: 5rem;
+		// font-size: clamp(5rem, 4.125rem + 4.375vw, 9.375rem);
+		// padding-inline: 40px;
+		text-align: left;
 	}
 
 	&__text h2,
@@ -75,36 +78,64 @@
 		}
 	}
 
+	&__text p {
+		@include u.breakpoint(medium) {
+			max-width: 75ch;
+		}
+	}
+
 	&__fullwidth {
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
-		align-items: center;
+		justify-content: flex-start;
+		align-items: flex-start;
 		min-height: 100vh;
 		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		padding-inline: 10vw;
+		padding-block: 10vh;
 		// overflow: hidden;
 
 		@include u.breakpoint-down(medium) {
 			justify-content: center;
+			background-size: cover;
+			background-position: center center;
+			align-items: center;
 		}
 	}
 
 	&__fullwidth h2 {
 		text-align: center;
+		overflow: hidden;
 	}
 	&__fullwidth p {
-		text-align: center;
+		text-align: left;
+
+		@include u.breakpoint-down(medium) {
+			text-align: center;
+		}
+
+		@include u.breakpoint(medium) {
+			max-width: 50ch;
+		}
 	}
 
 	&__image {
 		flex: 1;
 		height: 100vh;
 		object-fit: cover;
+	}
 
-		background-image: url(/img/landing/Logo\ Comp\ Render.jpg);
-		background-attachment: fixed;
-		background-repeat: no-repeat;
-		background-size: auto auto;
+	&__image img {
+		height: 100vh; /* Set the height to 100% of the viewport height */
+		width: 50vw; /* Width adjusts automatically to maintain aspect ratio */
+		object-fit: cover;
+
+		@include u.breakpoint-down(medium) {
+			width: auto;
+		}
 	}
 
 	&__accent-container {
@@ -114,7 +145,7 @@
 }
 
 .accent {
-	position: relative;
+	position: absolute;
 	width: 200px;
 	// z-index: -1;
 }
@@ -127,18 +158,14 @@
 	}
 }
 
-#design-image {
-	background-image: url(/img/landing/Logo\ Comp\ Render.jpg);
-}
-
 #accent-design1 {
 	position: absolute;
 	bottom: 10%;
 	right: 10%;
 }
 #broadcast {
-	background-image: url(/img/landing/pexels-saunak-shah-1169776-2819290.webp);
+	background-image: url(/img/landing/broadcast\ comp.jpg);
 }
 #influencers {
-	background-image: url(/img/landing/pexels-saunak-shah-1169776-2819290.webp);
+	background-image: url(/img/landing/influencer\ comp.jpg);
 }

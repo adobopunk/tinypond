@@ -40,8 +40,7 @@
 	}
 
 	&__content {
-		max-width: 50ch; /* max 50 characters per line */
-
+		max-width: 35ch; /* max 50 characters per line */
 		overflow-wrap: break-word;
 	}
 
@@ -49,6 +48,7 @@
 		transition: opacity 0.5s; /* fade out and in */
 		font-size: 6.25rem;
 		font-size: clamp(6.25rem, 5.25rem + 5vw, 11.25rem);
+		white-space: nowrap;
 	}
 
 	&__button-wrapper {

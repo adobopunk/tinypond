@@ -24,11 +24,17 @@
 		}
 	}
 
-	&__wrapper-values {
-		width: min(100% - u.rem(40), 60%);
+	&__team-container {
+		width: 100vw;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: center;
+		width: min(100% - u.rem(40), 95%);
 
 		@include u.breakpoint-down(large) {
-			width: min(100% - u.rem(0), 80%);
+			flex-direction: column;
+			align-items: center;
 		}
 	}
 
@@ -58,6 +64,28 @@
 		box-shadow: 0 10px 10px hsla(210, 100%, 5%, 0.503);
 		max-width: 600px;
 		margin: 10px auto;
+	}
+
+	&__team-layout {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		@include u.breakpoint-down(medium) {
+			gap: 10px;
+		}
+
+		& span {
+			font-size: u.rem(32);
+			line-height: 1.2;
+			font-weight: 700;
+			display: block;
+			text-align: center;
+			font-style: italic;
+			margin-block-end: u.rem(20);
+		}
 	}
 
 	&__values-layout {
@@ -149,6 +177,12 @@
 		align-items: flex-start;
 		justify-content: center;
 		align-items: center;
+		max-width: 30vw;
+		padding: 20px;
+
+		@include u.breakpoint-down(large) {
+			max-width: 90vw;
+		}
 
 		@include u.breakpoint-down(small) {
 			flex-direction: column;
