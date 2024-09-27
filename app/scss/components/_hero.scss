@@ -47,8 +47,18 @@
 	&__title {
 		transition: opacity 0.5s; /* fade out and in */
 		font-size: 6rem;
-		font-size: clamp(6rem, 5.2rem + 4vw, 10rem);
+		font-size: clamp(6rem, 5.6rem + 2vw, 8rem);
 		white-space: nowrap;
+
+		@include u.breakpoint-down(medium) {
+			font-size: 4.5rem;
+			font-size: clamp(4.5rem, 4.1rem + 2vw, 6.5rem);
+		}
+
+		@include u.breakpoint-down(small) {
+			font-size: 4rem;
+			font-size: clamp(4rem, 3.6rem + 2vw, 6rem);
+		}
 	}
 
 	&__button-wrapper {

@@ -112,10 +112,6 @@
 	&__fullwidth p {
 		text-align: left;
 
-		@include u.breakpoint-down(medium) {
-			text-align: center;
-		}
-
 		@include u.breakpoint(medium) {
 			max-width: 50ch;
 		}

@@ -7,6 +7,6 @@
 
 	@include u.breakpoint-down(medium) {
 		max-width: 95%;
-		padding-inline: u.rem(20);
+		padding-inline: 0;
 	}
 }
