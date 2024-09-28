@@ -127,9 +127,6 @@
 	}
 
 	& h1 {
-		font-size: 4rem;
-		font-size: clamp(4rem, 3.6rem + 2vw, 6rem);
-		line-height: 1.2;
 		text-align: center;
 		margin-bottom: u.rem(40);
 	}
@@ -218,6 +215,10 @@
 		backdrop-filter: blur(10px);
 	}
 
+	&__bio h3 {
+		text-align: center;
+	}
+
 	&__bio-name,
 	&__bio-text {
 		color: var(--murky-clouds);
@@ -237,10 +238,10 @@
 	}
 
 	&__bio-text {
-		padding-inline: 80px;
+		padding-inline: 40px;
 
 		@include u.breakpoint-down(medium) {
-			padding-inline: 40px;
+			padding-inline: 10px;
 		}
 	}
 
