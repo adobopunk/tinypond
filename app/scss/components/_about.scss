@@ -17,7 +17,7 @@
 
 	&__wrapper {
 		padding-top: 10vh;
-		width: min(100% - u.rem(0), 80%);
+		width: clamp(250px, 60%, 800px);
 	}
 
 	&__team-container {
