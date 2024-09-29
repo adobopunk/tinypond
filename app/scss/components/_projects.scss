@@ -269,6 +269,10 @@ figcaption {
 	box-shadow: none;
 	width: 100%;
 	width: 400px;
+
+	@include u.breakpoint-down(small) {
+		width: 80vw;
+	}
 }
 
 .project .project-description {

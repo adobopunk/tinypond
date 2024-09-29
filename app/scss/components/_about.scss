@@ -18,6 +18,13 @@
 	&__wrapper {
 		padding-top: 10vh;
 		width: clamp(250px, 60%, 800px);
+
+		@include u.breakpoint-down(medium) {
+			width: 80%;
+		}
+		@include u.breakpoint-down(small) {
+			width: 95%;
+		}
 	}
 
 	&__team-container {
@@ -174,7 +181,13 @@
 		padding: 20px;
 
 		@include u.breakpoint-down(large) {
-			max-width: 90vw;
+			max-width: 50vw;
+		}
+		@include u.breakpoint-down(medium) {
+			max-width: 75vw;
+		}
+		@include u.breakpoint-down(small) {
+			max-width: 95vw;
 		}
 
 		@include u.breakpoint-down(small) {
@@ -217,6 +230,7 @@
 
 	&__bio h3 {
 		text-align: center;
+		line-height: 1.2;
 	}
 
 	&__bio-name,

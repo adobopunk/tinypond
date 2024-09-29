@@ -102,7 +102,10 @@
 		transition-duration: 100ms;
 
 		@include u.breakpoint-down(small) {
-			font-size: u.rem(28);
+			@include u.breakpoint-down(small) {
+				font-size: 1rem;
+				font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+			}
 		}
 
 		&:hover {
