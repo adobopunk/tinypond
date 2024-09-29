@@ -103,7 +103,7 @@
 			align-items: center;
 			min-height: 50vh;
 			background-attachment: scroll;
-			background-size: cover;
+			background-size: contain;
 		}
 	}
 
@@ -183,7 +183,11 @@
 	right: 10%;
 }
 #broadcast {
-	background-image: url(/img/landing/broadcast\ comp.jpg);
+	background-image: url(/img/landing/broadcast-1x.webp);
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		background-image: url(/img/landing/broadcast\ comp.jpg);
+	}
 }
 
 #influencers {
