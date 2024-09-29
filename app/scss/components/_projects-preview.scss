@@ -10,6 +10,10 @@
 	z-index: 100;
 	position: relative;
 
+	@include u.breakpoint-down(medium) {
+		background-attachment: scroll;
+	}
+
 	&__text {
 		z-index: 200;
 		display: flex;

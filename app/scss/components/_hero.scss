@@ -11,9 +11,11 @@
 		height: 100vh;
 		gap: 40px;
 		padding-top: u.rem(20);
+		overflow-x: hidden;
 
-		@include u.breakpoint-down(medium) {
+		@include u.breakpoint-down(small) {
 			text-align: center;
+			align-items: center;
 		}
 	}
 	&__image {
@@ -56,8 +58,8 @@
 		}
 
 		@include u.breakpoint-down(small) {
-			font-size: 3rem;
-			font-size: clamp(3rem, 2.6rem + 2vw, 5rem);
+			font-size: 2.5rem;
+			font-size: clamp(2.5rem, 2.2rem + 1.5vw, 4rem);
 		}
 	}
 
@@ -92,15 +94,12 @@
 		height: 100vh;
 		z-index: -1;
 
-		@include u.breakpoint(large) {
+		@include u.breakpoint(medium) {
 			background: linear-gradient(
 				to right,
 				rgba(0, 50, 72, 0.998) 5%,
 				rgba(255, 255, 255, 0) 50%
 			);
-		}
-
-		@include u.breakpoint-down(medium) {
 		}
 	}
 

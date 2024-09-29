@@ -28,7 +28,7 @@
 
 		@include u.breakpoint-down(medium) {
 			flex-direction: column;
-			// min-height: 200vh;
+			min-height: 50vh;
 		}
 	}
 
@@ -49,6 +49,7 @@
 			max-width: 80vw;
 			text-align: center;
 			padding-block: 10vh;
+			align-items: center;
 		}
 
 		@include u.breakpoint(medium) {
@@ -99,9 +100,10 @@
 
 		@include u.breakpoint-down(medium) {
 			justify-content: center;
-			background-size: cover;
-			background-position: center center;
 			align-items: center;
+			min-height: 50vh;
+			background-attachment: scroll;
+			background-size: cover;
 		}
 	}
 
@@ -121,15 +123,20 @@
 		flex: 1;
 		height: 100vh;
 		object-fit: cover;
+
+		@include u.breakpoint-down(small) {
+			height: 50vh;
+		}
 	}
 
 	&__image img {
-		height: 100vh; /* Set the height to 100% of the viewport height */
-		width: 50vw; /* Width adjusts automatically to maintain aspect ratio */
+		height: 100vh;
+		width: 50vw;
 		object-fit: cover;
 
 		@include u.breakpoint-down(medium) {
 			width: 100vw;
+			height: 50vh;
 		}
 	}
 
