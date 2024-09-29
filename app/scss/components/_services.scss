@@ -10,7 +10,7 @@
 		background-attachment: scroll;
 	}
 
-	@include u.breakpoint-down(small) {
+    @include u.breakpoint-down(small) {
 		height: 50vh;
 	}
 
