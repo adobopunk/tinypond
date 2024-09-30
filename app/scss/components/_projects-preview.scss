@@ -42,15 +42,36 @@
 	}
 }
 
-.preview::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(4, 41, 42, 0.371);
-	z-index: 0;
+.preview {
+	position: relative; /* Ensure the parent has a position for absolute children */
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(4, 41, 42, 0.229);
+		z-index: 0;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%; /* Cover the entire section */
+		height: 100%; /* Cover the entire section */
+		background: linear-gradient(
+			to bottom right,
+			hsla(194, 100%, 12%, 0.855),
+			10%,
+			hsla(194, 100%, 12%, 0.533) 15%,
+			rgba(4, 41, 42, 0) 40%
+		); /* Smooth gradient */
+		z-index: 1; /* Ensure this overlay is above the main overlay */
+	}
 }
 
 #reunion {
@@ -61,5 +82,5 @@
 	background-image: url(/img/projects/porsche-911/screencaps/vlcsnap-2024-08-23-15h11m02s874.png);
 }
 #valorant-select {
-	background-image: url(/img/projects/valorant-select/Socials/announcement.png);
+	background-image: url(/img/projects/valorant-select/select-bg.webp);
 }

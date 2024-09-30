@@ -4,7 +4,6 @@
 	overflow-x: hidden;
 	width: 100vw;
 	padding-top: 10vh;
-
 	background-color: var(--background-color);
 	background-image: url(/img/backgrounds/tinyPondText.png);
 	background-position: center;
@@ -16,7 +15,6 @@
 	color: var(--murky-water);
 
 	&__wrapper {
-		padding-top: 10vh;
 		width: clamp(250px, 60%, 800px);
 
 		@include u.breakpoint-down(medium) {
@@ -135,6 +133,7 @@
 
 	& h1 {
 		text-align: center;
+		margin-block: 2.5rem;
 		margin-bottom: u.rem(40);
 	}
 

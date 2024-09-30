@@ -5,7 +5,7 @@
 	$b: &;
 	background-image: url(/img/accents/Texture\ Mushroom\ Green\ -\ Compressed.svg);
 	background-size: 140vh;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	z-index: 50;
 	background-repeat: repeat-x;
 
@@ -17,7 +17,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: u.rem(40) u.rem(20);
-		min-height: 100vh;
+		min-height: 80vh;
 		padding-inline: 40px;
 	}
 
