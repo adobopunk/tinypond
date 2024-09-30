@@ -94,7 +94,6 @@ a {
 	color: var(--lilly-green);
 	font-weight: 600;
 
-	transform: scale(1);
 	transition-property: text-shadow, transform;
 	transform-origin: center;
 	transform: translateZ(0);
@@ -102,7 +101,6 @@ a {
 
 	&:hover {
 		text-decoration-thickness: 1px;
-		// transform: scale(1.05);
 		color: var(--lilly-green);
 		text-shadow: 0 0 20px hsl(195, 77%, 50%);
 	}
