@@ -103,7 +103,6 @@
 			align-items: center;
 			min-height: 50vh;
 			background-attachment: scroll;
-			background-size: contain;
 		}
 	}
 
@@ -127,6 +126,19 @@
 		@include u.breakpoint-down(small) {
 			height: 50vh;
 		}
+	}
+
+	&__2x video {
+		flex: 1 1 50%;
+		width: 100%;
+		height: 100vh;
+		object-fit: cover;
+
+		// @media (orientation: portrait) {
+		// 	width: auto; /* Let the width adjust automatically */
+		// 	height: 100vh; /* Ensure the video takes up the full height of the viewport */
+		// 	flex: none; /* Disable the flex shrinking to allow height to be controlled */
+		// }
 	}
 
 	&__image img {
