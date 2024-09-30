@@ -53,10 +53,7 @@
 
 		@include u.breakpoint-down(small) {
 			gap: 16px;
-		}
-
-		@include u.breakpoint-down(xsmall) {
-			gap: 12px;
+			display: none;
 		}
 	}
 	// &__item {
