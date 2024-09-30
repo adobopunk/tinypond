@@ -87,10 +87,6 @@
 		bottom: 0;
 		z-index: -100;
 		right: 0;
-		// @include u.breakpoint-down(medium) {
-		// 	right: -40vw;
-		// 	width: auto;
-		// }
 
 		p {
 			line-height: 2;
@@ -108,8 +104,17 @@
 		@include u.breakpoint(medium) {
 			background: linear-gradient(
 				to right,
-				rgba(0, 50, 72, 0.636) 10%,
+				rgb(0, 50, 72) 10%,
+				rgba(0, 50, 72, 0.746) 30%,
 				rgba(255, 255, 255, 0) 80%
+			);
+		}
+		@include u.breakpoint-down(small) {
+			background: linear-gradient(
+				to bottom,
+				rgba(0, 50, 72, 0) 20%,
+				rgba(0, 50, 72, 0.736) 50%,
+				rgba(0, 50, 72, 0) 80%
 			);
 		}
 	}
