@@ -11,29 +11,13 @@
 		height: 100vh;
 		gap: 40px;
 		padding-top: u.rem(20);
-		overflow-x: hidden;
 
 		@include u.breakpoint-down(small) {
 			text-align: center;
 			align-items: center;
 		}
 	}
-	&__image {
-		width: 62%;
-		max-width: u.rem(483);
-		padding-bottom: 20px;
-		transition: transform 0.6s ease-in-out;
 
-		&:hover {
-			transform: rotate(-5deg); // Rotate image 10 degrees on hover
-		}
-
-		@include u.breakpoint(large) {
-			// flex: 5;
-			order: 2;
-			width: 100%;
-		}
-	}
 	&__text {
 		float: left;
 		@include u.breakpoint(large) {
@@ -46,23 +30,16 @@
 		overflow-wrap: break-word;
 		transition: text-shadow 0.5s;
 		text-shadow: 0 0 0 transparent;
-
-		&:hover {
-			text-shadow: 5px 5px 0 var(--feature-1);
-		}
 	}
 
 	&__title {
 		transition: opacity 0.5s, text-shadow 0.5s;
-		font-size: 6rem;
-		font-size: clamp(6rem, 5.6rem + 2vw, 8rem);
 		white-space: nowrap;
 		text-shadow: 0 0 0 transparent;
+		display: inline-block;
 
-		@include u.breakpoint-down(medium) {
-			font-size: 4.5rem;
-			font-size: clamp(4.5rem, 4.1rem + 2vw, 6.5rem);
-		}
+		font-size: 4.5rem;
+		font-size: clamp(4.5rem, 4.1rem + 2vw, 6.5rem);
 
 		@include u.breakpoint-down(small) {
 			font-size: 2.5rem;
@@ -76,7 +53,8 @@
 
 	&__button-wrapper {
 		display: flex;
-		justify-content: flex-start; // Horizontally center the items
+		justify-content: flex-start;
+		z-index: 100; // Horizontally center the items
 	}
 	&__background-video {
 		width: 100vw;

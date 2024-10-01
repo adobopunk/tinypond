@@ -20,8 +20,8 @@ h1 {
 }
 
 h2 {
-	font-size: 2.25rem;
-	font-size: clamp(2.25rem, 2.05rem + 1vw, 3.25rem);
+	font-size: 2rem;
+	font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
 	line-height: 1.1;
 	margin-block-end: u.rem(20);
 
@@ -34,8 +34,6 @@ h2 {
 h3 {
 	font-size: 1.2rem;
 	font-size: clamp(1.2rem, 1.14rem + 0.3vw, 1.5rem);
-
-	
 }
 
 p {
