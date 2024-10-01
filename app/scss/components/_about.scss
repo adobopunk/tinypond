@@ -15,10 +15,10 @@
 	color: var(--murky-water);
 
 	&__wrapper {
-		width: clamp(250px, 60%, 800px);
+		width: clamp(350px, 75%, 800px);
 
 		@include u.breakpoint-down(medium) {
-			width: 80%;
+			width: 90%;
 		}
 		@include u.breakpoint-down(small) {
 			width: 95%;
@@ -180,7 +180,7 @@
 		padding: 20px;
 
 		@include u.breakpoint-down(large) {
-			max-width: 50vw;
+			max-width: clamp(500px, 75%, 800px);
 		}
 		@include u.breakpoint-down(medium) {
 			max-width: 75vw;
