@@ -9,7 +9,7 @@ function debug(message) {
 
 // Mobile device check
 function isMobileDevice() {
-	return window.innerWidth <= 768; // You can adjust this threshold as needed
+	return window.innerWidth <= 900; // You can adjust this threshold as needed
 }
 
 //fade-in video

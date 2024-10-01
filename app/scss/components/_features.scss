@@ -7,7 +7,7 @@
 
 .features {
 	background-color: var(--background-color);
-	background-image: url(/img/backgrounds/tinyPondText.png);
+	background-image: url(/img/backgrounds/tinyPondText.webp);
 	background-size: 300vh;
 	background-attachment: fixed;
 
@@ -195,11 +195,11 @@
 	right: 10%;
 }
 #broadcast {
-	background-image: url(/img/landing/broadcast-1x.webp);
+	background-image: url(/img/landing/broadcast\ comp.jpg);
 
-	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-		background-image: url(/img/landing/broadcast\ comp.jpg);
-	}
+	// @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	// 	background-image: url(/img/landing/broadcast\ comp.jpg);
+	// }
 }
 
 #influencers {
