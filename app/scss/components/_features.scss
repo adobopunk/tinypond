@@ -62,6 +62,10 @@
 		font-size: clamp(4rem, 3.2rem + 4vw, 8rem);
 	}
 
+	&__text-fullwidth {
+		margin-top: 10vh;
+	}
+
 	&__text-fullwidth h3 {
 		// font-size: 5rem;
 		// font-size: clamp(5rem, 4.125rem + 4.375vw, 9.375rem);
