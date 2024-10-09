@@ -31,7 +31,7 @@
 		flex-direction: row;
 		align-items: flex-start;
 		justify-content: center;
-		width: min(100% - u.rem(40), 95%);
+		// width: min(100% - u.rem(40), 95%);
 
 		@include u.breakpoint-down(large) {
 			flex-direction: column;
@@ -186,7 +186,7 @@
 			max-width: 75vw;
 		}
 		@include u.breakpoint-down(small) {
-			max-width: 95vw;
+			max-width: 100vw;
 		}
 
 		@include u.breakpoint-down(small) {

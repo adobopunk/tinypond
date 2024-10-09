@@ -20,6 +20,10 @@
 		flex-direction: column;
 		height: 80vh;
 		// justify-content: space-between;
+
+		@include u.breakpoint-down(small) {
+			align-items: center;
+		}
 	}
 
 	&__subheader {
@@ -31,6 +35,10 @@
 
 		font-size: 4rem;
 		font-size: clamp(4rem, 3.6rem + 2vw, 6rem);
+
+		@include u.breakpoint-down(small) {
+			text-align: center;
+		}
 	}
 
 	&__description {
@@ -39,6 +47,10 @@
 		word-wrap: break-word;
 		white-space: normal;
 		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+		@include u.breakpoint-down(small) {
+			text-align: center;
+		}
 	}
 }
 
@@ -71,6 +83,14 @@
 			rgba(4, 41, 42, 0) 40%
 		); /* Smooth gradient */
 		z-index: 1; /* Ensure this overlay is above the main overlay */
+	}
+}
+
+.preview__subheader .secondary {
+	@include u.breakpoint-down(small) {
+		text-align: center;
+		margin: 0 auto;
+		display: block;
 	}
 }
 
