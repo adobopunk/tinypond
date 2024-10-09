@@ -12,7 +12,6 @@ window.onload = function () {
 	const footerTag = document.querySelector('h2.footer__title');
 	const footerOptions = [
 		"Your Journey Awaits.<br>Let's Get Started!",
-		'The Creative Agency<br>For High Impact Events.',
 		"Tiny Pond, Big Results.<br>Let's Dive In.",
 		'Free Consult?<br>We Got You.',
 	];

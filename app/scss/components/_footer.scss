@@ -4,28 +4,38 @@
 	background-color: var(--background-color);
 	$b: &;
 	background-image: url(/img/accents/Texture\ Mushroom\ Green\ -\ Compressed.svg);
-	background-size: 140vh;
+	background-size: cover; // Use cover for better image scaling
 	background-attachment: scroll;
 	z-index: 50;
-	background-repeat: repeat-x;
+	background-repeat: no-repeat; // Prevent tiling for a cleaner look
+
+	&__title {
+		margin-block-start: 5vh;
+	}
 
 	&__wrapper {
+		display: flex;
 		padding-block: 5vh;
 		text-align: center;
-		display: flex;
-		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: u.rem(40) u.rem(20);
 		min-height: 80vh;
-		padding-inline: 40px;
+		gap: 5%;
+
+		@include u.breakpoint(small) {
+		}
+
+		@include u.breakpoint-down(small) {
+			display: block;
+			flex-direction: column;
+			padding-inline: 0;
+		}
 	}
 
 	&__logo {
 		width: 100%;
 		margin: 0 auto;
 		text-align: center;
-		justify-content: center;
 	}
 
 	&__logo-image {
@@ -48,7 +58,8 @@
 	}
 
 	&__column {
-		flex-direction: row;
+		flex-direction: column; // Changed to column for better stacking on small screens
+		align-items: center; // Center items in column layout
 	}
 
 	&__links {
@@ -57,8 +68,9 @@
 		justify-content: center;
 		align-items: center;
 
-		@include u.breakpoint-down(small) {
-			gap: u.rem(20);
+		@include u.breakpoint-down(xsmall) {
+			gap: u.rem(0);
+			flex-direction: column; // Stack links vertically on small screens
 		}
 	}
 
@@ -69,7 +81,6 @@
 		gap: u.rem(16);
 		font-size: u.rem(18);
 		line-height: 1;
-		// margin-block-end: u.rem(10);
 		color: var(--murky-clouds);
 
 		&:hover {
@@ -92,20 +103,16 @@
 			fill: var(--lilly-green);
 		}
 	}
+
 	&__email {
 		color: var(--lilly-green);
-
 		transform: scale(1);
-		transition-property: text-shadow, transform;
+		transition: text-shadow 100ms, transform 100ms; // Combine transition properties
 		transform-origin: center;
 		transform: translateZ(0);
-		transition-duration: 100ms;
 
 		@include u.breakpoint-down(small) {
-			@include u.breakpoint-down(small) {
-				font-size: 1rem;
-				font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
-			}
+			font-size: u.rem(22);
 		}
 
 		&:hover {
@@ -119,9 +126,8 @@
 	&__homelink {
 		display: inline-block;
 		transform: scale(1);
-		transition-property: transform, opacity;
-		transform-origin: center;
-		transition-duration: 400ms;
+		transition: transform 400ms, opacity 400ms; // Combine transition properties
+
 		&:hover {
 			opacity: 0.75;
 			transform: scale(1.05);
@@ -129,17 +135,15 @@
 	}
 
 	&__about-link {
-		font-size: u.rem(24);
 		color: var(--murky-clouds);
 		transform: scale(1);
-		transition-property: text-shadow, transform;
+		transition: text-shadow 100ms, transform 100ms; // Combine transition properties
 		transform-origin: center;
 		transform: translateZ(0);
-		transition-duration: 100ms;
 
 		@include u.breakpoint-down(small) {
-			font-size: u.rem(20);
-			text-wrap: nowrap;
+			font-size: u.rem(16);
+			text-wrap: nowrap; // Ensure text does not wrap
 		}
 
 		&:hover {
@@ -149,44 +153,88 @@
 			text-shadow: 0 0 20px hsla(195, 77%, 50%, 0.476);
 		}
 	}
+
+	&__column.follow {
+		margin-block: 5vh;
+	}
+}
+
+.form-container {
+	padding: 20px;
+	width: 100%;
+	max-width: 900px; /* Maximum width of the form */
+	margin: 0 auto; /* Center the form container */
 }
 
 form {
 	display: flex;
-	border: 10px solid goldenrod;
-	flex-direction: row;
-	width: 50vw;
+	flex-direction: column; /* Stack elements vertically */
+	gap: 10px; /* Gap between the fields */
 	text-align: left;
-	margin-block-end: u.rem(80);
+	width: 100%; /* Full width for the form */
+}
+
+.label-container {
 	display: flex;
-	flex-wrap: wrap;
 	gap: 10px;
+	width: 100%;
 }
 
 input,
 textarea {
-	width: auto;
-	padding: u.rem(20);
-	border: 2px solid var(--lilly-green);
+	font-family: u.$font;
+	padding: u.rem(10);
 	border-radius: 4px;
-	background-color: var(--swamp-puppy);
-	color: white;
-	&:focus {
-		border: 4px solid var(--blue-fog);
-	}
+	font-size: u.rem(16);
+	width: 100%;
+	background-color: var(--dark-blue-fog);
+	outline: none;
+	border: none;
 }
 
+/* Styles for the name and email fields */
+#name,
 #email {
-	flex-basis: 100;
-	flex-grow: 3;
+	min-width: 0;
 }
 
 #name {
-	flex-basis: 200;
-	flex-grow: 1;
+	flex: 2;
+}
+
+#email {
+	flex: 3;
 }
 
 #message {
-	flex-basis: 500;
-	flex-grow: 5;
+	height: 100px;
+	resize: vertical;
+	font-family: u.$font;
+}
+
+/* Media Query for Small Screens */
+@include u.breakpoint-down(small) {
+	.form-container {
+		padding: 10px; /* Adjust padding for smaller screens */
+	}
+
+	form {
+		flex-direction: column; /* Stack all fields vertically */
+		align-items: stretch; /* Ensure inputs take full width */
+	}
+
+	.label-container {
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	#name,
+	#email {
+		width: 100%; /* Ensure full width for inputs */
+		min-width: auto; /* Remove min-width for smaller screens */
+	}
+
+	#message {
+		height: 120px; /* Adjust height for the message area */
+	}
 }

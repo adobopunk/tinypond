@@ -1,41 +1,28 @@
 <footer class="footer" id="contact">
     <h2 class="visually-hidden">Footer</h2>
     <div class="footer__wrapper wrapper">
-        <h2 class="footer__title">
+        <div> 
+            <h2 class="footer__title">
             Your Journey Awaits.<br />Let's Get Started!
         </h2>
-        
-        <h3 class="footer__email copy-link">
-            <a
-                class="footer__email"
-                id="copy-link"
-                href="mailto:hi@tinypond.studio"
-                >hi@tinypond.studio</a
-            >
-        </h3>
 
-        <ul class="footer__links">
-            <li class="footer__item">
-                <a href="/team/index.html#about">
-                    <h3 class="footer__about-link">About Us</h3>
-                </a>
-            </li>
-            <li class="footer__item">
-                <a href="/team/index.html#team"
-                    ><h3 class="footer__about-link">
-                        The Team
-                    </h3></a
-                >
-            </li>
-            <li class="footer__item">
-                <a href="/team/index.html#values"
-                    ><h3 class="footer__about-link">
-                        Our Values
-                    </h3></a
-                >
-            </li>
-          
-        </ul>
+        <div class="form-container">
+            <form name="contact" method="POST" data-netlify="true">
+                <div class="label-container"> 
+                        
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                      
+                        <input type="email" id="email" name="email" required placeholder="Your Email Address">
+                </div>
+                <div>
+                  
+                    <textarea id="message" name="message" required placeholder="Your Message Here"></textarea>
+                </div>
+                <button class="button tertiary" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <div>
         <section class="footer__column follow">
             <!-- <ul class="footer__links">
                 <li class="footer__item">
@@ -94,18 +81,49 @@
                 </li>
             </ul> -->
             <section class="footer__logo">
+
+                <ul class="footer__links">
+                    <li class="footer__item">
+                        <a href="/team/index.html#about">
+                            <h3 class="footer__about-link">About Us</h3>
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="/team/index.html#team"
+                            ><h3 class="footer__about-link">
+                                The Team
+                            </h3></a
+                        >
+                    </li>
+                    <li class="footer__item">
+                        <a href="/team/index.html#values"
+                            ><h3 class="footer__about-link">
+                                Our Values
+                            </h3></a
+                        >
+                    </li>
+                  
+                </ul>
+                <h3 class="footer__email copy-link">
+                    <a
+                        class="footer__email"
+                        id="copy-link"
+                        href="mailto:hi@tinypond.studio"
+                        >hi@tinypond.studio</a
+                    >
+                </h3>
                 <a
-                    href="/"
-                    class="footer__homelink js-scroll scroll-to"
-                >
-                    <img
-                        src="/img/Logos/Full White TP.svg"
-                        alt="Tiny Pond homepage"
-                        class="footer__logo-image"
-                        width="40"
-                        height="36"
-                    />
-                </a>
+                href="/"
+                class="footer__homelink js-scroll scroll-to"
+            >
+                <img
+                    src="/img/Logos/Full White TP.svg"
+                    alt="Tiny Pond homepage"
+                    class="footer__logo-image"
+                    width="40"
+                    height="36"
+                />
+            </a>
                 <p class="footer__copyright">
                     © <span id="currentYear"></span> Tiny Pond. All rights reserved.
                 </p>
@@ -113,6 +131,13 @@
             </section>
         </section>
     </div>
+       
+
+       
+
+        </div>
+        
+
 </footer>
 <script src="/app/js/hero.js"></script>
 <script src="/app/js/homepage.js" defer></script>

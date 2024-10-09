@@ -53,7 +53,7 @@
 
 		@include u.breakpoint-down(small) {
 			gap: 16px;
-			display: none;
+			// display: none;
 		}
 	}
 	// &__item {
