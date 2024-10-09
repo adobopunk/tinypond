@@ -12,6 +12,7 @@
 
 	@include u.breakpoint-down(medium) {
 		background-attachment: scroll;
+		height: 75vh;
 	}
 
 	&__text {

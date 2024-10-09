@@ -7,6 +7,8 @@ const words = [
 	'Broadcasts.',
 	'Marketing.',
 	'Experiences.',
+	'Esports.',
+	'Designs.',
 ]; // array of words
 let currentWordIndex = 1;
 let opacity = 1;
