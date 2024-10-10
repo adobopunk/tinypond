@@ -17,6 +17,11 @@
 
 	transition: background-color 4s ease-out;
 
+	@include u.breakpoint-down(small) {
+		background-attachment: scroll;
+		background-repeat: repeat-y;
+	}
+
 	&__2x {
 		position: relative;
 
@@ -200,14 +205,14 @@
 
 #accent-design1 {
 	z-index: -1;
-	top: -50vh;
+	top: -60vh;
 	left: 0;
 	transform: translateX(-50%);
 	transform: translateY(-50%);
 }
 #accent-design2 {
 	z-index: -1;
-	top: -50vh;
+	top: -60vh;
 	left: 0;
 	transform: translateX(-50%);
 	transform: translateY(-50%);

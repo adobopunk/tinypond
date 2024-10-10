@@ -10,7 +10,10 @@
 	background-position: center;
 	background-size: 300vh;
 	background-attachment: fixed;
+
 	@include u.breakpoint-down(small) {
+		background-attachment: scroll;
+		background-repeat: repeat-y;
 		padding-block-end: 10vh;
 	}
 

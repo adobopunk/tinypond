@@ -1,0 +1,22 @@
+.partners {
+	min-height: 50vh;
+	background: var(--background-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding-block: 10vh;
+
+	background-image: url(/img/backgrounds/tinyPondText.png);
+	background-position: center;
+	background-size: 300vh;
+	background-attachment: fixed;
+
+	@include u.breakpoint-down(small) {
+		background-attachment: scroll;
+		background-repeat: repeat-y;
+		padding-block: 20px;
+		min-height: 20px;
+	}
+}
