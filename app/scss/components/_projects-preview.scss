@@ -1,8 +1,8 @@
 @use '../util' as u;
 
 .preview {
-	height: 90vh;
-	padding-block: 15vh;
+	height: 50vh;
+	padding-block: 10vh;
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -80,8 +80,8 @@
 			to bottom right,
 			hsla(194, 100%, 12%, 0.855),
 			10%,
-			hsla(194, 100%, 12%, 0.533) 15%,
-			rgba(4, 41, 42, 0) 40%
+			hsla(194, 100%, 12%, 0.728) 15%,
+			rgba(4, 41, 42, 0) 75%
 		); /* Smooth gradient */
 		z-index: 1; /* Ensure this overlay is above the main overlay */
 	}
@@ -104,4 +104,7 @@
 }
 #valorant-select {
 	background-image: url(/img/projects/valorant-select/select-bg.png);
+}
+#proving-grounds {
+	background-image: url(/img/projects/proving-grounds/pg-bg.webp);
 }

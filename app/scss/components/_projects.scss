@@ -218,9 +218,12 @@
 
 figcaption {
 	font-style: italic;
+	font-weight: bold;
 	text-align: center;
 	font-family: u.$font;
 	color: var(--lilly-green);
+	margin-block: 20px;
+	box-shadow: none;
 }
 
 .bio-accent {
@@ -250,8 +253,8 @@ figcaption {
 	}
 }
 
-.side-by-side img,
-.side-by-side figure {
+.side-by-side > img,
+.side-by-side > figure {
 	height: auto;
 	flex: 1;
 
