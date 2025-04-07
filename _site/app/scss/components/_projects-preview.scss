@@ -1,0 +1,127 @@
+@use '../util' as u;
+
+.projects-directory {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding-block-end: u.rem(60);
+
+	background-color: var(--background-color);
+	background-image: url(/img/backgrounds/tinyPondText.png);
+	background-position: center;
+	background-size: 300vh;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+
+	@include u.breakpoint(medium) {
+		padding: 2rem;
+		// padding-block-start: u.rem(180);
+	}
+}
+
+.project-link,
+.next-project-link,
+.project-link-secondary {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	overflow: hidden;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	margin-block: u.rem(80);
+}
+
+.project-link:hover,
+.next-project-link:hover,
+.project-link-secondary:hover {
+	position: relative;
+	transform: translateY(-4px);
+	color: inherit;
+	text-shadow: none;
+}
+
+.project-preview {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	@include u.breakpoint(large) {
+		flex-direction: row-reverse;
+		text-align: right;
+		align-items: flex-start;
+		gap: 2rem;
+	}
+}
+
+.project-link:nth-child(odd) .project-preview {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+
+	@include u.breakpoint(large) {
+		flex-direction: column;
+	}
+}
+
+.project-link:nth-child(4n + 2) .project-preview {
+	display: flex;
+	flex-direction: row;
+	text-align: left;
+
+	@include u.breakpoint(large) {
+		flex-direction: row;
+	}
+
+	@include u.breakpoint-down(small) {
+		flex-direction: column;
+	}
+}
+
+.project-video {
+	position: relative;
+	width: 66.67%;
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+	background-color: rgba(
+		0,
+		0,
+		0,
+		0.1
+	); /* Placeholder background while video loads */
+
+	@include u.breakpoint-down(medium) {
+		width: 100%;
+	}
+}
+
+.project-link:nth-child(odd) .project-video {
+	width: 100%;
+}
+
+.project-video-element {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.project-info,
+.next-project-info {
+	position: relative;
+	flex: 1;
+	padding: 1rem;
+
+	@include u.breakpoint(large) {
+		margin-block-start: 10px;
+	}
+
+	&:hover {
+		text-decoration: underline;
+		text-decoration-thickness: 4px;
+		text-decoration-color: var(--lilly-green);
+		text-decoration-style: dotted;
+		text-underline-offset: 8px;
+	}
+}

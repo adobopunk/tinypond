@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1214.07 3379.52">
+  <defs>
+    <style>
+      font-face {
+        font-family: 'Yink';
+        src: url('/fonts/Yink Regular.ttf'); /* replace with your font file URL */
+      }
+    .cls-1 {
+        letter-spacing: -.03em;
+      }
+    .cls-2 {
+        fill: rgba(11, 24, 30, 0.391);
+        font-family: Yink, Yink;
+        font-size: 1103.71px;
+      }
+    </style>
+  </defs>
+  <text class="cls-2" transform="translate(275.93 0) rotate(90)">
+    <tspan x="0" y="0">P</tspan>
+    <tspan class="cls-1" x="879.65" y="0">O</tspan>
+    <tspan x="1579.39" y="0">ND</tspan>
+  </text>
+</svg>
