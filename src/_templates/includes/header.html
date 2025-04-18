@@ -30,10 +30,17 @@
 			property="og:url"
 			content="{{ site.siteUrl }}{{ page.url | url }}"
 		/>
+		{% if imagePath %}
+		<meta
+			property="og:image"
+			content="{{ site.siteUrl }}{{ imagePath }}"
+		/>
+		{% else %}
 		<meta
 			property="og:image"
 			content="{{ site.siteUrl }}/img/og-image.webp"
 		/>
+		{% endif %}
 		<meta property="og:type" content="website" />
 		<meta property="og:locale" content="en_US" />
 		<meta
