@@ -13,13 +13,14 @@ secondNextIndex = currentIndex | plus: 2 %}
 			<section class="project">
 				<div class="wrapper project__wrapper">
 					{{ content }}
-					<div class="next-projects-container">
-						<h2 class="explore-more">Explore More</h2>
 
+					<div class="next-projects-container">
 						{% assign nextProject =
 						collections.projects[nextIndex] %} {% if
 						nextProject == null %} {% assign nextProject =
 						collections.projects[0] %} {% endif %}
+						<h2 class="explore-more">More Work:</h2>
+
 						<a
 							href="{{ nextProject.url | url }}"
 							class="next-project-link"
