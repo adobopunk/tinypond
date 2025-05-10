@@ -63,8 +63,5 @@ module.exports = function (eleventyConfig) {
 			output: '_site',
 			includes: '_templates',
 		},
-		data: {
-			siteUrl: 'https://tinypond.studio',
-		},
 	};
 };
