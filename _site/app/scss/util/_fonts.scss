@@ -1,30 +1,6 @@
+@import url('https://use.typekit.net/fup4xhh.css');
 @import url('https://api.fonts.coollabs.io/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
 @import url('https://api.fonts.coollabs.io/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-@font-face {
-	font-family: 'Roc Grotesk Extrabold';
-	src: url(../../../fonts/Roc\ Grotesk\ ExtraBold.ttf);
-}
-@font-face {
-	font-family: 'Roc Grotesk Light';
-	src: url(../../../fonts/Roc\ Grotesk\ Light.ttf);
-}
-@font-face {
-	font-family: 'Roc Grotesk Regular';
-	src: url(../../../fonts/Roc\ Grotesk\ Light.ttf);
-}
-@font-face {
-	font-family: 'Roc Grotesk Medium';
-	src: url(../../../fonts/Roc\ Grotesk\ Medium.ttf);
-}
-@font-face {
-	font-family: 'Roc Grotesk Condensed';
-	src: url(../../../fonts/Roc\ Grotesk\ Condensed.ttf);
-}
-@font-face {
-	font-family: 'Roc Grotesk Condensed Light';
-	src: url(../../../fonts/);
-}
 
 @font-face {
 	font-family: 'Yink';
@@ -37,6 +13,7 @@
 }
 
 $font: 'Source Sans', sans-serif;
-$header-font: 'Roc Grotesk Medium', sans-serif;
-$button-font: 'Roc Grotesk Extrabold', sans-serif;
-$silly-font: 'Yink';
+
+$header-font: 'roc-grotesk', sans-serif;
+$button-font: 'roc-grotesk', sans-serif;
+$silly-font: 'Yink', cursive;
