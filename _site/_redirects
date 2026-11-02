@@ -1,0 +1,7 @@
+# Pages folded into the homepage by the redesign
+/team      /#about    301
+/team/     /#about    301
+/work      /#work     301
+/work/     /#work     301
+/contact   /#contact  301
+/contact/  /#contact  301

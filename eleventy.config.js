@@ -3,6 +3,8 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('img');
 	eleventyConfig.addPassthroughCopy('app');
 	eleventyConfig.addPassthroughCopy('robots.txt');
+	// Netlify redirects for pages the redesign folded into the homepage
+	eleventyConfig.addPassthroughCopy({ 'src/_redirects': '_redirects' });
 
 	eleventyConfig.addCollection('projects', function (collectionApi) {
 		return collectionApi
