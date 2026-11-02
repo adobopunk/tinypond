@@ -20,11 +20,11 @@
 
 		<meta
 			name="description"
-			content="Tiny Pond is a proudly independent, worker-owned creative studio & consultancy helping brands define their vision for maximum impact."
+			content="Tiny Pond is an independent, worker-owned creative studio. We design stream packages, animation and broadcast graphics for VTubers, streamers and live events."
 		/>
 
 		<meta property="og:title" content="Tiny Pond | Bespoke Design for Bold Brands" />
-		<meta property="og:description" content="Tiny Pond is a proudly independent, worker-owned creative studio & consultancy helping brands define their vision for maximum impact." />
+		<meta property="og:description" content="Tiny Pond is an independent, worker-owned creative studio. We design stream packages, animation and broadcast graphics for VTubers, streamers and live events." />
 		<meta
 			property="og:url"
 			content="https://tinypond.studio/"
@@ -46,7 +46,7 @@ Animation"
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="Tiny Pond | Bespoke Design for Bold Brands" />
-		<meta name="twitter:description" content="Tiny Pond is a proudly independent, worker-owned creative studio & consultancy helping brands define their vision for maximum impact." />
+		<meta name="twitter:description" content="Tiny Pond is an independent, worker-owned creative studio. We design stream packages, animation and broadcast graphics for VTubers, streamers and live events." />
 		<meta
 			name="twitter:image"
 			content="https://tinypond.studio/img/og-image.webp"
@@ -85,6 +85,13 @@ Animation"
 		/>
 		<meta name="msapplication-TileColor" content="#da532c" />
 		<meta name="theme-color" content="#ffffff" />
+		<link rel="preconnect" href="https://api.fonts.coollabs.io" />
+		<link rel="preconnect" href="https://use.typekit.net" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://api.fonts.coollabs.io/css2?family=Source+Sans+3:ital,wght@0,400..800;1,400..800&display=swap"
+		/>
+		<link rel="stylesheet" href="https://use.typekit.net/fup4xhh.css" />
 		<link rel="stylesheet" href="/assets/css/style.css" />
 		<link href="/assets/css/lightbox.css" rel="stylesheet" />
 		<script type="application/ld+json">
@@ -124,7 +131,7 @@ Animation"
 				src="/img/Logos/SVG/Color Logo White.svg"
 				alt="Tiny Pond homepage"
 				class="topnav__logo"
-				width="50px"
+				width="50px" decoding="async"
 			/>
 		</a>
 		<nav>
@@ -174,13 +181,17 @@ Animation"
 			data-parallax="-0.5"
 		>
 			<source
-				src="/img/landing/TP_PondLoop_FullWidth.webm"
+				src="/img/landing/TP_PondLoop_1600.webm"
 				type="video/webm"
+				media="(max-width: 900px)"
 			/>
 			<source
-				src="/img/landing/TP_PondLoop_FullWidth_h264_crf21.mp4"
+				src="/img/landing/TP_PondLoop_1600.mp4"
 				type="video/mp4"
+				media="(max-width: 900px)"
 			/>
+			<source src="/img/landing/TP_PondLoop_2560.webm" type="video/webm" />
+			<source src="/img/landing/TP_PondLoop_2560.mp4" type="video/mp4" />
 		</video>
 		<div class="hero__text">
 			<h1 class="hero__title" data-parallax="0">
@@ -188,17 +199,16 @@ Animation"
 			</h1>
 
 			<p class="hero__content" data-parallax="0">
-				We're a worker-owned creative collective crafting custom
-				worlds for VTubers, Live Events, and Streamers of all shapes
-				and sizes.
+				We're a worker-owned studio designing custom stream packages, animation and broadcast graphics for VTubers, streamers and live events.
 				<a href="/contact">Ready to collab?</a>
 			</p>
 
-			<a href="#make" class="js-scroll" data-parallax="0">
+			<a href="#make" class="js-scroll" data-parallax="0" aria-label="Scroll to What We Make">
 				<img
 					src="/img/accents/down arrow.svg"
+					alt=""
 					class="next-arrow"
-					id="arrow1"
+					id="arrow1" width="46" height="35" loading="lazy" decoding="async"
 				/>
 			</a>
 
@@ -211,67 +221,55 @@ Animation"
 
 <section class="services" id="make">
 	<div class="wrapper">
-		<h1 style="text-align: center; margin-top: 80px">What We Make</h1>
+		<h2 class="h1" style="text-align: center; margin-top: 80px">What We Make</h2>
 		<div class="side-by-side" style="gap: 5%">
 			<div>
-				<h1>Collaborative Creative Direction</h1>
+				<h3 class="h1">Collaborative Creative Direction</h3>
 				<p>
-					Whether you have defined visuals or are still figuring
-					things out, we work with you to understand your
-					personality and develop something that feels true to
-					you.
+					Whether you already have a look or are still figuring it out, we get to know you and design something that fits your personality.
 				</p>
 			</div>
-			<img src="/img/landing/tp1.webp" class="service" alt="" />
+			<img src="/img/landing/tp1.webp" class="service" alt="" width="1920" height="1082" loading="lazy" decoding="async" />
 		</div>
 		<div class="side-by-side" style="gap: 5%">
 			<div>
-				<h1>Immersive Stream Packages</h1>
+				<h3 class="h1">Immersive Stream Packages</h3>
 				<p>
-					Transport your audience into a hand-crafted world of
-					your very own style with a stream identity that's
-					fully-animated, totally custom, and built to match your
-					energy.
+					A fully animated, custom stream identity designed around your style and the way you stream.
 				</p>
 			</div>
 			<img
 				src="/img/projects/Baehino/screen_chat.webp"
 				class="service"
-				alt=""
+				alt="" width="1920" height="1080" loading="lazy" decoding="async"
 			/>
 		</div>
 		<div class="side-by-side" style="gap: 5%">
 			<div>
-				<h1>Cinematic Animations</h1>
+				<h3 class="h1">Cinematic Animations</h3>
 				<p>
-					From intros and intermissions to lore reveals, we
-					create cinematic moments that dazzle your viewers and
-					create lasting impressions.
+					Intros, intermissions and lore reveals, animated in 2D or 3D.
 				</p>
 			</div>
-			<img src="/img/landing/tp3.webp" class="service" alt="" />
+			<img src="/img/landing/tp3.webp" class="service" alt="" width="1920" height="1080" loading="lazy" decoding="async" />
 		</div>
 		<div class="side-by-side" style="gap: 5%">
 			<div>
-				<h1>Broadcast & Event Design</h1>
+				<h3 class="h1">Broadcast & Event Design</h3>
 				<p>
-					Tournaments, IRL events, and livestream chaos of all
-					shapes and sizes. We bring the polished, professional
-					visuals that make your production shine.
+					Graphics for tournaments, in-person events and livestreams of any size, from lower thirds to full broadcast packages.
 				</p>
 			</div>
-			<img src="/img/landing/tp4.webp" class="service" alt="" />
+			<img src="/img/landing/tp4.webp" class="service" alt="" width="1920" height="1080" loading="lazy" decoding="async" />
 		</div>
 		<div class="side-by-side" style="gap: 5%">
 			<div>
-				<h1>Production Assets & Templates</h1>
+				<h3 class="h1">Production Assets & Templates</h3>
 				<p>
-					Need a fresh schedule? Animated panel? Quick social
-					post? We design custom, editable templates that let you
-					keep your content fresh and flexible at all times.
+					Schedules, animated panels and social posts, delivered as editable templates you can update yourself.
 				</p>
 			</div>
-			<img src="/img/landing/tp5.webp" class="service" alt="" />
+			<img src="/img/landing/tp5.webp" class="service" alt="" width="1920" height="1080" loading="lazy" decoding="async" />
 		</div>
 	</div>
 </section>
@@ -305,9 +303,9 @@ Animation"
 	</div>
 </section>
  <div class="projects-directory" id="work">
-	<h1 class="title visually-hidden" id="our-work" style="margin-top: 20vh">
+	<h2 class="title visually-hidden" id="our-work" style="margin-top: 20vh">
 		Our Work
-	</h1>
+	</h2>
 	<div class="wrapper project__wrapper">
 		 
 <a href="/projects/ultracaius/" class="project-link">
@@ -326,7 +324,7 @@ Animation"
 		</div>
 		<div class="project-info">
 			<h2 class="project-title">UltraCaius Takes To The Stars</h2>
-			<p class="project-description">Designing a Celestial Dreamscape for UltraCaius's Supernova Evolution</p>
+			<p class="project-description">A celestial stream package and 3D intermission animation for VTuber UltraCaius.</p>
 		</div>
 	</div>
 </a>
@@ -344,7 +342,7 @@ Animation"
 		</div>
 		<div class="project-info">
 			<h2 class="project-title">Crafting a Bold New Esports Identity</h2>
-			<p class="project-description">A new era for esports, and a brand identity to match.</p>
+			<p class="project-description">Logo, brand identity and launch video for In Queue, a worker-owned esports agency.</p>
 		</div>
 	</div>
 </a>
@@ -362,7 +360,7 @@ Animation"
 		</div>
 		<div class="project-info">
 			<h2 class="project-title">A New Style for Baehino</h2>
-			<p class="project-description">Crafting a Demonic Brand Identity for Baehino’s Streaming Empire</p>
+			<p class="project-description">A demonic brand identity and stream package for VTuber Baehino.</p>
 		</div>
 	</div>
 </a>
@@ -372,7 +370,7 @@ Animation"
 		<div class="project-video">
 			
 			<img
-				src="/img/projects/Apparel/Cover 2.jpg"
+				src="/img/projects/Apparel/Cover 2.webp"
 				alt="Our Apparel Showcase"
 				class="project-image-element"
 			/>
@@ -380,7 +378,7 @@ Animation"
 		</div>
 		<div class="project-info">
 			<h2 class="project-title">Our Apparel Showcase</h2>
-			<p class="project-description">Visually Striking Wearables.</p>
+			<p class="project-description">Apparel and merch for creators, podcasts, events and Deco Deco.</p>
 		</div>
 	</div>
 </a>
@@ -390,7 +388,7 @@ Animation"
 		<div class="project-video">
 			
 			<img
-				src="/img/projects/Hot Burger/logo.jpg"
+				src="/img/projects/Hot Burger/logo.webp"
 				alt="Designing Hot Burger"
 				class="project-image-element"
 			/>
@@ -398,7 +396,7 @@ Animation"
 		</div>
 		<div class="project-info">
 			<h2 class="project-title">Designing Hot Burger</h2>
-			<p class="project-description">Crafting a Playful Brand for this Star-Studded Cooking Extravaganza</p>
+			<p class="project-description">Event identity, broadcast graphics and merch for QTCinderella’s live cooking event.</p>
 		</div>
 	</div>
 </a>
@@ -408,7 +406,7 @@ Animation"
 		<div class="project-video">
 			
 			<img
-				src="/img/projects/Deco Deco/Branding_.png"
+				src="/img/projects/Deco Deco/Branding_.webp"
 				alt="Getting Crafty with Deco Deco"
 				class="project-image-element"
 			/>
@@ -416,7 +414,7 @@ Animation"
 		</div>
 		<div class="project-info">
 			<h2 class="project-title">Getting Crafty with Deco Deco</h2>
-			<p class="project-description">Building a playful arts and crafts studio brand in the heart of Los Angeles</p>
+			<p class="project-description">Brand identity for Deco Deco, an arts and crafts studio in Los Angeles.</p>
 		</div>
 	</div>
 </a>
@@ -434,29 +432,23 @@ Animation"
  <section class="about" id="about">
 	<div class="wrapper about__wrapper">
 		<div class="about__layout1">
-			<h1>What is Tiny Pond?</h1>
+			<h2 class="h1">What is Tiny Pond?</h2>
 
 			<p>
-				Tiny Pond is a creative studio and consultancy created by
-				Tifa Jade and Mateo Julia-Wise. We worked side-by-side at an
-				agency for over three years, collaborating on designs for
-				gaming brands like Mountain Dew, Fortnite, and Xbox.
+				Tiny Pond is a creative studio and consultancy started by
+				Tifa Jade and Mateo Juliá Wise. We worked side by side at an agency for over three years,
+				designing for gaming brands like Mountain Dew, Fortnite and Xbox.
 			</p>
 
-			<p>Now, we bring our expertise directly to you as Tiny Pond.</p>
+			<p>Now we work with clients directly as Tiny Pond.</p>
 
 			<p>
-				Our goal is simple: deliver great results, together. When
-				you partner with us, you’re directly supporting independent
-				artists, dedicated to creating exceptional bespoke design
-				systems and assets that set you and your team up for
-				success.
+				When you hire Tiny Pond, you work directly with the two artists making your design system and assets, and your budget goes to independent artists.
 			</p>
 			<p>
-				Tiny Pond is a new venture for us, but our experience is
-				vast, and the potential we bring is limitless. Let’s work
-				together and make something amazing. We can't wait to
-				<b><a href="/contact">bring your ideas to life.</a></b>
+				Tiny Pond is a new studio, but we've each spent years doing this
+				work for major brands. If you have a project in mind,
+				<b><a href="/contact">tell us about it.</a></b>
 			</p>
 		</div>
 	</div>
@@ -469,7 +461,7 @@ Animation"
 					<img
 						src="/img/about/tj.webp"
 						alt="Headshot of Tifa"
-						class="pfp"
+						class="pfp" width="750" height="750" loading="lazy" decoding="async"
 					/>
 				</div>
 				<div class="about__bio">
@@ -489,25 +481,10 @@ Animation"
 					</h3>
 
 					<p class="about__bio-text">
-						Tifa Jade also enjoys going by TJ, and is a
-						creative producer and animation director with over
-						10 years of experience leading visual projects
-						from concept to delivery. She gained extensive
-						editorial experience working in the
-						post-production department at UFC for over four
-						years, and has had her work featured on UFC
-						broadcasts, Fight Pass, and ESPN.
+						Tifa Jade, who also goes by TJ, is a creative producer and animation director with over 10 years of experience leading visual projects from concept to delivery. She spent more than four years in the UFC's post-production department, and her work has aired on UFC broadcasts, Fight Pass and ESPN.
 					</p>
 					<p class="about__bio-text">
-						Now a senior creative producer and freelance
-						animation director, she has taken the lead on
-						development of dynamic animated visuals for
-						esports and gaming brands, working with industry
-						giants like Epic Games, Xbox, and Mountain Dew on
-						experiential marketing campaigns. She loves
-						designing motion identities, bringing experienced
-						animation to esports broadcasts, event promos,
-						websites, and everything in between.
+						Now a senior creative producer and freelance animation director, she leads animation for esports and gaming brands and has worked with Epic Games, Xbox and Mountain Dew on experiential marketing campaigns. She designs motion identities and animation for esports broadcasts, event promos and websites.
 					</p>
 					<a href="https://www.tifajade.com/" target="_blank">
 						<button
@@ -529,12 +506,12 @@ Animation"
 					<img
 						src="/img/about/mateo2.webp"
 						alt="Headshot of Mateo"
-						class="pfp"
+						class="pfp" width="750" height="750" loading="lazy" decoding="async"
 					/>
 				</div>
 				<div class="about__bio">
 					<h3 class="about__bio-name">
-						Mateo Julia-Wise
+						Mateo Juliá Wise
 						<span>Graphic Designer<br />he/him</span>
 					</h3>
 					<h3 class="footer__email">
@@ -545,26 +522,10 @@ Animation"
 						>
 					</h3>
 					<p class="about__bio-text">
-						Mateo is a well-versed graphic designer with
-						extensive experience in a variety of styles. As
-						creative director of esports powerhouse BoomTV,
-						he's worked with some of the world's leading
-						gaming brands on experiential brand design for
-						marketing campaigns and high-octane esports
-						broadcasts.
+						Mateo is a graphic designer who works across many styles. As creative director of the esports company BoomTV, he designed experiential brand work for marketing campaigns and esports broadcasts with major gaming brands.
 					</p>
 					<p class="about__bio-text">
-						Mateo fell in love with design while making event
-						graphics for his college in NYC, and has always
-						been driven by a passion for innovation and
-						creativity. He has since collaborated with
-						prominent brands, influencers, and independent
-						clients alike, always pushing visual identities
-						with experimental and bold design options. His
-						broad experience has shaped him into a highly
-						adaptable and efficient designer, capable of
-						delivering exceptional results, no matter the
-						challenge.
+						Mateo started designing while making event graphics for his college in NYC. He has since worked with brands, influencers and independent clients, and he likes to push visual identities toward experimental, bold options. He adapts quickly to each project and works fast.
 					</p>
 					<a href="https://www.mateojw.com/" target="_blank">
 						<button
@@ -582,7 +543,6 @@ Animation"
 				</div>
 			</div>
 		</div>
-		<div class="divider"></div>
 	</div>
 </section>
 
@@ -596,7 +556,7 @@ Animation"
     <div class="footer__wrapper wrapper">
         <div> 
             <h2 class="footer__title">
-            Your Journey Awaits.<br />Let's Get Started!
+            Have a project in mind?<br />Let's Get Started!
         </h2>
 
        <a href="/contact"><button class="button tertiary" type="submit">Let's Talk!</button></a> 
@@ -637,47 +597,47 @@ Animation"
                         alt="Tiny Pond homepage"
                         class="footer__logo-image"
                         width="40"
-                        height="36"
+                        height="36" loading="lazy" decoding="async"
                     />
                 </a>
 <ul class="footer__links">
     <li class="footer__social">
-        <a href="https://bsky.app/profile/tinypond.studio" target="_blank">
+        <a href="https://bsky.app/profile/tinypond.studio" target="_blank" aria-label="Tiny Pond on Bluesky">
 
-            <svg class="footer__social-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"/></svg>
+            <svg aria-hidden="true" class="footer__social-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2c42.1-31.6 110.3-56 110.3 21.8c0 15.5-8.9 130.5-14.1 149.2C478.2 298 412 314.6 353.1 304.5c102.9 17.5 129.1 75.5 72.5 133.5c-107.4 110.2-154.3-27.6-166.3-62.9l0 0c-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8l0 0c-12 35.3-59 173.1-166.3 62.9c-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1C10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"/></svg>
 
         </a>
     </li>
     <li class="footer__social">
-        <a href="https://x.com/tinypondstudio" target="_blank">
+        <a href="https://x.com/tinypondstudio" target="_blank" aria-label="Tiny Pond on X">
 
-            <svg class="footer__social-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+            <svg aria-hidden="true" class="footer__social-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
         </a>
     </li>
 
     <li class="footer__social">
 
-<a href="https://www.instagram.com/tinypond.studio/" target="_blank">
+<a href="https://www.instagram.com/tinypond.studio/" target="_blank" aria-label="Tiny Pond on Instagram">
 
-    <svg class="footer__social-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    <svg aria-hidden="true" class="footer__social-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
 </a>
 
     </li>
     <li class="footer__social">
 
-<a href="https://www.tiktok.com/@tinypond_studio" target="_blank">
+<a href="https://www.tiktok.com/@tinypond_studio" target="_blank" aria-label="Tiny Pond on TikTok">
 
-    <svg class="footer__social-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
+    <svg aria-hidden="true" class="footer__social-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
 </a>
 
     </li>
 
     <li class="footer__social">
 
-<a href="https://www.linkedin.com/company/tinypond" target="_blank">
+<a href="https://www.linkedin.com/company/tinypond" target="_blank" aria-label="Tiny Pond on LinkedIn">
 
 
-    <svg class="footer__social-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    <svg aria-hidden="true" class="footer__social-path" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
 </a>
 
     </li>
@@ -685,7 +645,7 @@ Animation"
                     <p class="footer__copyright">
                         © <span id="currentYear"></span> Tiny Pond. All rights reserved.
                     </p>
-                    <p class="footer__copyright">Designed and built in-house. This site collects basic, anoymous data via <a href="https://umami.is/" target="_blank">Umami</a>.</p>
+                    <p class="footer__copyright">Designed and built in-house. This site collects basic, anonymous data via <a href="https://umami.is/" target="_blank">Umami</a>.</p>
                 </section>
             </section>
         </div>

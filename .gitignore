@@ -1,7 +1,11 @@
 # === Eleventy/11ty Specific ===
-_site/          # 11ty's default output directory
-.cache/         # 11ty's cache folder
-.11ty.js        # Local 11ty config (if used)
+# _site/ is committed today (Netlify may publish it), so it stays tracked.
+# 11ty's default output directory:
+# _site/
+# 11ty's cache folder
+.cache/
+# Local 11ty config (if used)
+.11ty.js
 
 # === Dependencies ===
 node_modules/
@@ -9,8 +13,10 @@ package-lock.json
 yarn.lock
 
 # === Build Artifacts ===
-dist/           # Alternate output dir (if not _site)
-.temp/          # Temporary files
+# Alternate output dir (if not _site)
+dist/
+# Temporary files
+.temp/
 *.tmp
 
 # === Environment/Secrets ===
@@ -19,12 +25,17 @@ dist/           # Alternate output dir (if not _site)
 .env*.local
 
 # === OS/Editor Junk ===
-.DS_Store       # macOS
-Thumbs.db       # Windows
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
 desktop.ini
-*.swp           # Vim swap files
-.idea/          # JetBrains IDEs
-.vscode/        # VS Code
+# Vim swap files
+*.swp
+# JetBrains IDEs
+.idea/
+# VS Code
+.vscode/
 
 # === Logs ===
 *.log

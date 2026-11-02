@@ -5,7 +5,7 @@
 	width: 100vw;
 	padding-top: 10vh;
 	background-color: var(--background-color);
-	background-image: url(/img/backgrounds/tinyPondText.png);
+	background-image: url(/img/backgrounds/tinyPondText.webp);
 	background-position: center;
 	background-size: 300vh;
 	background-attachment: fixed;
@@ -56,7 +56,7 @@
 		// min-height: 100vh;
 
 		background-color: var(--background-color);
-		background-image: url(/img/backgrounds/tinyPondText.png);
+		background-image: url(/img/backgrounds/tinyPondText.webp);
 		background-position: center;
 		background-size: 300vh;
 		background-attachment: fixed;
@@ -141,7 +141,8 @@
 		}
 	}
 
-	& h1 {
+	& h1,
+	& .h1 {
 		text-align: center;
 		margin-block: 2.5rem;
 		margin-bottom: u.rem(40);

@@ -6,7 +6,7 @@
 	min-height: 100vh;
 	padding-top: u.rem(120);
 	background-color: var(--background-color);
-	background-image: url(/img/backgrounds/tinyPondText.png);
+	background-image: url(/img/backgrounds/tinyPondText.webp);
 	background-position: center;
 	background-size: 300vh;
 	background-attachment: fixed;
@@ -100,7 +100,8 @@
 		}
 	}
 
-	& h1 {
+	& h1,
+	& .h1 {
 		line-height: 1.2;
 		margin-block: u.rem(20);
 		font-size: 3.5rem;

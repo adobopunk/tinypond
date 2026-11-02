@@ -15,8 +15,7 @@
 		<link rel="canonical" href="{{ site.siteUrl }}{{ page.url | url }}" />
 
 		<title>
-			{% if page.url == "/" %}{{ title }} {% else %}{{ title }} | Tiny
-			Pond: Independent Design Studio{% endif %}
+			{% if page.url == "/" %}{{ title }} {% else %}{{ title }} | Tiny Pond{% endif %}
 		</title>
 
 		<meta
@@ -25,7 +24,7 @@
 		/>
 
 		<meta property="og:title" content="{{ title }}" />
-		<meta property="og:description" content="{{ description }}" />
+		<meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
 		<meta
 			property="og:url"
 			content="{{ site.siteUrl }}{{ page.url | url }}"
@@ -91,8 +90,14 @@ Animation"
 		/>
 		<meta name="msapplication-TileColor" content="#da532c" />
 		<meta name="theme-color" content="#ffffff" />
-		<link rel="stylesheet" href="/assets/css/style.css" />
+		<link rel="preconnect" href="https://api.fonts.coollabs.io" />
+		<link rel="preconnect" href="https://use.typekit.net" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://api.fonts.coollabs.io/css2?family=Source+Sans+3:ital,wght@0,400..800;1,400..800&display=swap"
+		/>
 		<link rel="stylesheet" href="https://use.typekit.net/fup4xhh.css" />
+		<link rel="stylesheet" href="/assets/css/style.css" />
 		<link href="/assets/css/lightbox.css" rel="stylesheet" />
 		<script type="application/ld+json">
 			{

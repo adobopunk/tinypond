@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/base.html'
 title: 'Tiny Pond | Bespoke Design for Bold Brands'
-description: 'Tiny Pond is a proudly independent, worker-owned creative studio & consultancy helping brands define their vision for maximum impact.'
+description: 'Tiny Pond is an independent, worker-owned creative studio. We design stream packages, animation and broadcast graphics for VTubers, streamers and live events.'
 ---
 
 <section class="hero" id="home">
@@ -17,13 +17,17 @@ description: 'Tiny Pond is a proudly independent, worker-owned creative studio &
 			data-parallax="-0.5"
 		>
 			<source
-				src="/img/landing/TP_PondLoop_FullWidth.webm"
+				src="/img/landing/TP_PondLoop_1600.webm"
 				type="video/webm"
+				media="(max-width: 900px)"
 			/>
 			<source
-				src="/img/landing/TP_PondLoop_FullWidth_h264_crf21.mp4"
+				src="/img/landing/TP_PondLoop_1600.mp4"
 				type="video/mp4"
+				media="(max-width: 900px)"
 			/>
+			<source src="/img/landing/TP_PondLoop_2560.webm" type="video/webm" />
+			<source src="/img/landing/TP_PondLoop_2560.mp4" type="video/mp4" />
 		</video>
 		<div class="hero__text">
 			<h1 class="hero__title" data-parallax="0">
@@ -31,17 +35,16 @@ description: 'Tiny Pond is a proudly independent, worker-owned creative studio &
 			</h1>
 
 			<p class="hero__content" data-parallax="0">
-				We're a worker-owned creative collective crafting custom
-				worlds for VTubers, Live Events, and Streamers of all shapes
-				and sizes.
+				We're a worker-owned studio designing custom stream packages, animation and broadcast graphics for VTubers, streamers and live events.
 				<a href="/contact">Ready to collab?</a>
 			</p>
 
-			<a href="#make" class="js-scroll" data-parallax="0">
+			<a href="#make" class="js-scroll" data-parallax="0" aria-label="Scroll to What We Make">
 				<img
 					src="/img/accents/down arrow.svg"
+					alt=""
 					class="next-arrow"
-					id="arrow1"
+					id="arrow1" width="46" height="35" loading="lazy" decoding="async"
 				/>
 			</a>
 

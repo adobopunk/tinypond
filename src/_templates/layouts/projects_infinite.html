@@ -8,7 +8,7 @@ currentIndex = forloop.index0 %} {% endif %} {% endfor %} {% assign nextIndex =
 currentIndex | plus: 1 %} {% if nextIndex >= projectsList.size %} {% assign
 nextIndex = 0 %} {% endif %} {% assign nextProject = projectsList[nextIndex] %}
 
-<main id="main" class="project-main">
+<div class="project-main">
 	<div class="project-container" data-current-slug="{{ page.fileSlug }}">
 		<article class="project-content">{{ content }}</article>
 
@@ -18,7 +18,7 @@ nextIndex = 0 %} {% endif %} {% assign nextProject = projectsList[nextIndex] %}
 			data-next-project-title="{{ nextProject.data.title }}"
 		></div>
 	</div>
-</main>
+</div>
 
 <script>
 	// Store loaded projects to prevent duplicates
