@@ -24,6 +24,7 @@ h2 {
 	font-size: clamp(2.5rem, 2.3rem + 1vw, 3.5rem);
 	line-height: 1.1;
 	margin-block-end: u.rem(20);
+	font-weight: 700;
 
 	@include u.breakpoint-down(medium) {
 		font-size: 2rem;
