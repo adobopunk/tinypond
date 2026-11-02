@@ -20,6 +20,15 @@ permalink: /redesign/
 			<a class="btn btn--secondary" href="#work">See our work</a>
 		</div>
 	</div>
+	<div class="showcase-wrap">
+	<div class="container showcase-nav">
+		<button class="showcase-btn" type="button" data-dir="-1" aria-label="Previous projects" disabled>
+			<svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+		</button>
+		<button class="showcase-btn" type="button" data-dir="1" aria-label="Next projects">
+			<svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+		</button>
+	</div>
 	<ul class="showcase" aria-label="Recent projects">
 		{% for project in collections.projects limit: 6 %}
 		<li class="showcase__item">
@@ -36,6 +45,7 @@ permalink: /redesign/
 		</li>
 		{% endfor %}
 	</ul>
+	</div>
 </section>
 
 <section class="credits" aria-labelledby="credits-title">
@@ -43,7 +53,7 @@ permalink: /redesign/
 		<h2 id="credits-title" class="credits__title">
 			Our team has designed for
 		</h2>
-		<ul class="credits__list">
+		<ul class="credits__list reveal">
 			<li>Mountain Dew</li>
 			<li>Fortnite</li>
 			<li>Xbox</li>
@@ -56,14 +66,14 @@ permalink: /redesign/
 
 <section class="section" id="work" aria-labelledby="work-title">
 	<div class="container">
-		<div class="section__head">
+		<div class="section__head reveal">
 			<h2 id="work-title">Selected work</h2>
 			<p>
 				Stream packages, brand identities, event design and apparel for
 				creators, brands and live events.
 			</p>
 		</div>
-		<ul class="work-grid">
+		<ul class="work-grid reveal">
 			{% for project in collections.projects %}
 			<li class="work-card">
 				<a href="/redesign/projects/{{ project.fileSlug }}/">
@@ -93,7 +103,7 @@ permalink: /redesign/
 				Everything is designed and animated by our team, in 2D or 3D.
 			</p>
 		</div>
-		<ul class="services">
+		<ul class="services reveal">
 			<li class="service">
 				<img src="/img/landing/tp1.webp" alt="" width="1920" height="1082" loading="lazy" decoding="async" />
 				<h3>Collaborative creative direction</h3>
@@ -149,7 +159,7 @@ permalink: /redesign/
 		<div class="section__head">
 			<h2 id="quotes-title">What clients say</h2>
 		</div>
-		<div class="quotes">
+		<div class="quotes reveal">
 			<figure class="quote">
 				<blockquote>
 					<p>
@@ -192,7 +202,7 @@ permalink: /redesign/
 
 <section class="section section--tint" id="about" aria-labelledby="about-title">
 	<div class="container about">
-		<div class="about__intro">
+		<div class="about__intro reveal">
 			<h2 id="about-title">About Tiny Pond</h2>
 			<p>
 				Tiny Pond is a creative studio and consultancy started by Tifa
@@ -206,7 +216,7 @@ permalink: /redesign/
 				independent artists.
 			</p>
 		</div>
-		<ul class="team">
+		<ul class="team reveal">
 			<li class="person">
 				<img src="/img/about/tj.webp" alt="Headshot of Tifa Jade" width="400" height="400" loading="lazy" decoding="async" />
 				<div>
@@ -220,7 +230,6 @@ permalink: /redesign/
 						Games, Xbox and Mountain Dew campaigns.
 					</p>
 					<p class="person__links">
-						<a href="mailto:tj@tinypond.studio">tj@tinypond.studio</a>
 						<a href="https://www.tifajade.com/">Portfolio</a>
 					</p>
 				</div>
@@ -237,7 +246,6 @@ permalink: /redesign/
 						esports broadcasts with major gaming brands.
 					</p>
 					<p class="person__links">
-						<a href="mailto:mateo@tinypond.studio">mateo@tinypond.studio</a>
 						<a href="https://www.mateojw.com/">Portfolio</a>
 					</p>
 				</div>
@@ -245,7 +253,7 @@ permalink: /redesign/
 		</ul>
 
 		<h3 class="values__title">How we work</h3>
-		<ul class="values">
+		<ul class="values reveal">
 			<li><strong>Embrace collaboration.</strong> We get the best results by communicating openly and solving problems together with you.</li>
 			<li><strong>Champion inclusivity.</strong> We partner with and support causes that make a positive difference, and everyone on our team is respected and heard.</li>
 			<li><strong>Own your work.</strong> We take creative risks, and we can always explain the thinking behind them.</li>
@@ -268,10 +276,10 @@ permalink: /redesign/
 				need and when you need it. The more detail you share, the sooner we
 				can tell you whether we're the right fit.
 			</p>
-			<ul class="contact__direct">
-				<li><a href="mailto:tj@tinypond.studio">tj@tinypond.studio</a></li>
-				<li><a href="https://www.instagram.com/tinypond.studio/">Instagram</a></li>
-			</ul>
+			<button class="copy-email" type="button" data-email="connect@tinypond.studio">
+				<span class="copy-email__addr">connect@tinypond.studio</span>
+				<span class="copy-email__status" aria-live="polite">Click to copy</span>
+			</button>
 		</div>
 		<form
 			class="form"
