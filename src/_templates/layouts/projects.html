@@ -1,81 +1,29 @@
 ---
-layout: /layouts/base.html
+layout: layouts/base.html
 ---
 
-{% assign currentIndex = -1 %} {% for project in collections.projects %} {% if
-project.url == page.url %} {% assign currentIndex = forloop.index0 %} {% endif
-%} {% endfor %} {% assign nextIndex = currentIndex | plus: 1 %} {% assign
-secondNextIndex = currentIndex | plus: 2 %}
+{% assign currentIndex = 0 %}{% for project in collections.projects %}{% if project.url == page.url %}{% assign currentIndex = forloop.index0 %}{% endif %}{% endfor %}
+{% assign nextIndex = currentIndex | plus: 1 %}{% assign nextProject = collections.projects[nextIndex] %}{% if nextProject == null %}{% assign nextProject = collections.projects[0] %}{% endif %}
 
-<div class="project-main">
-	<div class="project-container" data-current-slug="{{ page.fileSlug }}">
-		<article class="project-content">
-			<section class="project">
-				<div class="wrapper project__wrapper">
-					{{ content }}
-
-					<div class="next-projects-container">
-						{% assign nextProject =
-						collections.projects[nextIndex] %} {% if
-						nextProject == null %} {% assign nextProject =
-						collections.projects[0] %} {% endif %}
-						<h2 class="explore-more">More Work:</h2>
-
-						<a
-							href="{{ nextProject.url | url }}"
-							class="next-project-link"
-						>
-							<div class="next-project-preview">
-								<img
-									src="{{ nextProject.data.imagePath }}"
-									alt="{{ nextProject.data.title }}"
-									class="next-project-image-element"
-								/>
-								<div class="next-project-info">
-									<h2>
-										{{ nextProject.data.title }}
-									</h2>
-									<p>
-										{{
-										nextProject.data.description
-										}}
-									</p>
-								</div>
-							</div>
-						</a>
-
-						{% assign secondNextProject =
-						collections.projects[secondNextIndex] %} {% if
-						secondNextProject == null %} {% assign
-						secondNextProject = collections.projects[1] %} {%
-						endif %}
-						<a
-							href="{{ secondNextProject.url | url }}"
-							class="next-project-link"
-						>
-							<div class="next-project-preview">
-								<img
-									src="{{ secondNextProject.data.imagePath }}"
-									alt="{{ secondNextProject.data.title }}"
-									class="next-project-image-element"
-								/>
-								<div class="next-project-info">
-									<h2>
-										{{
-										secondNextProject.data.title
-										}}
-									</h2>
-									<p>
-										{{
-										secondNextProject.data.description
-										}}
-									</p>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</section>
-		</article>
-	</div>
-</div>
+<article class="case">
+	<header class="case__head container">
+		<p class="case__back"><a href="/#work">All work</a></p>
+		<h1>{{ title }}</h1>
+		<p class="case__lede">{{ description }}</p>
+	</header>
+	<div class="case__body container reveal">{{ content }}</div>
+	<aside class="case__cta container" aria-labelledby="case-cta-title">
+		<h2 id="case-cta-title">Want something like this?</h2>
+		<p>Tell us about your project and we'll let you know how we can help.</p>
+		<a class="btn btn--primary" href="/#contact">Start a project</a>
+	</aside>
+	<nav class="case__next container" aria-label="Next project">
+		<a href="{{ nextProject.url }}">
+			<img src="{{ nextProject.data.imagePath }}" alt="" width="640" height="360" loading="lazy" decoding="async" />
+			<span>
+				<span class="case__next-label">Next project</span>
+				<span class="case__next-title">{{ nextProject.data.title }}</span>
+			</span>
+		</a>
+	</nav>
+</article>

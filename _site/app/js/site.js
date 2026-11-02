@@ -1,4 +1,4 @@
-// Redesign draft: reveal-on-scroll, copy-to-clipboard email, project strip arrows
+// Reveal-on-scroll, copy-to-clipboard email, project strip arrows
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -15,7 +15,11 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
 		},
 		{ rootMargin: '0px 0px -10% 0px' }
 	);
-	revealEls.forEach((el) => observer.observe(el));
+	revealEls.forEach((el) => {
+		// Anything already on screen shows right away, without waiting on the observer
+		if (el.getBoundingClientRect().top < window.innerHeight * 0.9) el.classList.add('is-visible');
+		else observer.observe(el);
+	});
 } else {
 	revealEls.forEach((el) => el.classList.add('is-visible'));
 }
