@@ -235,44 +235,112 @@ ul {
 	}
 }
 
-/* Hero */
+/* Hero: the pond animation fills the top of the page, text sits over a teal shade */
 .hero {
-	padding: 64px 0 48px;
+	padding-bottom: 48px;
 	overflow: hidden;
 }
 
+.hero__pond {
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-height: min(86vh, 860px);
+	padding: 96px 0 72px;
+	isolation: isolate;
+	overflow: hidden;
+}
+
+.hero__video {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -3;
+}
+
+/* Same teal fade as the original hero, darkened at the bottom into the page */
+.hero__shade {
+	position: absolute;
+	inset: 0;
+	z-index: -2;
+	background: linear-gradient(
+		to bottom,
+		hsla(195, 62%, 7%, 0.35) 0%,
+		hsla(198, 100%, 14%, 0.55) 45%,
+		var(--bg) 100%
+	);
+}
+
+.hero__bg-text {
+	position: absolute;
+	left: -2vw;
+	top: 50%;
+	transform: translateY(-55%);
+	z-index: -1;
+	margin: 0;
+	font-family: 'yink', var(--font-display);
+	font-size: 22vw;
+	line-height: 1;
+	white-space: nowrap;
+	color: transparent;
+	-webkit-text-stroke: 2px hsla(112, 44%, 55%, 0.22);
+	pointer-events: none;
+}
+
+.hero__inner {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .hero__title {
-	font-size: 36px;
-	max-width: 18ch;
+	font-size: 48px;
+	max-width: 12ch;
 	margin-bottom: 24px;
+	text-shadow: 0 2px 24px hsla(195, 80%, 4%, 0.6);
 }
 
 .hero__lede {
-	font-size: 20px;
-	color: var(--text-muted);
+	font-size: 19px;
+	color: var(--text);
 	max-width: 36em;
 	margin-bottom: 32px;
+	text-shadow: 0 1px 12px hsla(195, 80%, 4%, 0.7);
 }
 
 .hero__actions {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 12px;
 }
 
-@media (min-width: 700px) {
-	.hero {
-		padding: 64px 0 64px;
+.hero__actions .btn--secondary {
+	background: hsla(195, 62%, 7%, 0.5);
+}
+
+@media (max-width: 899px) {
+	.hero__bg-text {
+		display: none;
 	}
+}
+
+@media (min-width: 700px) {
 	.hero__title {
-		font-size: 60px;
+		font-size: 72px;
+	}
+	.hero__lede {
+		font-size: 20px;
 	}
 }
 
 @media (min-width: 1100px) {
 	.hero__title {
-		font-size: 64px;
-		max-width: 20ch;
+		font-size: 96px;
 	}
 }
 
@@ -995,6 +1063,15 @@ ul {
 
 	.showcase-wrap {
 		animation-delay: 300ms;
+	}
+
+	@keyframes pond-glow {
+		0%, 100% { -webkit-text-stroke-color: hsla(112, 44%, 55%, 0.14); }
+		50% { -webkit-text-stroke-color: hsla(112, 44%, 55%, 0.3); }
+	}
+
+	.hero__bg-text {
+		animation: pond-glow 8s ease-in-out infinite;
 	}
 
 	.js .reveal {
