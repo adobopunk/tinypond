@@ -1,4 +1,4 @@
-// Reveal-on-scroll, copy-to-clipboard email, project strip arrows
+// Reveal-on-scroll, copy-to-clipboard email
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -54,27 +54,3 @@ document.querySelectorAll('.copy-email').forEach((button) => {
 		}, 2500);
 	});
 });
-
-// Project strip arrows
-const strip = document.querySelector('.showcase');
-if (strip) {
-	const buttons = document.querySelectorAll('.showcase-btn');
-	const update = () => {
-		const max = strip.scrollWidth - strip.clientWidth - 2;
-		buttons[0].disabled = strip.scrollLeft <= 2;
-		buttons[1].disabled = strip.scrollLeft >= max;
-	};
-	buttons.forEach((button) => {
-		button.addEventListener('click', () => {
-			const item = strip.querySelector('.showcase__item');
-			const step = item ? item.getBoundingClientRect().width + 16 : strip.clientWidth;
-			strip.scrollBy({
-				left: step * Number(button.dataset.dir),
-				behavior: reduceMotion ? 'auto' : 'smooth',
-			});
-		});
-	});
-	strip.addEventListener('scroll', update, { passive: true });
-	window.addEventListener('resize', update);
-	update();
-}
